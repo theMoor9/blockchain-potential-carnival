@@ -6,7 +6,8 @@
 #### Blockchain: A Peer-to-Peer Distributed Database
 
 - **Definition**: Blockchain is a peer-to-peer distributed database technology where every machine (peer) acts as a node-block.
-- **Mechanism**: Each block is linked to the next through a cryptographic hash.
+- **Mechanism**: Each block is linked to the next through a cryptographic hash; the end of one block contains the key to the start of the next block.
+- **Purpose Aspect**: Every blockchain technology needs to suit the specific application it is intended for. Cryptocurrency is just one application that can use blockchain protocols.
 
 - **Implementing Knowledge through Code**:
 
@@ -22,7 +23,7 @@
 
 ```Rust
 ```
-#### Security and Efficiency
+#### Unprecedented Security and Efficiency
 
 - **Ownership Verification**: This solves ownership verification and exchange in a secure way without a middle person.
 - **Speed**: Data transfer times are significantly faster, almost instantaneous, which is useful for market exchanges and property-related transfers.
@@ -42,7 +43,7 @@
 ```
 #### Disruptive Potential
 
-- **Applications**: The practical applications of blockchains are many: voting by unique tokens, IoT security, medical ecosystem enhancements, financial statements, secure process validations, transaction transparency for governance, passports, and more.
+- **Applications**: The practical applications of blockchains are many: voting by unique tokens, IoT security, medical ecosystem enhancements, financial statements, secure process validations, transaction transparency for governance, passports, transaction costs and more.
 
 - **Implementing Knowledge through Code**:
 
@@ -144,6 +145,36 @@
 
 ```Rust
 ```
+
+---
+### Key Questions and Resolutions 08/2024
+
+**Key Questions that Have Been Resolved:**
+
+1. **How can blockchain technology overcome traditional transaction speeds?**
+    - Blockchain can process transactions faster than traditional methods due to its decentralized nature and advanced consensus algorithms.
+2. **Why use large databases in a blockchain?**
+    - Large databases ensure redundancy, security, and availability of data across the network.
+3. **How can we achieve cross-chain interoperability?**
+    - Cross-chain interoperability can be achieved through protocols and technologies that allow different blockchains to communicate and transact with each other.
+
+**Key Questions that Haven't Been Fully Resolved:**
+
+1. **Privacy:**
+    - Privacy remains an unresolved issue, as enhancing transparency often requires sacrificing some level of privacy.
+2. **Real-World Verification:**
+    - How do we verify real-world elements with blockchain, such as using RFID tags? This is still an open question.
+3. **Immutability and Forks:**
+    - Upgrading the immutability of a chain can create forks, leading to new blockchain technologies and making the ecosystem more fragmented.
+4. **Governance:**
+    - If these technologies become widespread, algorithms will need upgrades to stay current with societal changes. Achieving consensus for these substantial changes will be very challenging.
+5. **Regulations:**
+    - We lack regulations due to the disruptive nature of these technologies. New laws are needed to regulate this field effectively.
+
+
+---
+
+***Blockchain technology enables people in emerging markets to monetize products in unprecedented ways, driving significant growth by accessing modern finance and breaking previous constraints. This surge in human capital benefits both emerging and developed markets, leading to unexpected and impactful advancements.***
 
 ---
 

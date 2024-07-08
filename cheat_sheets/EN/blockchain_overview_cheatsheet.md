@@ -1,7 +1,9 @@
 # **Blockchain - Cheatsheet**
 ---
 
-## Blockchain: A Peer-to-Peer Distributed Database
+## § Fundamentals
+
+#### Blockchain: A Peer-to-Peer Distributed Database
 
 - **Definition**: Blockchain is a peer-to-peer distributed database technology where every machine (peer) acts as a node-block.
 - **Mechanism**: Each block is linked to the next through a cryptographic hash.
@@ -11,7 +13,7 @@
 ```Rust
 ```
 
-## Trust and Immutability
+#### Trust and Immutability
 
 - **No Trust Needed**: Features of the blocks and ownership are registered in the immutable history of the chain (ledgers).
 - **Consensus Control**: Consensus is always controlled by every block in the chain through Proof of Work or Proof of Stake.
@@ -20,7 +22,7 @@
 
 ```Rust
 ```
-## Security and Efficiency
+#### Security and Efficiency
 
 - **Ownership Verification**: This solves ownership verification and exchange in a secure way without a middle person.
 - **Speed**: Data transfer times are significantly faster, almost instantaneous, which is useful for market exchanges and property-related transfers.
@@ -30,7 +32,7 @@
 
 ```Rust
 ```
-## Anti-Counterfeiting
+#### Anti-Counterfeiting
 
 - **Ledger Verification**: Blockchain solves counterfeiting by checking the ledgers of the blockchains.
 
@@ -38,7 +40,7 @@
 
 ```Rust
 ```
-## Disruptive Potential
+#### Disruptive Potential
 
 - **Applications**: The practical applications of blockchains are many: voting by unique tokens, IoT security, medical ecosystem enhancements, financial statements, secure process validations, transaction transparency for governance, passports, and more.
 
@@ -48,9 +50,9 @@
 ```
 
 ---
-## Blockchain Tech Bic Picture
+## § Blockchain Tech Bic Picture
 
-**Hashing Function:**
+#### Hashing Function
 
 - A hashing function creates a "fingerprint" of the block elements in a dynamic way, used as a key to connect the blocks.
 
@@ -59,7 +61,7 @@
 ```Rust
 ```
 
-**Private/Public Key System:**
+#### Private/Public Key System
 
 - **Related to Each Other:** The private key and public key are mathematically related.
 - **Easy to Trace back**: Private Key => Public Key 
@@ -70,8 +72,7 @@
 ```Rust
 ```
 
-
-**Public Address:**
+#### Public Address
 
 - **Relation to Public Key:** The public address is related to the public key.
 - **Derivation:** It can either be the public key itself or a value derived from the public key using a function.
@@ -81,7 +82,7 @@
 ```Rust
 ```
 
-**Digital Signature Algorithms (DSA):**
+#### Digital Signature Algorithms (DSA)
 
 - **Proof of Ownership:** DSA proves who is the owner of the private key.
 - **Verification without Revelation:** They allow verification of the signature without revealing the private key.
@@ -91,7 +92,7 @@
 ```Rust
 ```
 
-**Transaction Mechanics:**
+#### Transaction Mechanics
 
 **UTXO Concept:** The system operates with the concept of UTXO (unspent transaction outputs), which represents the value that the block possesses and establishes the units that are unspent and spendable.
 
@@ -112,7 +113,7 @@
 ```Rust
 ```
 
-**Cryptography:**
+#### Cryptography
 
 - **Integral Part of the Ecosystem:** Cryptography flows within the structure of the ecosystem.
 - **Usage:** It is used for generating private keys and storing encrypted data in the block.
@@ -122,7 +123,7 @@
 ```Rust
 ```
 
-**Consensus Mechanism:**
+#### Consensus Mechanism
 
 - **Different Methods:** There are different ways to achieve consensus, such as:
     - **Proof-of-Work (PoW):** Miners solve complex problems to validate transactions.
@@ -133,7 +134,7 @@
 ```Rust
 ```
 
-**Incentives:**
+#### Incentives
 
 - **Purpose:** Incentives are designed to encourage participation in the system.
 - **Proof-of-Work Systems:** In PoW systems, rewards are given to those who contribute to the well-being of the system, such as by validating transactions.

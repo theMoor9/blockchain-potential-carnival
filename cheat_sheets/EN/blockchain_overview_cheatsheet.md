@@ -1,4 +1,4 @@
-# **Blockchain - Cheatsheet**
+# **Blockchain Cheatsheet - Overview**
 ---
 
 ## § Fundamentals
@@ -178,4 +178,4 @@
 
 ---
 
-Author: Kenneth Boldrini
+**Author**: Kenneth Boldrini

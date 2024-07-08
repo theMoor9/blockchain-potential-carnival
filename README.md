@@ -6,7 +6,7 @@ It is designed to help Rust users approach blockchain protocols.
 
 However, don't worry! Everyone can understand the cheat sheets; just skip the code blocks if you're not a developer, as they might be confusing.
 
-My methodical approach to learning has proven to be practically successful. I hope it will be for you too!
+Built as I learn, my methodical approach to learning has proven to be practically successful. I hope it will be for you too!
 
 
 ## Table of Contents

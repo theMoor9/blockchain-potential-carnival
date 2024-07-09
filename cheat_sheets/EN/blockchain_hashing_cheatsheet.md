@@ -22,9 +22,10 @@ We should consider hashing like a fingerprint; it provides a secure genetic refe
 
 1. **Speed**: It must be easy to compute to a certain extent because we don't want the algorithm to be easily brute-forced due to its speed.
 2. **Deterministic**: The same input should always produce the same output.
-3. **One-way**: It must be infeasible to recreate the original data from the hash.
+3. **One-way**: It must be infeasible to recreate the original data from the hash. In particular it is hard because during hashing we may lose data.
 4. **Secure**: If you alter the data to be hashed, you get a totally different hash, but if you re-alter back, you get the original hash.
 5. **Collision**: It is impossible for two different data sets to have the same hash value, so hashing is Concurrency-safe \*.
+6. **Size**: It doesn't matter how large is the data to be hashed. Since the Hashing practice has generally a lot of capacity.
 
 >\* **Collision Issue**: The primary concern is not just the probability of any two hashes colliding, but rather the likelihood that, within a dataset, there will be at least two identical data points with the same hash. This probability increases significantly with the size of the dataset, similar to the birthday paradox.
 #### Salting
@@ -54,6 +55,11 @@ We should consider hashing like a fingerprint; it provides a secure genetic refe
 	    - SHA3-384: 384 bits
 	    - SHA3-512: 512 bits
 
+- **Implementing Knowledge through Code**:
+
+```Rust
+```
+
 
 -  ***Technical Terms***:
 	- **Padding**: Adding bits to indicate the end of the message.
@@ -61,6 +67,11 @@ We should consider hashing like a fingerprint; it provides a secure genetic refe
 	- **Append Length**: Adding the original length of the message in bits.
 	- **Compression Function**: The process of mixing bits that includes cryptographic operations.
 	- **Hash Value**: The resulting unique secret code.
+
+- **Implementing Knowledge through Code**:
+
+```Rust
+```
 
 ##### 1. Prepare the Message
 
@@ -85,6 +96,16 @@ Now the algorithm starts mixing the characters. It takes each 512-bit block and 
 ##### 6. Obtain the Secret Code (Hash Value)
 
 After the algorithm has finished mixing, we get a unique secret code called a hash or digest, like "a7b9c3d2". This code is special because even if you change just one letter of the original message, the hash will be completely different.
+
+- **Implementing Knowledge through Code**:
+
+```Rust
+```
+
+---
+## § Applications
+
+Is useful to check if some data has been corrupted or modified in a defined period of time since creation or to certify the origins of a data. This is possible by checking the Hash from T0 with T1. 
 
 - **Implementing Knowledge through Code**:
 

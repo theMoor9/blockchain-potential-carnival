@@ -1,8 +1,7 @@
 # Welcome to my Blockchain CheatRepo!
 
-This repository contains a comprehensive collection of knowledge for learning blockchain through easy-to-reference cheat sheets and Rust code examples. 
-
-It is designed to help Rust users approach blockchain protocols. 
+This repository contains a comprehensive collection of knowledge for learning blockchain through easy-to-reference cheat sheets. 
+It is designed to help Rust users approach blockchain technology through an implementation of knowledge in Rust code. 
 
 However, don't worry! Everyone can understand the cheat sheets; just skip the code blocks if you're not a developer, as they might be confusing.
 

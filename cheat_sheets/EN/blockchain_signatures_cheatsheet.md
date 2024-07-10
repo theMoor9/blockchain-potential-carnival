@@ -27,9 +27,8 @@
 
 ```Rust
 ```
-
+	
 ---
-
 ## § Symmetric Cyphers
 
 #### Monoalphabetic Symmetric Ciphers
@@ -53,8 +52,6 @@ Example of Encryption
 ```Rust
 ```
 
-
-
 #### Polyalphabetic Symmetric Ciphers
 
 Phrase to encrypt: "HELLO WORLD" Repeated key: "KEYKEYKEYKE"
@@ -73,16 +70,55 @@ Phrase to encrypt: "HELLO WORLD" Repeated key: "KEYKEYKEYKE"
 ```
 
 
-
 ---
-
 ## § Symmetric Digital Signatures
 
+Symmetric key Exchange
+- **Key Usage**: Uses a single key for both signing and verification.
+- **Speed**: Generally faster because it uses simpler algorithms.
+- **Key Management**: Key distribution can be challenging since the same key must be shared securely between parties.
+- **Use Case**: Commonly used in scenarios where both parties already share a secret key, like within closed systems.
 
+#### Diffie Hellman Key Exchange
 
+**Definition**: Diffie-Hellman Key Exchange is a secret-sharing algorithm that returns the components needed for arithmetic operations to generate a shared secret key.
 
+**Process**:
+
+1. **Establish Public Components**:
+    - **Modulus (M)**: A large prime number used as the mathematical dividend.
+    - **Generator (G)**: A base number used for exponentiation.
+    
+2. **Private Keys**:
+    - Each party generates their own private key (**PK**).
+    
+3. **Arithmetic Operations**:
+    - Each party performs the following operation using their private key: 
+	    
+		**G<sup>PK</sup> mod M**
+		
+    - The remainder (R) from this operation is shared between the parties.
+	
+4. **Secret Unveiling**:
+    - Each party then takes the received remainder (**R**) and performs the following operation using their private key: 
+	    
+		**R<sup>PK</sup> mod M**
+		
+    - The final remainder (**LR**) will be the same for both parties and will serve as the common encryption and decryption key.
+	
+- **Implementing Knowledge through Code**:
+
+```Rust
+```
+	
+**Security**:
+- No attacker can decipher the shared secret key (**LR**) by only knowing **G**, **M**, and **R** without access to the private keys (**PK**) of the parties involved.
+	
+	
 ---
 ## § Asymmetric Digital Signatures
+
+RSA
 
 
 

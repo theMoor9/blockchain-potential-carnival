@@ -1,5 +1,11 @@
 ## **Blockchain Cheatsheet - Cryptography & Signatures**
 ---
+##### § Fundamentals
+##### § Symmetric Cyphers
+##### § Symmetric Digital Signatures
+##### § Asymmetric Digital Signatures
+	
+---
 ### § Fundamentals
 	
 #### Cryptanalysis
@@ -23,7 +29,7 @@
     4. Hard to decode if intercepted
     5. Source of data should be validated
 	
-- **Implementing Knowledge through Code**:
+- **Implementing Concept through Code**:
 	
 ```Rust
 ```
@@ -48,7 +54,7 @@ Example of Encryption
 | :---: | :---: | :---: | :---: | :---: |
 | **S** | **V** | **O** | **O** | **L** |
 	
-- **Implementing Knowledge through Code**:
+- **Implementing Concept through Code**:
 	
 ```Rust
 ```
@@ -65,7 +71,7 @@ Phrase to encrypt: "HELLO WORLD" Repeated key: "KEYKEYKEYKE"
 | Sum mod 26        | 17  |  8  |  9  | 21  | 18  | 20  | 24  | 21  |  9  | 13  |
 | Encrypted         |  R  |  I  |  J  |  V  |  S  |  U  |  Y  |  V  |  J  |  N  |
 	
-- **Implementing Knowledge through Code**:
+- **Implementing Concept through Code**:
 
 ```Rust
 ```
@@ -107,7 +113,7 @@ Symmetric key Exchange
 		
     - The final remainder (**LR**) will be the same for both parties and will serve as the common encryption and decryption key.
 	
-- **Implementing Knowledge through Code**:
+- **Implementing Concept through Code**:
 	
 ```Rust
 ```

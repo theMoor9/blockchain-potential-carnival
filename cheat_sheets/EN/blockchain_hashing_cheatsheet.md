@@ -1,18 +1,22 @@
 # **Blockchain Cheatsheet - Hashing**
 ---
+##### § Fundamentals
+##### § Hashing Math
+##### § Applications
 	
+---
 ## § Fundamentals
 	
 Hashing is not encryption because you cannot rebuild the original data from the hash as you can with encrypted files. 
 	
-- **Implementing Knowledge through Code**:
+- **Implementing Concept through Code**:
 	
 ```Rust
 ```
 	
 We should consider hashing like a fingerprint; it provides a secure genetic reference to the data but is not the data "in person".
 	
-- **Implementing Knowledge through Code**:
+- **Implementing Concept through Code**:
 	
 ```Rust
 ```
@@ -32,7 +36,7 @@ We should consider hashing like a fingerprint; it provides a secure genetic refe
 	
 **Salting** is the practice of adding a random value to the hashed password stored. This is the only way to securely hash passwords.
 	
-- **Implementing Knowledge through Code**:
+- **Implementing Concept through Code**:
 	
 ```Rust
 ```
@@ -56,7 +60,7 @@ We should consider hashing like a fingerprint; it provides a secure genetic refe
 	    - SHA3-384: 384 bits
 	    - SHA3-512: 512 bits
 	
-- **Implementing Knowledge through Code**:
+- **Implementing Concept through Code**:
 	
 ```Rust
 ```
@@ -69,7 +73,7 @@ We should consider hashing like a fingerprint; it provides a secure genetic refe
 	- **Compression Function**: The process of mixing bits that includes cryptographic operations.
 	- **Hash Value**: The resulting unique secret code.
 	
-- **Implementing Knowledge through Code**:
+- **Implementing Concept through Code**:
 	
 ```Rust
 ```
@@ -98,7 +102,7 @@ Now the algorithm starts mixing the characters. It takes each 512-bit block and 
 	
 After the algorithm has finished mixing, we get a unique secret code called a hash or digest, like "a7b9c3d2". This code is special because even if you change just one letter of the original message, the hash will be completely different.
 	
-- **Implementing Knowledge through Code**:
+- **Implementing Concept through Code**:
 	
 ```Rust
 ```
@@ -109,7 +113,7 @@ After the algorithm has finished mixing, we get a unique secret code called a ha
 	
 Is useful to check if some data has been corrupted or modified in a defined period of time since creation or to certify the origins of a data. This is possible by checking the Hash from T0 with T1. 
 	
-- **Implementing Knowledge through Code**:
+- **Implementing Concept through Code**:
 	
 ```Rust
 ```

@@ -1,9 +1,10 @@
 # **Blockchain Cheatsheet - Hashing**
 ---
 ##### § Fundamentals
+- Key Characteristics of Good Cryptographic Hashing
+- Salting
 ##### § Hashing Math
 ##### § Applications
-	
 ---
 ## § Fundamentals
 	

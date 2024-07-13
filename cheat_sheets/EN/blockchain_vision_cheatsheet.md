@@ -2,12 +2,24 @@
 # **Blockchain Cheatsheet - The Vision**
 ---
 ##### § Bitcoin
+- Hashing
+- Mining in Proof of Work
 ##### § Ethereum
+- Smart Contracts Concept
+- Decentralized Applications (dApps)
 ##### § Storing
+- Account Types
+- Wallets
 ##### § Cryptocurrencies
+- Tokens
+##### § Gas
+- The problem
+- Solution
+- Analogy
+##### § Decentralized Autonomous Organization (DAO)
 ##### § Private Blockchains
 ##### § The Blockchain Vision
-	
+- Cryptocurrency Risks
 ---
 ## § Bitcoin
 	
@@ -63,7 +75,7 @@ Today, Ethereum it stands as one of the most, if not the most, important technol
 - **Finney**: Multiplier 10<sup>15</sup>
 - **Ether**: Multiplier 10<sup>18</sup>
 	
-#### Smart Contracts
+#### Smart Contracts Concept
 	
 - **Programmatically enforced state updates**
     - Can add any functionality you want.
@@ -163,13 +175,29 @@ These, for the most enterprising minds, are likely to be the ultimate substitute
 	
 	
 ---
+## § Gas
+	
+#### The Problem
+	
+Having applications developed on-chain could result in faulty algorithms, which could end up consuming and wasting the computing power of the blockchain node system.
+	
+#### The Solution
+	
+Introducing a "gas" fee allows applications and smart contracts to be used. This is equivalent to the transaction fee in Bitcoin blockchains, rewarding miners for managing the computational power of the applications to a certain extent, determined by the amount of gas.
+	
+#### Analogy
+	
+Having a car with a faulty throttle pedal could be dangerous with infinite gas. This is the idea implemented in the blockchain: it limits application use by the amount of gas fee you are willing to spend.
+	
+	
+---
 ## § Private Blockchains
 
 	
 	
 ---
 ## § The Blockchain Vision
-
+	
 - **Secure, efficient, immutable, and indisputable transactions**
     - Transactions are secure, efficient, and cannot be altered or disputed once confirmed.
     

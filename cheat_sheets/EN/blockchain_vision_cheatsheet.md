@@ -16,9 +16,15 @@
 - The problem
 - Solution
 - Analogy
-##### § Decentralized Autonomous Organization (DAO)
+##### § The DAO ( Decentralized Autonomous Organization ) 
+- An Issue Occurred
+- The damage and The Fortune
+- The Resolution
+- The Fork Mechanism
+- Lessons
 ##### § Private Blockchains
-##### § The Blockchain Vision
+- Special Use Case
+##### § The Blockchain Vision Proprieties
 - Cryptocurrency Risks
 ---
 ## § Bitcoin
@@ -127,6 +133,11 @@ As previously mentioned, Ethereum and other new generation blockchains provide t
 	
 **Multisig**: Divides your keys to enhance security by requiring multiple signatures to authorize transaction
 	
+- **Implementing Concepts through Code**:
+	
+```Rust
+```
+	
 	
 ---
 ## § Cryptocurrencies
@@ -189,14 +200,80 @@ Introducing a "gas" fee allows applications and smart contracts to be used. This
 	
 Having a car with a faulty throttle pedal could be dangerous with infinite gas. This is the idea implemented in the blockchain: it limits application use by the amount of gas fee you are willing to spend.
 	
+- **Implementing Concepts through Code**:
+	
+```Rust
+```
+	
+	
+---
+## § The DAO ( Decentralized Autonomous Organization ) 
+	
+A DAO (Decentralized Autonomous Organization) is an organization built through smart contract funding by investors who receive tokens to vote. At the time, DAO tokens represented a significant portion of Ethereum's market value and were considered a security due to their value as decision tokens within a business structure.
+	
+- **Implementing Concepts through Code**:
+	
+```Rust
+```
+	
+#### An Issue Occurred
+A bug was found that allowed limitless withdrawals without proper accounting, draining the reserves. This was a major issue.
+	
+#### The Damage and The Furtune
+DAO smart contracts were hacked in two attempts, one withdrawing 30% and the other 70% of the project's value simultaneously. Fortunately, the smart contract was coded with a 28-day settlement period.
+	
+#### The Resolution
+The community had choose together to hard fork the blockchain rewriting his history to prevent this mishap, returning the tokens in the form of ETC (Ethereum Classic) to the original owners.
+	
+#### The Fork Mechanism
+Much like a new version of an operating system can handle an old version of Excel, a Soft Fork is a type of upgrade that introduces new rules which are backward compatible. This is similar to how Microsoft Windows can update to support new features while still running older applications.
+	
+In contrast, if you upgrade to new functionalities in Excel that an old operating system doesn't support, like a 5G internet of things upgrade, you would need a Hard Fork. A Hard Fork introduces changes that are not backward compatible and requires an upgrade of the system to implement those features. 
+	
+This is similar to the Hard Fork done on the Ethereum Blockchain to bypass the rigid rules and properties of the original blockchain.
+	
+**Soft Fork**
+- Minor changes of the system
+- Backward compatible
+- Nodes dont need to upgrade to form consensus
+	
+**Hard Fork**
+- Major software changes
+- Not backward compatible
+- Nodes need to follow new rules of consensus
+	
+- **Implementing Concepts through Code**:
+	
+```Rust
+```
+	
+#### Lessons
+	
+- Not all contracts are smart; their effectiveness depends on their implementation.
+- Once deployed, a contract cannot be easily fixed.
+- If faulty, a contract can compromise the immutability of the blockchain.
+	
 	
 ---
 ## § Private Blockchains
-
+	
+Blockchain exists in two forms, and the use case is crucial:
+	
+- **Public**: We don't trust the nodes, so we need a public group to validate operations for security.
+- **Private**: We can limit the blockchain to specific sectors to optimize certain fields.
+	
+#### Special Use Case
+	
+Using blockchain properties to solidify data in a secure way, for example in banking contracts between parties. With the encryption of contracts on a blockchain system, access to data is granted only to the interested parties and regulators. This ensures a secure, efficient, immutable, and indisputable system. Additionally, smart contract application protocols can streamline and disrupt back-office paperwork, leading to significant cost savings.
+	
+- **Implementing Concepts through Code**:
+	
+```Rust
+```
 	
 	
 ---
-## § The Blockchain Vision
+## § The Blockchain Vision Proprieties
 	
 - **Secure, efficient, immutable, and indisputable transactions**
     - Transactions are secure, efficient, and cannot be altered or disputed once confirmed.

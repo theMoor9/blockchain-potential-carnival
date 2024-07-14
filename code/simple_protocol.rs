@@ -1,3 +1,10 @@
+/*
+!!! This is AI Generated !!!
+i will, as soon as i am done with learning the blockchain business model,
+review and refactor this code adding an explicative and challenging improvement to
+code with comments and features. As a strong developer should do!
+*/
+
 use std::collections::HashMap;
 use std::time::{SystemTime, UNIX_EPOCH};
 use sha2::{Sha256, Digest};

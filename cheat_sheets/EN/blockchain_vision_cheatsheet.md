@@ -1,13 +1,13 @@
 # **Blockchain Cheat Sheet - The Vision**
 ---
 ##### **Table of Contents**
-###### [§ Bitcoin](#-Bitcoin)
+###### [§ Bitcoin](#-Bitcoin-1)
 - Hashing
 - Mining in Proof of Work
-###### [§ Ethereum](#-Ethereum)
+###### [§ Ethereum](#-Ethereum-and-New-Gen-Blockchains-1)
 - Smart Contracts Concept
 - Decentralized Applications (dApps)
-###### [§ Storing](#-Storing)
+###### [§ Storing](#-Storing-1)
 - Account Types
 - Wallets
 ###### [§ Cryptocurrencies](#-Cryptocurrencies)
@@ -70,7 +70,7 @@ Bitcoin Blockchain Blocks, by design, are composed of 10 minutes of data each, a
 	
 	
 ---
-## § Ethereum and new gen Blockchains
+## § Ethereum and New Gen Blockchains
 	
 **Child and Enhancement of the Bitcoin Blockchain**
 	

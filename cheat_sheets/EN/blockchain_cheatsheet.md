@@ -1,31 +1,39 @@
 # **Blockchain Cheat Sheet - Technical Use**
 ---
-##### § Addresses
+##### **Table of Contents**
+###### [§ Addresses](#-Addresses-1)
 - Use Cases
 - The steps
-##### § Cryptotransactions
+###### [§ Cryptotransactions](#-Cryptotransactions-1)
 - Analogy
 - Mechanics of transactions
 - Validation of the Proposal
 - Cryptotransactions in Depth 
-##### § Scalability
+###### [§ Scalability](#-Scalability-1)
 
-##### § Machine to Machine
+###### [§ Machine to Machine](#-Machine-to-Machine-1)
+
 ---
 ## § Addresses
-	
+	  
 #### Use Cases
 - Sign transaction with public key to Identify and Validation of data.
 - Anyone that possesses the public key can Identify and Validate data.
-	
-#### The steps
+	  
+#### The steps  
 1. Generating Key Pairs:
-	- Create ***Private Key*** :: `256 bit or 64 hexadecimal Chars`<br>Randomly.
-	- Derive ***Public Key Base*** :: `512 bits or 128 Hexadecimal Chars`<br>   We use the ***Private Key*** with the *Elliptic Curve Digital Signature Algorithm* <br>   ( Algorithm => x_coordinate-256bits + y_coordinate-256bits = 512 bits ***Public Key Base*** ).
+	- Create ***Private Key*** :: `256 bit or 64 hexadecimal Chars`  
+		Randomly.  
+	- Derive ***Public Key Base*** :: `512 bits or 128 Hexadecimal Chars`
+		We use the ***Private Key*** with the *Elliptic Curve Digital Signature Algorithm* 
+		( Algorithm => x_coordinate-256bits + y_coordinate-256bits = 512 bits ***Public Key Base*** ).
 1. Hashing ( Ethereum ):
-	- Hash ***Public Key*** :: `From 512 bits to 256 bits or 64 Hexadecimal Chars`<br>   Hash the ***Public Key Base*** with *Kekkak-256 *or *Sha-3*.
-3. Generating Public Address ( Ethereum ):
-	- Create ***Public Address*** :: `From 64 Hexadecimal Chars to 42 Hexadecimal Chars`<br>   Take last 40 Hexadecimal Chars (20 bytes) and prefix with 0x to 42 Hexadecimal Chars.<br>
+	- Hash ***Public Key*** :: `From 512 bits to 256 bits or 64 Hexadecimal Chars`
+		Hash the ***Public Key Base*** with *Kekkak-256 *or *Sha-3*.
+1. Generating Public Address ( Ethereum ):
+	- Create ***Public Address*** :: `From 64 Hexadecimal Chars to 42 Hexadecimal Chars`
+		Take last 40 Hexadecimal Chars (20 bytes) and prefix with 0x to 42 Hexadecimal Chars.
+		
 - **Implementing Concept through Code**:
 	
 ```Rust

@@ -1,15 +1,16 @@
 ## **Blockchain Cheat Sheet - Cryptography & Signatures**
 ---
-##### § Fundamentals
+##### **Table of Contents**
+###### [§ Fundamentals](#-Fundamentals-1)
 - Cryptoanalysis
 - Cryptography
 - Ciphers
-##### § Symmetric Cyphers
+###### [§ Symmetric Cyphers](#-Symmetric-Cyphers-1)
 - Monoalphabetic Symmetric Ciphers
 - Polyalphabetic Symmetric Ciphers
-##### § Symmetric Digital Signatures
+###### [§ Symmetric Digital Signatures](#-Symmetric-Digital-Signatures-1)
 - Diffie Hellman Key Exchanges
-##### § Asymmetric Digital Signatures
+###### [§ Asymmetric Digital Signatures](#-Asymmetric-Digital-Signatures-1)
 - RSA (Rivest Shamir Adleman)
 - ECC Operations (Elliptic Curve Cryptography)
 - ECDSA (Elliptic Curve Digital Signature Algorithm)

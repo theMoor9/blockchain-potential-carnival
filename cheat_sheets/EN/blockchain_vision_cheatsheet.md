@@ -4,27 +4,27 @@
 ###### [§ Bitcoin](#-Bitcoin-1)
 - Hashing
 - Mining in Proof of Work
-###### [§ Ethereum](#-Ethereum-and-New-Gen-Blockchains-1)
+###### [§ Ethereum and New Gen Blockchains](#-Ethereum-and-New-Gen-Blockchains)
 - Smart Contracts Concept
 - Decentralized Applications (dApps)
 ###### [§ Storing](#-Storing-1)
 - Account Types
 - Wallets
-###### [§ Cryptocurrencies](#-Cryptocurrencies)
+###### [§ Cryptocurrencies](#-Cryptocurrencies-1)
 - Tokens
-###### [§ Gas](#-Gas)
+###### [§ Gas](#-Gas-1)
 - The problem
 - Solution
 - Analogy
-###### [§ The DAO (-Decentralized Autonomous Organization )](#The-DAO-(-Decentralized-Autonomous-Organization-)) 
+###### [§ The DAO (-Decentralized Autonomous Organization )](#-The-DAO--Decentralized-Autonomous-Organization--1) 
 - An Issue Occurred
 - The damage and The Fortune
 - The Resolution
 - The Fork Mechanism
 - Lessons
-###### [§ Private Blockchains](#-Private-Blockchains)
+###### [§ Private Blockchains](#-Private-Blockchains-1)
 - Special Use Case
-###### [§ The Blockchain Vision Proprieties](#-The-Blockchain-Vision-Proprieties)
+###### [§ The Blockchain Vision Proprieties](#-The-Blockchain-Vision-Proprieties-1)
 - Cryptocurrency Risks
 ---
 ## § Bitcoin

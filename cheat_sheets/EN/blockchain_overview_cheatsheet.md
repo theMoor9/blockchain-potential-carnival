@@ -1,12 +1,13 @@
 # **Blockchain Cheat Sheet - Overview**
 ---
-##### § Fundamentals  
+##### **Table of Contents**
+###### [§ Fundamentals](#-Fundamentals-1)
 - Blockchain: A Peer-to-Peer Distributed Database - [[blockchain_vision_cheatsheet]]
 - Trust and Immutability
 - Unprecedented Security and Efficiency
 - Anti-Counterfeiting
 - Disruptive Potential
-##### § Blockchain Tech Bic Picture  
+###### [§ Blockchain Tech Bic Picture](#-Blockchain-Tech-Bic-Picture-1)  
 - Hashing Function - [[blockchain_hashing_cheatsheet]]
 - Private/Public Key System - [[blockchain_signatures_cheatsheet]]
 - Public Address
@@ -15,7 +16,7 @@
 - Cryptography - [[blockchain_signatures_cheatsheet]]
 - Consensus Mechanism PoW vs PoS
 - Incentives
-##### § Key Questions and Resolutions 08/2024
+###### [§ Key Questions and Resolutions 08/2024](#-Key-Questions-and-Resolutions-082024-1)
 ---
 ## § Fundamentals
 	

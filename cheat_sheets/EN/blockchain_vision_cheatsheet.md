@@ -1,29 +1,30 @@
 # **Blockchain Cheat Sheet - The Vision**
 ---
-##### § Bitcoin
+##### **Table of Contents**
+###### § [Bitcoin](#§ Bitcoin)
 - Hashing
 - Mining in Proof of Work
-##### § Ethereum
+###### [§ Ethereum](#§ Ethereum)
 - Smart Contracts Concept
 - Decentralized Applications (dApps)
-##### § Storing
+###### [§ Storing](#§ Storing)
 - Account Types
 - Wallets
-##### § Cryptocurrencies
+###### [§ Cryptocurrencies](#§ Cryptocurrencies)
 - Tokens
-##### § Gas
+###### [§ Gas](#§ Gas)
 - The problem
 - Solution
 - Analogy
-##### § The DAO ( Decentralized Autonomous Organization ) 
+###### [§ The DAO ( Decentralized Autonomous Organization )](#§ The DAO ( Decentralized Autonomous Organization )) 
 - An Issue Occurred
 - The damage and The Fortune
 - The Resolution
 - The Fork Mechanism
 - Lessons
-##### § Private Blockchains
+###### [§ Private Blockchains](#§ Private Blockchains)
 - Special Use Case
-##### § The Blockchain Vision Proprieties
+###### [§ The Blockchain Vision Proprieties](#§ The Blockchain Vision Proprieties)
 - Cryptocurrency Risks
 ---
 ## § Bitcoin
@@ -54,6 +55,7 @@ Bitcoin Blockchain Blocks, by design, are composed of 10 minutes of data each, a
 	
 ```Rust
 ```
+	
 	
 #### Mining in Proof of Work
 - **Purpose**: Ensure the immutability of the blockchain.

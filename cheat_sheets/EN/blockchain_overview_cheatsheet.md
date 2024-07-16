@@ -1,4 +1,4 @@
-# **Blockchain Cheatsheet - Overview**
+# **Blockchain Cheat Sheet - Overview**
 ---
 ##### § Fundamentals
 - Blockchain: A Peer-to-Peer Distributed Database - [[blockchain_vision_cheatsheet]]
@@ -197,6 +197,10 @@
 ---
 	
 ***Blockchain technology enables people in emerging markets to monetize products in unprecedented ways, driving significant growth by accessing modern finance and breaking previous constraints. This surge in human capital benefits both emerging and developed markets, leading to unexpected and impactful advancements.***
+	
+---
+###### Suggested Follow Up
+[[blockchain_hashing_cheatsheet]]
 	
 ---
 	

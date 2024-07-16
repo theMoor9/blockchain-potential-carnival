@@ -1,5 +1,4 @@
-
-# **Blockchain Cheatsheet - The Vision**
+# **Blockchain Cheat Sheet - The Vision**
 ---
 ##### § Bitcoin
 - Hashing
@@ -322,6 +321,10 @@ Using blockchain properties to solidify data in a secure way, for example in ban
 ```Rust
 ```
 	
+	
+---
+###### Suggested Follow Up
+[[blockchain_cheatsheet]]
 	
 ---
 	

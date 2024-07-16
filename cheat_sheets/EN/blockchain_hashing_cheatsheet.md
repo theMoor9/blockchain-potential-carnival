@@ -1,4 +1,4 @@
-# **Blockchain Cheatsheet - Hashing**
+# **Blockchain Cheat Sheet - Hashing**
 ---
 ##### § Fundamentals
 - Key Characteristics of Good Cryptographic Hashing
@@ -119,6 +119,10 @@ Is useful to check if some data has been corrupted or modified in a defined peri
 ```Rust
 ```
 	
+	
+---
+###### Suggested Follow Up
+[[blockchain_signatures_cheatsheet]]
 	
 ---
 	

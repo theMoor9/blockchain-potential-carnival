@@ -1,4 +1,4 @@
-## **Blockchain Cheatsheet - Cryptography & Signatures**
+## **Blockchain Cheat Sheet - Cryptography & Signatures**
 ---
 ##### § Fundamentals
 - Cryptoanalysis
@@ -198,6 +198,10 @@ Notice:
 This elegantly proves that the person with the private key generated the data  
 And the signature is always diffrent based on the entity of the data
 	
+	
+---
+###### Suggested Follow Up
+[[blockchain_vision_cheatsheet]]
 	
 ---
 	

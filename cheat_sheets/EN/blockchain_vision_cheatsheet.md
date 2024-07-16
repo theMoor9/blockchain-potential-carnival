@@ -1,7 +1,7 @@
 # **Blockchain Cheat Sheet - The Vision**
 ---
 ##### **Table of Contents**
-###### [§ Bitcoin](#-Bitcoin)
+###### [§ Bitcoin](#§-Bitcoin)
 - Hashing
 - Mining in Proof of Work
 ###### [§ Ethereum](#Ethereum)

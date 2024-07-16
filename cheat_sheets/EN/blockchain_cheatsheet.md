@@ -1,5 +1,4 @@
 # **Blockchain Cheat Sheet - Technical Use**
----
 ##### § Addresses
 - Use Cases
 - The steps
@@ -11,6 +10,7 @@
 ##### § Scalability
 
 ##### § Machine to Machine
+---
 ---
 ## § Addresses<br>
 #### Use Cases
@@ -28,6 +28,7 @@
 ```Rust
 ```
 <br><br>
+
 ---
 ## § Cryptotransactions<br>
 #### Analogy<br>
@@ -53,7 +54,7 @@ Suppose that the parties **A**, **B**, and **C** each have a _lockbox_ which con
 - **Implementing Concept through Code**:<br>
 ```Rust
 ```
-<br>
+<br><br>
 #### Validation of the Proposal<br>
 **B then Sends -> to C** 
 - We need to check before imprinting the transaction in the Blockchain that B has effectively the content necessary to be sent again:<br>
@@ -61,7 +62,7 @@ Suppose that the parties **A**, **B**, and **C** each have a _lockbox_ which con
 - **Implementing Concept through Code**:<br>
 ```Rust
 ```
-<br>
+<br><br>
 #### Bitcoin Cryptotransactions in Depth <br>
 **Bitcoin vs Ethereum**
 - Bitcoin: We need to think Every transaction as a container of an unique unspent cryptocurrency which is not mixed with the others.
@@ -69,7 +70,7 @@ Suppose that the parties **A**, **B**, and **C** each have a _lockbox_ which con
 - **Implementing Concept through Code**:<br>
 ```Rust
 ```
-<br>
+<br><br>
 **Transaction management**
 Cryptocurrency as it is linked to transaction containers 
 that we will name *X*-Trsct-C*n* (*X* = ID, Trsct = Transaction , C*n* = Container Number) 
@@ -95,7 +96,7 @@ then need to be accessed manipulating the container to handle it.<br>
 - **Implementing Concept through Code**:<br>
 ```Rust
 ```
-<br>
+<br><br>
 **Proof of Work Validation**
 	
 

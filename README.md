@@ -1,4 +1,4 @@
-# Welcome to my Blockchain CheatRepo!
+# Welcome to Kenneth's Blockchain CheatRepo!
 
 This repository contains a comprehensive collection of knowledge for learning blockchain through easy-to-reference cheat sheets. 
 It is designed to help Rust users approach blockchain technology through an implementation of knowledge in Rust code. 

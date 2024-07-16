@@ -4,7 +4,7 @@
 ###### [§ Bitcoin](#§-Bitcoin)
 - Hashing
 - Mining in Proof of Work
-###### [§ Ethereum](#Ethereum)
+###### [§ Ethereum](#-Ethereum)
 - Smart Contracts Concept
 - Decentralized Applications (dApps)
 ###### [§ Storing](#Storing)
@@ -115,7 +115,7 @@ As previously mentioned, Ethereum and other new generation blockchains provide t
 	
 	
 ---
-## § Storing
+## Storing
 	
 #### Account Types
 	

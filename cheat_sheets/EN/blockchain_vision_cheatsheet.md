@@ -1,30 +1,30 @@
 # **Blockchain Cheat Sheet - The Vision**
 ---
 ##### **Table of Contents**
-###### § [Bitcoin](#§ Bitcoin)
+###### [§ Bitcoin](#Bitcoin)
 - Hashing
 - Mining in Proof of Work
-###### [§ Ethereum](#§ Ethereum)
+###### [§ Ethereum](#Ethereum)
 - Smart Contracts Concept
 - Decentralized Applications (dApps)
-###### [§ Storing](#§ Storing)
+###### [§ Storing](#Storing)
 - Account Types
 - Wallets
-###### [§ Cryptocurrencies](#§ Cryptocurrencies)
+###### [§ Cryptocurrencies](#Cryptocurrencies)
 - Tokens
-###### [§ Gas](#§ Gas)
+###### [§ Gas](#Gas)
 - The problem
 - Solution
 - Analogy
-###### [§ The DAO ( Decentralized Autonomous Organization )](#§ The DAO ( Decentralized Autonomous Organization )) 
+###### [§ The DAO ( Decentralized Autonomous Organization )](#The-DAO-(-Decentralized-Autonomous-Organization-)) 
 - An Issue Occurred
 - The damage and The Fortune
 - The Resolution
 - The Fork Mechanism
 - Lessons
-###### [§ Private Blockchains](#§ Private Blockchains)
+###### [§ Private Blockchains](#Private-Blockchains)
 - Special Use Case
-###### [§ The Blockchain Vision Proprieties](#§ The Blockchain Vision Proprieties)
+###### [§ The Blockchain Vision Proprieties](#The-Blockchain-Vision-Proprieties)
 - Cryptocurrency Risks
 ---
 ## § Bitcoin

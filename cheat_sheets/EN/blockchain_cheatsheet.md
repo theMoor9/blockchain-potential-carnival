@@ -23,8 +23,9 @@
 	- Create ***Private Key*** :: `256 bit or 64 hexadecimal Chars`
 		Randomly.
 	- Derive ***Public Key Base*** :: `512 bits or 128 Hexadecimal Chars`
-		With the *Elliptic Curve Digital Signature Algorithm* ( x_coordinate-256bits + y_coordinate-256bits ).
-2. Hashing ( Ethereum ):
+		We use the ***Private Key*** with the *Elliptic Curve Digital Signature Algorithm* 
+		( Algorithm => x_coordinate-256bits + y_coordinate-256bits = 512 bits ***Public Key Base*** ).
+1. Hashing ( Ethereum ):
 	- Hash ***Public Key*** :: `From 512 bits to 256 bits or 64 Hexadecimal Chars`
 		Hash the ***Public Key Base*** with *Kekkak-256 *or *Sha-3*.
 3. Generating Public Address ( Ethereum ):

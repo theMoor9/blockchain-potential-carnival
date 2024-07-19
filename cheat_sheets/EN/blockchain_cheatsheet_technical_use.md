@@ -3,10 +3,10 @@
 ##### **Table of Contents**
 ###### [§ Addresses](#-Addresses-1)
 - Use Cases
-- The steps
+- The Steps
 ###### [§ Cryptotransactions](#-Cryptotransactions-1)
 - Analogy
-- Mechanics of transactions
+- Mechanics of Transactions
 - Validation of the Proposal
 - Cryptotransactions in Depth 
 ###### [§ Scalability](#-Scalability-1)
@@ -20,7 +20,7 @@
 - Sign transaction with public key to Identify and Validation of data.
 - Anyone that possesses the public key can Identify and Validate data.
   
-### The steps  
+### The Steps  
 1. Generating Key Pairs:
 	- Create ***Private Key*** :: `256 bit or 64 hexadecimal Chars`  
 		Randomly.  
@@ -54,7 +54,7 @@ Suppose that the parties **A**, **B**, and **C** each have a _lockbox_ which con
 ```
   
   
-### Mechanics of transactions
+### Mechanics of Transactions
   
 **A Sends -> to B Data or Cryptocurrency**
 1. **B** Creates ***Public Address*** and ***Public Key*** from ***Private Key***:  
@@ -100,7 +100,7 @@ Suppose that the parties **A**, **B**, and **C** each have a _lockbox_ which con
 ```
   
   
-#### Transaction management
+#### Transaction Management
 Cryptocurrency as it is linked to transaction containers  
 that we will name *X*-Trsct-C*n* (*X* = ID, Trsct = Transaction , C*n* = Container Number)  
 then need to be accessed manipulating the container to handle it.  
@@ -175,17 +175,23 @@ In the context of blockchain, miners create blocks with a specific structure. A 
 
 ###### Suggested Follow Up
 [Blockchain Cheat Sheet - Hashing - Procedure](./blockchain_hashing_cheatsheet)
-  
+
 ---
 ## § Scalability
 
-## § Machine to Machine
+#### Layers
+- **Layer 0** : Internet as we know it.
+- **Layer 1** : Blockchain Layer 1 transactions are slow more than the traditional methos up to 10 minutes for a settlement.
+- **Layer 2** : Wallet for small transactions faster.
 
+#### Layer 2 Lightning Network
+
+**Description**: The Lightning Network is an off-chain solution that functions as a payment channel, built on a network structure that connects users. It enables transactions to be processed without recording every transaction on the Bitcoin blockchain.
+
+**What it Solves**: It significantly increases transaction speed by using a double signature system as an agreement of exchange.
+
+**How it Works**: Whenever customers need to make a payment, both parties send a transaction as described in the [Transaction Management](#Transaction-Management) section. The sender sets the amount due, and the receiver sets a transaction with a near-zero value. The payment request travels through the network, seeking the shortest path of connected channels to reach the recipient. Each channel holds a balance that can be transferred between the parties involved, and only the opening and closing of channels are recorded on the blockchain.  
   
-  
----
-###### Suggested Follow Up
-[[]]
   
 ---
   

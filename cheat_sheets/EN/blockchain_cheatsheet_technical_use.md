@@ -50,7 +50,6 @@ Suppose that the parties **A**, **B**, and **C** each have a _lockbox_ which con
 - **Implementing Concept through Code**:
   
 ```Rust
-
 ```
   
   
@@ -172,7 +171,13 @@ In the context of blockchain, miners create blocks with a specific structure. A 
 > - The timestamp (which can vary not only by location but also by the number of attempts to find the nonce).
 > - The nonce itself.
 > - Additionally, the order in which the data is grouped can vary between miners.
-
+	
+- **Implementing Concepts through Code**:
+	
+```Rust
+```
+	
+	
 ###### Suggested Follow-up
 [Blockchain Cheat Sheet - Hashing - Procedure](./blockchain_hashing_cheatsheet)
 
@@ -191,7 +196,13 @@ In the context of blockchain, miners create blocks with a specific structure. A 
 **What it Solves**: It significantly increases transaction speed by using a double signature system as an agreement of exchange.
 
 **How it Works**: Whenever customers need to make a payment, both parties send a transaction as described in the [Transaction Management](#Transaction-Management) section. The sender sets the amount due, and the receiver sets a transaction with a near-zero value. The payment request travels through the network, seeking the shortest path of connected channels to reach the recipient. Each channel holds a balance that can be transferred between the parties involved, and only the opening and closing of channels are recorded on the blockchain.  
-  
+	  	
+- **Implementing Concepts through Code**:
+	
+```Rust
+```
+	
+	
   
 ---
   

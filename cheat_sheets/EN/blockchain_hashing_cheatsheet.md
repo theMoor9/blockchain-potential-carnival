@@ -2,11 +2,14 @@
 ---
 ##### **Table of Contents**
 ###### [§ Fundamentals](#-Fundamentals-1)
-- Key Characteristics of Good Cryptographic Hashing
-- Salting
-- Miners
+- [Key Characteristics of Good Cryptographic Hashing](#Key-Characteristics-of-Good-Cryptographic-Hashing)
+- [Salting](#Salting)
+- [Miners](#Miners)
 ###### [§ Hashing Math](#-Hashing-Math-1)
+- [Overview](#Overview)
+- [Procedure](#Procedure)
 ###### [§ Applications](#-Applications-1)
+	  
 ---
 ## § Fundamentals
 	
@@ -146,7 +149,7 @@ Is useful to check if some data has been corrupted or modified in a defined peri
 	
 	
 ---
-###### Suggested Follow Up
+###### Suggested Follow-up
 [**Blockchain Cheat Sheet - Cryptography & Signatures**](./blockchain_signatures_cheatsheet)
 	
 ---

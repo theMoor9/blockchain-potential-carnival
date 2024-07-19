@@ -2,30 +2,31 @@
 ---
 ##### **Table of Contents**
 ###### [§ Bitcoin](#-Bitcoin-1)
-- Hashing
-- Mining in Proof of Work
+- [Hashing](#Hashing)
+- [Mining in Proof of Work](#Mining-in-Proof-of-Work)
 ###### [§ Ethereum and New Gen Blockchains](#-Ethereum-and-New-Gen-Blockchains)
-- Smart Contracts Concept
-- Decentralized Applications (dApps)
+- [Smart Contracts Concept](#Smart-Contracts-Concept)
+- [Decentralized Applications (dApps)](#Decentralized-Applications-dApps)
 ###### [§ Storing](#-Storing-1)
-- Account Types
-- Wallets
+- [Account Types](#Account-Types)
+- [Wallets](#Wallets)
 ###### [§ Cryptocurrencies](#-Cryptocurrencies-1)
-- Tokens
+- [Tokens](#Tokens)
 ###### [§ Gas](#-Gas-1)
-- The problem
-- Solution
-- Analogy
+- [The problem](#The-problem)
+- [Solution](#Solution)
+- [Analogy](#Analogy)
 ###### [§ The DAO (-Decentralized Autonomous Organization )](#-The-DAO--Decentralized-Autonomous-Organization--1) 
-- An Issue Occurred
-- The damage and The Fortune
-- The Resolution
-- The Fork Mechanism
-- Lessons
+- [An Issue Occurred](#An-Issue-Has-Occurred)
+- [The damage and The Fortune](#The-damage-and-The-Fortune)
+- [The Resolution](The-Resolution)
+- [The Fork Mechanism](#The-Fork-Mechanism)
+- [Lessons](Lessons)
 ###### [§ Private Blockchains](#-Private-Blockchains-1)
-- Special Use Case
+- [Special Use Case](#Special-Use-Case)
 ###### [§ The Blockchain Vision Proprieties](#-The-Blockchain-Vision-Proprieties-1)
-- Cryptocurrency Risks
+- [Cryptocurrency Risks](#Cryptocurrency-Risks)
+	
 ---
 ## § Bitcoin
 	
@@ -217,7 +218,7 @@ A DAO (Decentralized Autonomous Organization) is an organization built through s
 ```Rust
 ```
 	
-### An Issue Occurred
+### An Issue Has Occurred
 A bug was found that allowed limitless withdrawals without proper accounting, draining the reserves. This was a major issue.
 	
 ### The Damage and The Furtune
@@ -325,7 +326,7 @@ Using blockchain properties to solidify data in a secure way, for example in ban
 	
 	
 ---
-###### Suggested Follow Up
+###### Suggested Follow-up
 [**Blockchain Cheat Sheet - Cryptography & Signatures**](./blockchain_signatures_cheatsheet)
 	
 ---

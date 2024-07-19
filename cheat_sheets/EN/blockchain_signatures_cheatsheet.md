@@ -2,18 +2,19 @@
 ---
 ##### **Table of Contents**
 ###### [§ Fundamentals](#-Fundamentals-1)
-- Cryptoanalysis
-- Cryptography
-- Ciphers
+- [Cryptoanalysis](#Cryptoanalysis)
+- [Cryptography](#Cryptography)
+- [Ciphers](#Ciphers)
 ###### [§ Symmetric Cyphers](#-Symmetric-Cyphers-1)
-- Monoalphabetic Symmetric Ciphers
-- Polyalphabetic Symmetric Ciphers
+- [Monoalphabetic Symmetric Ciphers](#Monoalphabetic-Symmetric-Ciphers)
+- [Polyalphabetic Symmetric Ciphers](#Polyalphabetic-Symmetric-Ciphers)
 ###### [§ Symmetric Digital Signatures](#-Symmetric-Digital-Signatures-1)
-- Diffie Hellman Key Exchanges
+- [Diffie Hellman Key Exchanges](#Diffie-Hellman-Key-Exchanges)
 ###### [§ Asymmetric Digital Signatures](#-Asymmetric-Digital-Signatures-1)
-- RSA (Rivest Shamir Adleman)
-- ECC Operations (Elliptic Curve Cryptography)
-- ECDSA (Elliptic Curve Digital Signature Algorithm)
+- [RSA (Rivest Shamir Adleman)](#rsa-Rivest-Shamir-Adleman)
+- [ECC Operations (Elliptic Curve Cryptography)](#ecc-Operations-Elliptic-Curve-Cryptography)
+- [ECDSA (Elliptic Curve Digital Signature Algorithm)](#ecdsa-elliptic-curvedigital-signature-algorithm)
+	
 ---
 ## § Fundamentals
 	
@@ -200,7 +201,7 @@ Verification of the signatures : We use the data, the coordinates as signatures 
 	
 	
 ---
-###### Suggested Follow Up
+###### Suggested Follow-up
 [**Blockchain Cheat Sheet - Technical Use**](blockchain_cheatsheet_technical_use.md)
 	
 ---

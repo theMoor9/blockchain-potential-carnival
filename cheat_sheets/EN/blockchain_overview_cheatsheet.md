@@ -2,21 +2,22 @@
 ---
 ##### **Table of Contents**
 ###### [§ Fundamentals](#-Fundamentals-1)
-- Blockchain: A Peer-to-Peer Distributed Database 
-- Trust and Immutability
-- Unprecedented Security and Efficiency
-- Anti-Counterfeiting
-- Disruptive Potential
+- [Blockchain: A Peer-to-Peer Distributed Database](#Blockchain-A-Peer-to-Peer-Distributed-Database)
+- [Trust and Immutability](#Trust-and-Immutability)
+- [Unprecedented Security and Efficiency](#Unprecedented-Security-and-Efficiency)
+- [Anti-Counterfeiting](#Anti-Counterfeiting)
+- [Disruptive Potential](#Disruptive-Potential)
 ###### [§ Blockchain Tech Bic Picture](#-Blockchain-Tech-Bic-Picture-1)  
-- Hashing Function
-- Private/Public Key System - In Depth: [blockchain_signatures_cheatsheet](./blockchain_signatures_cheatsheet)
-- Public Address
-- Digital Signature Algorithms (DSA) - In Depth: [blockchain_signatures_cheatsheet](./blockchain_signatures_cheatsheet)
-- Transaction Mechanics
-- Cryptography - In Depth: [blockchain_signatures_cheatsheet](./blockchain_signatures_cheatsheet)
-- Consensus Mechanism PoW vs PoS 
-- Incentives
+- [Hashing Function](#Hashing-Function)
+- [Private/Public Key System](#PrivatePublic-Key-System) | [In-Depth Information](./blockchain_signatures_cheatsheet)
+- [Public-Address](#Public-Address)
+- [Digital Signature Algorithms (DSA)](#Digital-Signature-Algorithms-DSA) | [In-Depth Information](./blockchain_signatures_cheatsheet)
+- [Transaction Mechanics](#Transaction-Mechanics)
+- [Cryptography](#Cryptography) | [In-Depth Information](./blockchain_signatures_cheatsheet)
+- [Consensus Mechanism PoW vs PoS](#Consensus-Mechanism-PoW-vs-PoS) | [In-Depth Information](/.blockchain_consensus_cheatsheet)
+- [Incentives](#Incentives)
 ###### [§ Key Questions and Resolutions 08/2024](#-Key-Questions-and-Resolutions-082024-1)
+	
 ---
 ## § Fundamentals
 	
@@ -212,7 +213,7 @@
 ***Blockchain technology enables people in emerging markets to monetize products in unprecedented ways, driving significant growth by accessing modern finance and breaking previous constraints. This surge in human capital benefits both emerging and developed markets, leading to unexpected and impactful advancements.***
 	
 ---
-###### Suggested Follow Up
+###### Suggested Follow-up
 [**Blockchain Cheat Sheet - The Vision**](./blockchain_vision_cheatsheet)
 	
 ---

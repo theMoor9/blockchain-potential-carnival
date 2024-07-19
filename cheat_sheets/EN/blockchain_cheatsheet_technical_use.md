@@ -2,17 +2,17 @@
 ---
 ##### **Table of Contents**
 ###### [§ Addresses](#-Addresses-1)
-- Use Cases
-- The Steps
+- [Use Cases](#Use-Cases)
+- [The Steps](#The-Steps)
 ###### [§ Cryptotransactions](#-Cryptotransactions-1)
-- Analogy
-- Mechanics of Transactions
-- Validation of the Proposal
-- Cryptotransactions in Depth 
+- [Analogy](#Analogy)
+- [Mechanics of Transactions](#Mechanics-of-Transactions)
+- [Validation of the Proposal](#Validation-of-the-Proposal)
+- [Cryptotransactions in Depth](#Cryptotransactions-in-Depth)
 ###### [§ Scalability](#-Scalability-1)
-
-###### [§ Machine to Machine](#-Machine-to-Machine-1)
-
+- [Layers](#Layers)
+- [Layer 2 Lightning Network](#Layer-2-Lightning-Network)
+	  
 ---
 ## § Addresses
   
@@ -173,7 +173,7 @@ In the context of blockchain, miners create blocks with a specific structure. A 
 > - The nonce itself.
 > - Additionally, the order in which the data is grouped can vary between miners.
 
-###### Suggested Follow Up
+###### Suggested Follow-up
 [Blockchain Cheat Sheet - Hashing - Procedure](./blockchain_hashing_cheatsheet)
 
 ---

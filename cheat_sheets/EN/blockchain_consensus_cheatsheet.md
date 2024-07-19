@@ -4,7 +4,7 @@
 ---
   
 ---
-###### Suggested Follow Up
+###### Suggested Follow-up
 [Blockchain Cheat Sheet - ](/.)
   
 ---

@@ -29,18 +29,18 @@
 ---
 ## § Bitcoin
 	
-#### Overview
-A Peer-to-Peer Distributed Database as a public ledger that proves ownership
-No Trust Needed Features of the blocks and ownership are registered in the immutable history of the chain (ledgers).
-Security and Efficiency backed by strong cryptography and the most powerful network of computers
-Miners providing security by rewarding system
+### Overview
+A Peer-to-Peer Distributed Database as a public ledger that proves ownership  
+No Trust Needed Features of the blocks and ownership are registered in the immutable history of the chain (ledgers).  
+Security and Efficiency backed by strong cryptography and the most powerful network of computers  
+Miners providing security by rewarding system  
 	
 - **Implementing Concepts through Code**:
 	
 ```Rust
 ```
 	
-#### Hashing
+### Hashing
 	
 Bitcoin Blockchain Blocks, by design, are composed of 10 minutes of data each, a practice established since 2009.
 	
@@ -57,12 +57,12 @@ Bitcoin Blockchain Blocks, by design, are composed of 10 minutes of data each, a
 ```
 	
 	
-#### Mining in Proof of Work
+### Mining in Proof of Work
 - **Purpose**: Ensure the immutability of the blockchain.
 - **How it is done**: *Nonces* (Numbers Only Used Once) are added to the end of each block's hash to find a hash that has a certain number of leading zeros, thereby validating the block.
 - **Why**: The system requires proof that computational work has been done. Finding a hash with a certain number of leading zeros is difficult and requires many attempts, demonstrating that work has been performed.
 - **Security**: This process makes it difficult for anyone to alter the data without redoing all the computational work, thus enhancing the security of the blockchain. 
-	
+
 - **Implementing Concepts through Code**:
 	
 ```Rust
@@ -82,7 +82,7 @@ Today, Ethereum it stands as one of the most, if not the most, important technol
 - **Finney**: Multiplier 10<sup>15</sup>
 - **Ether**: Multiplier 10<sup>18</sup>
 	
-#### Smart Contracts Concept
+### Smart Contracts Concept
 	
 - **Programmatically enforced state updates**
     - Can add any functionality you want.
@@ -95,7 +95,7 @@ Today, Ethereum it stands as one of the most, if not the most, important technol
     
 - **Base layer for the Internet of Value**
 	
-#### Decentralized Applications (dApps)
+### Decentralized Applications (dApps)
 	
 As previously mentioned, Ethereum and other new generation blockchains provide the opportunity to develop Decentralized Applications (dApps). These applications use a series of technologies such as smart contracts for app logic, IPFS or Swarm for data storage, Ethereum Name Services (**ENS**) for decentralized domain naming, and Whisper for decentralized messaging between apps.
 	
@@ -117,7 +117,7 @@ As previously mentioned, Ethereum and other new generation blockchains provide t
 ---
 ## § Storing
 	
-#### Account Types
+### Account Types
 	
 **External Owned Accounts (EOA)**
 - Human managed account
@@ -128,7 +128,7 @@ As previously mentioned, Ethereum and other new generation blockchains provide t
 - Can hold and transfer BTC, ETH or other Tokens
 - Unchangeable outside of what is coded
 	
-#### Wallets
+### Wallets
 	
 **Definition**: A tool composed of one or more accounts used to store and transfer BTC, ETH or other tokens.
 	
@@ -151,7 +151,7 @@ As previously mentioned, Ethereum and other new generation blockchains provide t
 	
 - **Ethereum (ETH)**: Revolutionizes the industry by allowing small applications to run on the blockchain system. Other projects in this category include **Tezos (XTZ)**, **EOS**, and **DFinity**.
 	
-#### Tokens
+### Tokens
 	
 *Unlike coins, which have their own dedicated blockchains, tokens exist on and are dependent on the specific blockchain they are created on.*
 	
@@ -189,15 +189,15 @@ These, for the most enterprising minds, are likely to be the ultimate substitute
 ---
 ## § Gas
 	
-#### The Problem
+### The Problem
 	
 Having applications developed on-chain could result in faulty algorithms, which could end up consuming and wasting the computing power of the blockchain node system.
 	
-#### The Solution
+### The Solution
 	
 Introducing a "gas" fee allows applications and smart contracts to be used. This is equivalent to the transaction fee in Bitcoin blockchains, rewarding miners for managing the computational power of the applications to a certain extent, determined by the amount of gas.
 	
-#### Analogy
+### Analogy
 	
 Having a car with a faulty throttle pedal could be dangerous with infinite gas. This is the idea implemented in the blockchain: it limits application use by the amount of gas fee you are willing to spend.
 	
@@ -217,16 +217,16 @@ A DAO (Decentralized Autonomous Organization) is an organization built through s
 ```Rust
 ```
 	
-#### An Issue Occurred
+### An Issue Occurred
 A bug was found that allowed limitless withdrawals without proper accounting, draining the reserves. This was a major issue.
 	
-#### The Damage and The Furtune
+### The Damage and The Furtune
 DAO smart contracts were hacked in two attempts, one withdrawing 30% and the other 70% of the project's value simultaneously. Fortunately, the smart contract was coded with a 28-day settlement period.
 	
-#### The Resolution
+### The Resolution
 The community had choose together to hard fork the blockchain rewriting his history to prevent this mishap, returning the tokens in the form of ETC (Ethereum Classic) to the original owners.
 	
-#### The Fork Mechanism
+### The Fork Mechanism
 Much like a new version of an operating system can handle an old version of Excel, a Soft Fork is a type of upgrade that introduces new rules which are backward compatible. This is similar to how Microsoft Windows can update to support new features while still running older applications.
 	
 In contrast, if you upgrade to new functionalities in Excel that an old operating system doesn't support, like a 5G internet of things upgrade, you would need a Hard Fork. A Hard Fork introduces changes that are not backward compatible and requires an upgrade of the system to implement those features. 
@@ -248,7 +248,7 @@ This is similar to the Hard Fork done on the Ethereum Blockchain to bypass the r
 ```Rust
 ```
 	
-#### Lessons
+### Lessons
 	
 - Not all contracts are smart; their effectiveness depends on their implementation.
 - Once deployed, a contract cannot be easily fixed.
@@ -263,7 +263,7 @@ Blockchain exists in two forms, and the use case is crucial:
 - **Public**: We don't trust the nodes, so we need a public group to validate operations for security.
 - **Private**: We can limit the blockchain to specific sectors to optimize certain fields.
 	
-#### Special Use Case
+### Special Use Case
 	
 Using blockchain properties to solidify data in a secure way, for example in banking contracts between parties. With the encryption of contracts on a blockchain system, access to data is granted only to the interested parties and regulators. This ensures a secure, efficient, immutable, and indisputable system. Additionally, smart contract application protocols can streamline and disrupt back-office paperwork, leading to significant cost savings.
 	
@@ -300,7 +300,7 @@ Using blockchain properties to solidify data in a secure way, for example in ban
 ```
 	
 	
-#### Cryptocurrency Risks
+### Cryptocurrency Risks
 	
 - **Technology is complicated to understand**
     - The complexity of cryptocurrency technology can be a barrier to widespread adoption and understanding.
@@ -326,7 +326,7 @@ Using blockchain properties to solidify data in a secure way, for example in ban
 	
 ---
 ###### Suggested Follow Up
-[[blockchain_cheatsheet]]
+[**Blockchain Cheat Sheet - Cryptography & Signatures**](./blockchain_signatures_cheatsheet)
 	
 ---
 	

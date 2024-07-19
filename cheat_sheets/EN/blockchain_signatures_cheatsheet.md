@@ -15,17 +15,17 @@
 - ECC Operations (Elliptic Curve Cryptography)
 - ECDSA (Elliptic Curve Digital Signature Algorithm)
 ---
-### § Fundamentals
+## § Fundamentals
 	
-#### Cryptanalysis
+### Cryptoanalysis
 	
 - **Definition**: The art of decryption, which is the analysis and overcoming of cryptographic systems.
 	
-#### Cryptography
+### Cryptography
 	
 - **Definition**: The art of encryption, which is the practice of protecting information using ciphers.
 	
-#### Ciphers
+### Ciphers
 	
 - **Definition**: Rules used to encrypt data.
     - **Symmetric**: Uses the same key for encryption and decryption.
@@ -47,7 +47,7 @@
 ---
 ## § Symmetric Cyphers
 	
-#### Monoalphabetic Symmetric Ciphers
+### Monoalphabetic Symmetric Ciphers
 	
 - **Definition**: Use a single fixed substitution between plaintext and ciphertext.
 	
@@ -68,7 +68,7 @@ Example of Encryption
 ```Rust
 ```
 	
-#### Polyalphabetic Symmetric Ciphers
+### Polyalphabetic Symmetric Ciphers
 	
 Phrase to encrypt: "HELLO WORLD" Repeated key: "KEYKEYKEYKE"
 	
@@ -95,7 +95,7 @@ Symmetric key Exchange
 - **Key Management**: Key distribution can be challenging since the same key must be shared securely between parties.
 - **Use Case**: Commonly used in scenarios where both parties already share a secret key, like within closed systems.
 	
-#### Diffie Hellman Key Exchange
+### Diffie Hellman Key Exchange
 	
 **Definition**: Diffie-Hellman Key Exchange is a secret-sharing algorithm that returns the components needed for arithmetic operations to generate a shared secret key.
 	
@@ -134,7 +134,7 @@ Symmetric key Exchange
 ---
 ## § Asymmetric Digital Signatures
 	
-#### RSA (Rivest Shamir Adleman)
+### RSA (Rivest Shamir Adleman)
 	
 **Key Generation**:
 	
@@ -156,7 +156,7 @@ Brute-force attacks to find d would require factoring Max, which is computationa
 	
 - Factoring Max is possible by dividing it by prime numbers in search of the original pair.
 	
-#### ECC Operations (Elliptic Curve Cryptography)
+### ECC Operations (Elliptic Curve Cryptography)
 	
 **Comparisons**: 
 To reach the level of security of a 256-bit key with ECC, you would need a 3072-bit key with RSA. In real use cases, a government top secret level of security implies a 384-bit key with ECC, which would require a 7680-bit key with RSA.
@@ -165,7 +165,7 @@ To reach the level of security of a 256-bit key with ECC, you would need a 3072-
 	
 Y<sup>2</sup> = X<sup>3</sup> + ax + b 
 	
-![[elliptic-curve-250px.png]]
+![Elliptic Curve](./imgs/elliptic-curve-250px.png)
 	
 If you draw a straight line that originates from a point on the curve (A) in the positive Y plane to intercept another point on the same curve (B), the line will inevitably touch a third point (C).
 	
@@ -186,23 +186,22 @@ Repeating this last operation (scalar multiplication) N times, the number of sca
 	
 > BTC uses Y<sup>2</sup> = X<sup>3</sup> + 0 * x + 7  = **X<sup>3</sup> + 7**
 	
-#### ECDSA (Elliptic Curve Digital Signature Algorithm)
+### ECDSA (Elliptic Curve Digital Signature Algorithm)
 	
 Public key : we take a private key or in other words a Secret Signing key then we generate a liked public key though Elliptic Curve operations in mathematical way as coordinates ( x<sub>1</sub> , y<sub>1</sub> )
 	
-The signature : We use the data a Nonce(Random number) and the private key and we use the in ellipitc curve operation that will return a digital signatures in coordinates ( r , s ) which are public
+The signature : We use the data a Nonce(Random number) and the private key and we use the in elliptic curve operation that will return a digital signatures in coordinates ( r , s ) which are public
 	
 Verification of the signatures : We use the data, the coordinates as signatures and the public key we use them with elliptic curve operations  which gives us two new coordinates ( x<sub>2</sub> , y<sub>2</sub> ) then we do a modulus using x<sub>2</sub> as a base if we get x<sub>1</sub> the signature is verified.
 	
 	
-Notice:
-This elegantly proves that the person with the private key generated the data  
-And the signature is always diffrent based on the entity of the data
+>Notice: This elegantly proves that the person with the private key generated the data.
+>And the signature is always different based on the entity of the data.
 	
 	
 ---
 ###### Suggested Follow Up
-[[blockchain_vision_cheatsheet]]
+[**Blockchain Cheat Sheet - Technical Use**](blockchain_cheatsheet_technical_use.md)
 	
 ---
 	

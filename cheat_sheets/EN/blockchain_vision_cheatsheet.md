@@ -16,7 +16,7 @@
 - [The problem](#The-problem)
 - [Solution](#Solution)
 - [Analogy](#Analogy)
-###### [§ The DAO (-Decentralized Autonomous Organization )](#-The-DAO--Decentralized-Autonomous-Organization--1) 
+###### [§ The DAO ( Decentralized Autonomous Organization )](#-The-DAO--Decentralized-Autonomous-Organization--1) 
 - [An Issue Occurred](#An-Issue-Has-Occurred)
 - [The damage and The Fortune](#The-damage-and-The-Fortune)
 - [The Resolution](The-Resolution)

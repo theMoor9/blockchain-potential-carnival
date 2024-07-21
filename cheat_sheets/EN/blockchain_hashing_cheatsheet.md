@@ -14,12 +14,7 @@
 ## § Fundamentals
 	
 Hashing is not encryption because you cannot rebuild the original data from the hash as you can with encrypted files. 
-	
-- **Implementing Concept through Code**:
-	
-```Rust
-```
-	
+
 We should consider hashing like a fingerprint; it provides a secure genetic reference to the data but is not the data "in person".
 	
 - **Implementing Concept through Code**:

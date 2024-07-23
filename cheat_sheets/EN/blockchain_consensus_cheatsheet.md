@@ -5,7 +5,7 @@
   
 ---
 ###### Suggested Follow-up
-[Blockchain Cheat Sheet - ](/.)
+[Blockchain Cheat Sheet - ](./.md)
   
 ---
   

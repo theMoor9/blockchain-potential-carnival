@@ -214,7 +214,7 @@
 	
 ---
 ###### Suggested Follow-up
-[**Blockchain Cheat Sheet - The Vision**](./blockchain_vision_cheatsheet)
+[**Blockchain Cheat Sheet - The Vision**](./blockchain_vision_cheatsheet.md)
 	
 ---
 	

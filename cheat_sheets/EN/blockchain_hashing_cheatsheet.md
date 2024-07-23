@@ -145,7 +145,7 @@ Is useful to check if some data has been corrupted or modified in a defined peri
 	
 ---
 ###### Suggested Follow-up
-[**Blockchain Cheat Sheet - Cryptography & Signatures**](./blockchain_signatures_cheatsheet)
+[**Blockchain Cheat Sheet - Cryptography & Signatures**](./blockchain_signatures_cheatsheet.md)
 	
 ---
 	

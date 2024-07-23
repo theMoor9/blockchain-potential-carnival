@@ -327,7 +327,7 @@ Using blockchain properties to solidify data in a secure way, for example in ban
 	
 ---
 ###### Suggested Follow-up
-[**Blockchain Cheat Sheet - Cryptography & Signatures**](./blockchain_signatures_cheatsheet)
+[**Blockchain Cheat Sheet - Cryptography & Signatures**](./blockchain_signatures_cheatsheet.md)
 	
 ---
 	

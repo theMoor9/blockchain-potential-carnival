@@ -178,9 +178,6 @@ In the context of blockchain, miners create blocks with a specific structure. A 
 ```
 	
 	
-###### Suggested Follow-up
-[Blockchain Cheat Sheet - Hashing - Procedure](./blockchain_hashing_cheatsheet)
-
 ---
 ## § Scalability
 
@@ -203,7 +200,9 @@ In the context of blockchain, miners create blocks with a specific structure. A 
 ```
 	
 	
-  
 ---
+###### Suggested Follow-up
+[Blockchain Cheat Sheet - Hashing - Procedure](./blockchain_hashing_cheatsheet.md)
   
+--- 
 **Author**: Kenneth Boldrini

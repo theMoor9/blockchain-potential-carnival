@@ -202,7 +202,7 @@ In the context of blockchain, miners create blocks with a specific structure. A 
 	
 ---
 ###### Suggested Follow-up
-[Blockchain Cheat Sheet - Hashing - Procedure](./blockchain_hashing_cheatsheet.md)
-  
+[Blockchain Cheat Sheet - Consensus](./blockchain_consensus_cheatsheet.md)
+	  
 --- 
 **Author**: Kenneth Boldrini

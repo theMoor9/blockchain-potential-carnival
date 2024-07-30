@@ -14,7 +14,7 @@
 - [Digital Signature Algorithms (DSA)](#Digital-Signature-Algorithms-DSA) | [In-Depth Information](./blockchain_signatures_cheatsheet)
 - [Transaction Mechanics](#Transaction-Mechanics)
 - [Cryptography](#Cryptography) | [In-Depth Information](./blockchain_signatures_cheatsheet)
-- [Consensus Mechanism PoW vs PoS](#Consensus-Mechanism-PoW-vs-PoS) | [In-Depth Information](/.blockchain_consensus_cheatsheet)
+- [Consensus Mechanism PoW vs PoS](#Consensus-Mechanism-PoW-vs-PoS) | [In-Depth Information](./blockchain_consensus_cheatsheet)
 - [Incentives](#Incentives)
 ###### [§ Key Questions and Resolutions 08/2024](#-Key-Questions-and-Resolutions-082024-1)
 	

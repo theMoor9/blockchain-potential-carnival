@@ -10,7 +10,9 @@
 - [Strengths](#Strengths)
 - [Weaknesses](#Weaknesses)
 - [Current PoW Systems](#Current-PoW-Systems)
-###### [§ Profitability](#-Profitability-1)
+###### [§ Economics](#-Economics-1)
+- [Pools](#Pools)
+###### [§ Proof of Stake](#-Proof-of-Stake-1)
 
 ---
 ## § Overview
@@ -80,9 +82,24 @@ The consensus mechanism and its forms are designed to address these issues.
 	
 	
 ---
+## § Economics
+	
+For most individuals, it is nearly impossible to successfully mine a block on their own due to the prohibitive costs of specialized mining hardware and electricity, especially when compared to the potential rewards.
+	
+### Pools
+	
+The most feasible approach is to join a mining pool, which consolidates the processing power of multiple miners. These pools typically have access to cheaper energy sources and more efficient mining rigs. As a member, you would receive a portion of the rewards proportional to your contribution to the pool’s overall resources.
+	
+	
+---
+## § Proof of Stake (PoS)
+
+	
+	
+---
 ###### Suggested Follow-up
 [Blockchain Cheat Sheet - ](./.md)
-  
+	  
 ---
   
 **Author**: Kenneth Boldrini

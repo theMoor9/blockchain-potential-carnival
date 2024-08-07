@@ -16,7 +16,7 @@
 - [ECDSA (Elliptic Curve Digital Signature Algorithm)](#ecdsa-elliptic-curvedigital-signature-algorithm)
 	
 ---
-## § Fundamentals
+## **§ Fundamentals**
 	
 ### Cryptoanalysis
 	
@@ -39,14 +39,9 @@
     4. Hard to decode if intercepted
     5. Source of data should be validated
 	
-- **Implementing Concept through Code**:
-	
-```Rust
-```
-	
 	
 ---
-## § Symmetric Cyphers
+## **§ Symmetric Cyphers**
 	
 ### Monoalphabetic Symmetric Ciphers
 	
@@ -64,11 +59,6 @@ Example of Encryption
 | :---: | :---: | :---: | :---: | :---: |
 | **S** | **V** | **O** | **O** | **L** |
 	
-- **Implementing Concept through Code**:
-	
-```Rust
-```
-	
 ### Polyalphabetic Symmetric Ciphers
 	
 Phrase to encrypt: "HELLO WORLD" Repeated key: "KEYKEYKEYKE"
@@ -81,14 +71,9 @@ Phrase to encrypt: "HELLO WORLD" Repeated key: "KEYKEYKEYKE"
 | Sum mod 26        | 17  |  8  |  9  | 21  | 18  | 20  | 24  | 21  |  9  | 13  |
 | Encrypted         |  R  |  I  |  J  |  V  |  S  |  U  |  Y  |  V  |  J  |  N  |
 	
-- **Implementing Concept through Code**:
-
-```Rust
-```
-
 	
 ---
-## § Symmetric Digital Signatures
+## **§ Symmetric Digital Signatures**
 	
 Symmetric key Exchange
 - **Key Usage**: Uses a single key for both signing and verification.
@@ -123,17 +108,12 @@ Symmetric key Exchange
 		
     - The final remainder (**LR**) will be the same for both parties and will serve as the common encryption and decryption key.
 	
-- **Implementing Concept through Code**:
-	
-```Rust
-```
-	
 **Security**:
 - No attacker can decipher the shared secret key (**LR**) by only knowing **G**, **M**, and **R** without access to the private keys (**PrK**) of the parties involved.
 	
 	
 ---
-## § Asymmetric Digital Signatures
+## **§ Asymmetric Digital Signatures**
 	
 ### RSA (Rivest Shamir Adleman)
 	

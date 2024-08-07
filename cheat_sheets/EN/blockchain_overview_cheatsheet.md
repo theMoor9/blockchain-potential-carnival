@@ -19,7 +19,7 @@
 ###### [§ Key Questions and Resolutions 08/2024](#-Key-Questions-and-Resolutions-082024-1)
 	
 ---
-## § Fundamentals
+## **§ Fundamentals**
 	
 ### Blockchain: A Peer-to-Peer Distributed Database
 	
@@ -27,20 +27,10 @@
 - **Mechanism**: Each block is linked to the next through a cryptographic hash; the end of one block contains the key to the start of the next block.
 - **Purpose Aspect**: Every blockchain technology needs to suit the specific application it is intended for. Cryptocurrency is just one application that can use blockchain protocols.
 	
-- **Implementing Concept through Code**:
-	
-```Rust
-```
-  
 ### Trust and Immutability
 	
 - **No Trust Needed**: Features of the blocks and ownership are registered in the immutable history of the chain (ledgers).
 - **Consensus Control**: Consensus is always controlled by every block in the chain through Proof of Work or Proof of Stake.
-	
-- **Implementing Concept through Code**:
-
-```Rust
-```
 	
 ### Unprecedented Security and Efficiency
 	
@@ -48,41 +38,21 @@
 - **Speed**: Data transfer times are significantly faster, almost instantaneous, which is useful for market exchanges and property-related transfers.
 - **Core Features**: Security, speed, and ownership verification are the main features that make blockchain crucial for economic services.
 	
-- **Implementing Concept through Code**:
-	
-```Rust
-```
-	
 ### Anti-Counterfeiting
 	
 - **Ledger Verification**: Blockchain solves counterfeiting by checking the ledgers of the blockchains.
-	
-- **Implementing Concept through Code**:
-	
-```Rust
-```
 	
 ### Disruptive Potential
 	
 - **Applications**: The practical applications of blockchains are many: voting by unique tokens, IoT security, medical ecosystem enhancements, financial statements, secure process validations, transaction transparency for governance, passports, transaction costs and more.
 	
-- **Implementing Concept through Code**:
-	
-```Rust
-```
-	
 	
 ---
-## § Blockchain Tech Bic Picture
+## **§ Blockchain Tech Bic Picture**
 	
 ### Hashing Function
 	
 - A hashing function creates a "fingerprint" of the block elements in a dynamic way, used as a key to connect the blocks.
-	
-- **Implementing Concept through Code**:
-	
-```Rust
-```
 	
 ###### In-Depth Follow-Up
 [Blockchain Cheat Sheet - Hashing](./blockchain_hashing_cheatsheet)
@@ -93,37 +63,22 @@
 - **Easy to Trace back**: Private Key => Public Key 
 - **Complicated to Trace back**: Public Key => Private Key
 	
-- **Implementing Concept through Code**:
-	
-```Rust
-```
-  
 ###### In-Depth Follow-Up
 [**Blockchain Cheat Sheet - Cryptography & Signatures**](./blockchain_signatures_cheatsheet)
-
+	
 ### Public Address
 	
 - **Relation to Public Key:** The public address is related to the public key.
 - **Derivation:** It can either be the public key itself or a value derived from the public key using a function.
-	
-- **Implementing Concept through Code**:
-	
-```Rust
-```
 	
 ### Digital Signature Algorithms (DSA)
 	
 - **Proof of Ownership:** DSA proves who is the owner of the private key.
 - **Verification without Revelation:** They allow verification of the signature without revealing the private key.
 	
-- **Implementing Concept through Code**:
-	
-```Rust
-```
-  
 ###### In-Depth Follow-Up
 [**Blockchain Cheat Sheet - Cryptography & Signatures**](./blockchain_signatures_cheatsheet)
-  
+	  
 ### Transaction Mechanics
 	
 **UTXO Concept:** The system operates with the Concept of UTXO (unspent transaction outputs), which represents the value that the block possesses and establishes the units that are unspent and spendable.
@@ -140,34 +95,22 @@
 10. **New UTXO:** The sender has a new UTXO of 3 units, while the old UTXO is now valueless.
 11. **End:** End of the transaction process.
 	
-- **Implementing Concept through Code**:
-	
-```Rust
-```
-	
 ### Cryptography
 	
 - **Integral Part of the Ecosystem:** Cryptography flows within the structure of the ecosystem.
 - **Usage:** It is used for generating private keys and storing encrypted data in the block.
 	
-- **Implementing Concept through Code**:
-	
-```Rust
-```
-  
 ###### In-Depth Follow-Up
 [**Blockchain Cheat Sheet - Cryptography & Signatures**](./blockchain_signatures_cheatsheet)
-  
+	  
 ### Consensus Mechanism
 	
 - **Different Methods:** There are different ways to achieve consensus, such as:
     - **Proof-of-Work (PoW):** Miners solve complex problems to validate transactions.
     - **Proof-of-Stake (PoS):** Major token holders create consensus, as they have the most interest in validating correct transactions.
 	
-- **Implementing Concept through Code**:
-	
-```Rust
-```
+###### In-Depth Follow-Up
+[**Blockchain Cheat Sheet - Consensus**](./blockchain_consensus_cheatsheet)
 	
 ### Incentives
 	
@@ -175,15 +118,10 @@
 - **Proof-of-Work Systems:** In PoW systems, rewards are given to those who contribute to the well-being of the system, such as by validating transactions.
 - **Rewards:** These rewards typically have some value and motivate participants to maintain the network.
 	
-- **Implementing Concept through Code**:
-	
-```Rust
-```
-	
 	
 ---
 	
-## § Key Questions and Resolutions 08/2024
+## **§ Key Questions and Resolutions 08/2024**
 	
 **Key Questions that Have Been Resolved:**
 	

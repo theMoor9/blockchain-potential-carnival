@@ -1,7 +1,7 @@
 # Blockchain Cheat Sheet - Consensus
 ---
 ##### **Table of Contents**
-###### [§ Overview](#-Overview-1)
+###### [§ Fundamentals](#-Fundamentals-1)
 - [Consensus](#Consensus)
 - [Nodes](#Nodes)
 - [Needs](#Needs)
@@ -13,9 +13,14 @@
 ###### [§ Economics](#-Economics-1)
 - [Pools](#Pools)
 ###### [§ Proof of Stake](#-Proof-of-Stake-1)
+- [Overview](#Overview-1)
+- [Strengths](#Strengths-1)
+- [Weaknesses](#Weaknesses-1)
+- [Delegated Proof of Stake (DPoS)](#Delegated-Proof-of-Stake-DPoS)
+- [Current PoW Systems](#Current-PoW-Systems-1)
 
 ---
-## § Overview
+## **§ Fundamentals**
 	
 ### Consensus 
 **Definition**: Consensus in blockchain refers to the mechanism through which nodes (independent computers connected in a network) agree on the state of a distributed ledger. It ensures that all transactions are valid and irreversible, according to rules defined by the consensus algorithm.
@@ -27,7 +32,6 @@
 - Weighted = Proof of Stake Votes are weighted based on the stake (or the amount of cryptocurrency held) by each node.
 	
 ### Nodes
-	
 **Definition**: A node is a computer that runs software supporting a specific blockchain architecture, forming a part of the blockchain's distributed network.
 	
 ##### Common nodes
@@ -37,11 +41,6 @@
 **Full Node**: Acts as a relay between the creation of blocks and their distribution. They maintain a complete copy of the blockchain's ledger and validate all transactions and blocks to ensure consistency and security.
 	
 **Light Node**: Acts as a relay between the creation of blocks and their distribution. They maintain a complete copy of the blockchain's ledger and validate all transactions and blocks to ensure consistency and security.
-	
-- **Implementing Concepts through Code**:
-	
-```Rust
-```
 	
 ### Needs
 	
@@ -53,7 +52,7 @@ The consensus mechanism and its forms are designed to address these issues.
 	
 	
 ---
-## § Proof of Work (PoW)
+## **§ Proof of Work (PoW)**
 	
 ### Overview
 	
@@ -80,9 +79,8 @@ The consensus mechanism and its forms are designed to address these issues.
 	
 > For the most accurate and up-to-date information, I recommend performing quick research with the help of AI assistants to stay current with the latest developments in PoW systems.
 	
-	
 ---
-## § Economics
+## **§ Economics**
 	
 For most individuals, it is nearly impossible to successfully mine a block on their own due to the prohibitive costs of specialized mining hardware and electricity, especially when compared to the potential rewards.
 	
@@ -92,8 +90,36 @@ The most feasible approach is to join a mining pool, which consolidates the proc
 	
 	
 ---
-## § Proof of Stake (PoS)
-
+## **§ Proof of Stake (PoS)**
+	
+### Overview
+	
+Proof of Stake (PoS) is an alternative consensus mechanism to Proof of Work (PoW), offering a different approach to achieving consensus in a blockchain network.
+	
+**Definition**: In PoS, the "stake" refers to the amount of cryptocurrency an individual holds and commits as a means to gain the right to participate in the process of creating new blocks. The probability of being chosen to create a block is typically proportional to the amount of stake held.
+	
+### Strengths
+	
+- **Energy Efficiency**: PoS is far less energy-intensive compared to PoW, reducing the environmental impact.
+- **Interest-Based Security**: The more stake a validator has, the more they stand to lose from acting maliciously, aligning their interests with the well-being of the network.
+- **Highest Cost of Attack**: The expense of achieving a 51% attack makes it the most unfeasible due to the interest that you achieve having more control.
+- **Uncensorabile and Public**: Transactions and blocks are broadcasted publicly and cannot easily be censored.
+- **Significantly more scalable**: Lower operational costs allow PoS to handle more transactions, enhancing scalability.
+	
+### Weaknesses
+	
+- **Wealth Accumulation**: Higher stakes lead to higher rewards, potentially leading to wealth centralization where the "rich get richer."
+- **PoS vs PoW**: PoS could be not as secure as PoW since you could set an *escrow* of your token to a block which has to be mined to secure it for yourself that could be invalid so if a transaction results in a loss for a user the escrow will be used to compensate the damage done by a potential attack. 
+- **Sybil Attack**: For the previous reason a multi attack on blocks would be dangerous, still there's multiple ways which the PoS systems could be implemented so that will make this kind of attack unfeasible.
+- **Nothing at Stake**: Although less energy-intensive, PoS systems can still be vulnerable to different types of attacks such as the "Nothing at Stake" problem, where validators might be incentivized to support multiple blockchain histories.
+	
+### Delegated Proof of Stake (DPoS)
+	
+DPoS aims to democratize the staking process by allowing stakeholders to delegate their staking power to "delegates," who validate transactions and create blocks on their behalf. This system can potentially address the centralization of rewards by spreading the opportunity to earn transaction fees and block rewards more broadly among participants.
+	
+### Current PoW Systems
+	
+> For the most accurate and up-to-date information, I recommend performing quick research with the help of AI assistants to stay current with the latest developments in PoW systems.
 	
 	
 ---

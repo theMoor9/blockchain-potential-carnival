@@ -28,18 +28,13 @@
 - [Cryptocurrency Risks](#Cryptocurrency-Risks)
 	
 ---
-## § Bitcoin
+## **§ Bitcoin**
 	
 ### Overview
 A Peer-to-Peer Distributed Database as a public ledger that proves ownership  
 No Trust Needed Features of the blocks and ownership are registered in the immutable history of the chain (ledgers).  
 Security and Efficiency backed by strong cryptography and the most powerful network of computers  
 Miners providing security by rewarding system  
-	
-- **Implementing Concepts through Code**:
-	
-```Rust
-```
 	
 ### Hashing
 	
@@ -52,26 +47,15 @@ Bitcoin Blockchain Blocks, by design, are composed of 10 minutes of data each, a
 - If you alter a block, its SHA-256 hash will also change.
 - This change will break the chain because the first line of the subsequent block will no longer match.
 	
-- **Implementing Concepts through Code**:
-	
-```Rust
-```
-	
-	
 ### Mining in Proof of Work
 - **Purpose**: Ensure the immutability of the blockchain.
 - **How it is done**: *Nonces* (Numbers Only Used Once) are added to the end of each block's hash to find a hash that has a certain number of leading zeros, thereby validating the block.
 - **Why**: The system requires proof that computational work has been done. Finding a hash with a certain number of leading zeros is difficult and requires many attempts, demonstrating that work has been performed.
 - **Security**: This process makes it difficult for anyone to alter the data without redoing all the computational work, thus enhancing the security of the blockchain. 
-
-- **Implementing Concepts through Code**:
-	
-```Rust
-```
 	
 	
 ---
-## § Ethereum and New Gen Blockchains
+## **§ Ethereum and New Gen Blockchains**
 	
 **Child and Enhancement of the Bitcoin Blockchain**
 	
@@ -116,7 +100,7 @@ As previously mentioned, Ethereum and other new generation blockchains provide t
 	
 	
 ---
-## § Storing
+## **§ Storing**
 	
 ### Account Types
 	
@@ -135,14 +119,9 @@ As previously mentioned, Ethereum and other new generation blockchains provide t
 	
 **Multisig**: Divides your keys to enhance security by requiring multiple signatures to authorize transaction
 	
-- **Implementing Concepts through Code**:
-	
-```Rust
-```
-	
 	
 ---
-## § Cryptocurrencies
+## **§ Cryptocurrencies**
 	
 **First Gen/Gold 2.0**:
 	
@@ -181,14 +160,9 @@ As previously mentioned, Ethereum and other new generation blockchains provide t
 	
 These, for the most enterprising minds, are likely to be the ultimate substitute for fiat currencies.
 	
-- **Implementing Concepts through Code**:
-	
-```Rust
-```
-	
 	
 ---
-## § Gas
+## **§ Gas**
 	
 ### The Problem
 	
@@ -202,21 +176,11 @@ Introducing a "gas" fee allows applications and smart contracts to be used. This
 	
 Having a car with a faulty throttle pedal could be dangerous with infinite gas. This is the idea implemented in the blockchain: it limits application use by the amount of gas fee you are willing to spend.
 	
-- **Implementing Concepts through Code**:
-	
-```Rust
-```
-	
 	
 ---
-## § The DAO ( Decentralized Autonomous Organization ) 
+## **§ The DAO ( Decentralized Autonomous Organization )** 
 	
 A DAO (Decentralized Autonomous Organization) is an organization built through smart contract funding by investors who receive tokens to vote. At the time, DAO tokens represented a significant portion of Ethereum's market value and were considered a security due to their value as decision tokens within a business structure.
-	
-- **Implementing Concepts through Code**:
-	
-```Rust
-```
 	
 ### An Issue Has Occurred
 A bug was found that allowed limitless withdrawals without proper accounting, draining the reserves. This was a major issue.
@@ -244,11 +208,6 @@ This is similar to the Hard Fork done on the Ethereum Blockchain to bypass the r
 - Not backward compatible
 - Nodes need to follow new rules of consensus
 	
-- **Implementing Concepts through Code**:
-	
-```Rust
-```
-	
 ### Lessons
 	
 - Not all contracts are smart; their effectiveness depends on their implementation.
@@ -257,7 +216,7 @@ This is similar to the Hard Fork done on the Ethereum Blockchain to bypass the r
 	
 	
 ---
-## § Private Blockchains
+## **§ Private Blockchains**
 	
 Blockchain exists in two forms, and the use case is crucial:
 	
@@ -268,14 +227,9 @@ Blockchain exists in two forms, and the use case is crucial:
 	
 Using blockchain properties to solidify data in a secure way, for example in banking contracts between parties. With the encryption of contracts on a blockchain system, access to data is granted only to the interested parties and regulators. This ensures a secure, efficient, immutable, and indisputable system. Additionally, smart contract application protocols can streamline and disrupt back-office paperwork, leading to significant cost savings.
 	
-- **Implementing Concepts through Code**:
-	
-```Rust
-```
-	
 	
 ---
-## § The Blockchain Vision Proprieties
+## **§ The Blockchain Vision Proprieties**
 	
 - **Secure, efficient, immutable, and indisputable transactions**
     - Transactions are secure, efficient, and cannot be altered or disputed once confirmed.
@@ -295,12 +249,6 @@ Using blockchain properties to solidify data in a secure way, for example in ban
 - **Financial inclusion for the unbanked**
     - Blockchain can provide financial services to those who do not have access to traditional banking.
 	
-- **Implementing Concepts through Code**:
-	
-```Rust
-```
-	
-	
 ### Cryptocurrency Risks
 	
 - **Technology is complicated to understand**
@@ -317,12 +265,6 @@ Using blockchain properties to solidify data in a secure way, for example in ban
 	
 - **The privacy debate**
     - There is ongoing debate and concern over privacy issues related to the use of cryptocurrencies, including the balance between transparency and anonymity.
-	
-	
-- **Implementing Concepts through Code**:
-	
-```Rust
-```
 	
 	
 ---

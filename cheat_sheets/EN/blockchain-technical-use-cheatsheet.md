@@ -1,4 +1,4 @@
-# **Blockchain Cheat Sheet - Technical Use**
+# **Blockchain CheatSheet - Technical Use**
 ---
 ##### **Table of Contents**
 ###### [§ Addresses](#-Addresses-1)
@@ -157,7 +157,7 @@ In the context of blockchain, miners create blocks with a specific structure. A 
 	
 ---
 ###### Suggested Follow-up
-[Blockchain Cheat Sheet - Consensus](blockchain-consensus-cheatsheet.md)
+[Blockchain CheatSheet - Consensus](blockchain-consensus-cheatsheet.md)
 	  
 --- 
 **Author**: Kenneth Boldrini

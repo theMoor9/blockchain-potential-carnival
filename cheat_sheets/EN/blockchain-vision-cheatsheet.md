@@ -1,4 +1,4 @@
-# **Blockchain Cheat Sheet - The Vision**
+# **Blockchain CheatSheet - The Vision**
 ---
 ##### **Table of Contents**
 ###### [§ Bitcoin](#-Bitcoin-1)
@@ -269,7 +269,7 @@ Using blockchain properties to solidify data in a secure way, for example in ban
 	
 ---
 ###### Suggested Follow-up
-[**Blockchain Cheat Sheet - Cryptography & Signatures**](blockchain-signatures-cheatsheet.md)
+[**Blockchain CheatSheet - Cryptography & Signatures**](blockchain-signatures-cheatsheet.md)
 	
 ---
 	

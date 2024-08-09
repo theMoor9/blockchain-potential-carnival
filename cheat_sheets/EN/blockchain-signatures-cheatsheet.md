@@ -1,4 +1,4 @@
-## **Blockchain Cheat Sheet - Cryptography & Signatures**
+## **Blockchain CheatSheet - Cryptography & Signatures**
 ---
 ##### **Table of Contents**
 ###### [§ Fundamentals](#-Fundamentals-1)
@@ -182,7 +182,7 @@ Verification of the signatures : We use the data, the coordinates as signatures 
 	
 ---
 ###### Suggested Follow-up
-[**Blockchain Cheat Sheet - Technical Use**](blockchain-technical-use-cheatsheet.md)
+[**Blockchain CheatSheet - Technical Use**](blockchain-technical-use-cheatsheet.md)
 	
 ---
 	

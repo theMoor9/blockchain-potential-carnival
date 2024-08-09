@@ -1,4 +1,4 @@
-# Blockchain Cheat Sheet - Consensus
+# Blockchain CheatSheet - Consensus
 ---
 ##### **Table of Contents**
 ###### [§ Fundamentals](#-Fundamentals-1)
@@ -21,7 +21,7 @@
 ###### [§ The Byzantine Generals Problem](#-The-Byzantine-Generals-Problem-1)
 - [Blockchain Application](#Blockchain-Application)
 ###### [§ Other Consensus Algorithm](#-Other-Consensus-Algorithm-1)
-
+	
 ---
 ## **§ Fundamentals**
 	
@@ -161,7 +161,7 @@ Is not proven that a particular consensus algorithm is suitable for every case. 
 	
 ---
 ###### Suggested Follow-up
-[Blockchain Cheat Sheet - Cryptoapplications](./blockchain-cryptoapplications-cheatsheet.md)
+[Blockchain CheatSheet - Cryptoapplications](./blockchain-cryptoapplications-cheatsheet.md)
 	  
 ---
   

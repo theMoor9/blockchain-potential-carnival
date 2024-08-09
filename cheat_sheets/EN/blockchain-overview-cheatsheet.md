@@ -1,4 +1,4 @@
-# **Blockchain Cheat Sheet - Overview**
+# **Blockchain CheatSheet - Overview**
 ---
 ##### **Table of Contents**
 ###### [§ Fundamentals](#-Fundamentals-1)
@@ -152,7 +152,7 @@
 	
 ---
 ###### Suggested Follow-up
-[**Blockchain Cheat Sheet - The Vision**](blockchain-vision-cheatsheet.md)
+[**Blockchain CheatSheet - The Vision**](blockchain-vision-cheatsheet.md)
 	
 ---
 	

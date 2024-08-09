@@ -1,4 +1,4 @@
-# **Blockchain Cheat Sheet - Hashing**
+# **Blockchain CheatSheet - Hashing**
 ---
 ##### **Table of Contents**
 ###### [§ Fundamentals](#-Fundamentals-1)
@@ -112,7 +112,7 @@ Is useful to check if some data has been corrupted or modified in a defined peri
 	
 ---
 ###### Suggested Follow-up
-[**Blockchain Cheat Sheet - Cryptography & Signatures**](blockchain-signatures-cheatsheet.md)
+[**Blockchain CheatSheet - Cryptography & Signatures**](blockchain-signatures-cheatsheet.md)
 	
 ---
 	

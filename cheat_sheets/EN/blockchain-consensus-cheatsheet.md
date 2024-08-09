@@ -18,6 +18,9 @@
 - [Weaknesses](#Weaknesses-1)
 - [Delegated Proof of Stake (DPoS)](#Delegated-Proof-of-Stake-DPoS)
 - [Current PoW Systems](#Current-PoW-Systems-1)
+###### [§ The Byzantine Generals Problem](#-The-Byzantine-Generals-Problem-1)
+- [Blockchain Application](#Blockchain-Application)
+###### [§ Other Consensus Algorithm](#-Other-Consensus-Algorithm-1)
 
 ---
 ## **§ Fundamentals**
@@ -108,10 +111,10 @@ Proof of Stake (PoS) is an alternative consensus mechanism to Proof of Work (PoW
 	
 ### Weaknesses
 	
-- **Wealth Accumulation**: Higher stakes lead to higher rewards, potentially leading to wealth centralization where the "rich get richer."
-- **PoS vs PoW**: PoS could be not as secure as PoW since you could set an *escrow* of your token to a block which has to be mined to secure it for yourself that could be invalid so if a transaction results in a loss for a user the escrow will be used to compensate the damage done by a potential attack. 
-- **Sybil Attack**: For the previous reason a multi attack on blocks would be dangerous, still there's multiple ways which the PoS systems could be implemented so that will make this kind of attack unfeasible.
-- **Nothing at Stake**: Although less energy-intensive, PoS systems can still be vulnerable to different types of attacks such as the "Nothing at Stake" problem, where validators might be incentivized to support multiple blockchain histories.
+- **Wealth Accumulation**: Higher stakes increase rewards, risking wealth centralization and power imbalances.
+- **Security Concerns**: PoS may be perceived as less secure than PoW because stake-based security depends heavily on economic penalties, not computational efforts.
+- **Sybil Attack Risk**: High entry barriers deter but do not eliminate Sybil attacks, where multiple fake identities influence the network.
+- **Nothing at Stake Problem**: Validators may support multiple blockchain forks since doing so incurs no significant costs, potentially leading to double-spending issues.
 	
 ### Delegated Proof of Stake (DPoS)
 	
@@ -123,8 +126,42 @@ DPoS aims to democratize the staking process by allowing stakeholders to delegat
 	
 	
 ---
+## **§ The Byzantine Generals Problem**
+	
+The Byzantine Generals Problem illustrates a challenge in achieving consensus in distributed systems, especially under conditions where some participants (or "nodes") may act maliciously or fail to communicate reliably. The problem is named after an analogy involving Byzantine generals who must agree on a battle plan via messengers, knowing that some of the generals or messengers might be traitors.
+	
+**Key Aspects**:
+	
+- **Trust and Coordination**: Ensuring all loyal generals (or nodes in a blockchain) reach a common decision, despite the presence of traitors who may disrupt the consensus or send false information.
+- **Consensus Reliability**: The need for a mechanism that guarantees agreement among the participants, ensuring that messages are not altered and that the agreed-upon strategy (or transaction) is executed consistently across the network.
+	
+![[generals-1024x512.png]]
+	
+### Blockchain Application
+	
+- In blockchain technology, this problem is analogous to ensuring that all nodes in the network agree on the validity and order of transactions, despite potential attempts by some participants to cheat or disrupt the process. Solutions such as Proof of Work (PoW) and Proof of Stake (PoS) are designed to mitigate these risks by requiring participants to contribute work or stake, creating economic and computational barriers to dishonest behavior.
+	
+	
+---
+## **§ Other Consensus Algorithms**
+	
+- **Practical Byzantine Fault Tolerance (pBFT)** : Democratic election of a leader who delegates the "shard" nodes for validation.
+- **Federated Byzantine Fault Tolerance (fBFT)** : Federated elections of a leader who delegates the "shard" nodes for validation.
+- **Delegated Byzantine Fault Tolerance**  
+- **Proof-of-Importance (PoI)**  : How much you use your Stake.
+- **Proof-of-Elapsed-Time (PoET)** 
+- **Proof-of-Capacity (PoC - aka P-o-Space)**
+- **Proof-of-Authority (PoA)**
+- **Raft** (more classical consensus, not blockchain specific)
+	
+Is not proven that a particular consensus algorithm is suitable for every case. May very well be the opposite case in many instances. 
+	
+>Consensus algorithms needs to be fine tuned to the use case.
+	
+	
+---
 ###### Suggested Follow-up
-[Blockchain Cheat Sheet - ](./.md)
+[Blockchain Cheat Sheet - Cryptoapplications](./blockchain-cryptoapplications-cheatsheet.md)
 	  
 ---
   

@@ -9,12 +9,12 @@
 - [Disruptive Potential](#Disruptive-Potential)
 ###### [§ Blockchain Tech Bic Picture](#-Blockchain-Tech-Bic-Picture-1)  
 - [Hashing Function](#Hashing-Function)
-- [Private/Public Key System](#PrivatePublic-Key-System) | [In-Depth Information](./blockchain_signatures_cheatsheet)
+- [Private/Public Key System](#PrivatePublic-Key-System) | [In-Depth Information](blockchain-signatures-cheatsheet.md)
 - [Public-Address](#Public-Address)
-- [Digital Signature Algorithms (DSA)](#Digital-Signature-Algorithms-DSA) | [In-Depth Information](./blockchain_signatures_cheatsheet)
+- [Digital Signature Algorithms (DSA)](#Digital-Signature-Algorithms-DSA) | [In-Depth Information](blockchain-signatures-cheatsheet.md)
 - [Transaction Mechanics](#Transaction-Mechanics)
-- [Cryptography](#Cryptography) | [In-Depth Information](./blockchain_signatures_cheatsheet)
-- [Consensus Mechanism PoW vs PoS](#Consensus-Mechanism-PoW-vs-PoS) | [In-Depth Information](./blockchain_consensus_cheatsheet)
+- [Cryptography](#Cryptography) | [In-Depth Information](blockchain-signatures-cheatsheet.md)
+- [Consensus Mechanism PoW vs PoS](#Consensus-Mechanism-PoW-vs-PoS) | [In-Depth Information](blockchain-consensus-cheatsheet.md)
 - [Incentives](#Incentives)
 ###### [§ Key Questions and Resolutions 08/2024](#-Key-Questions-and-Resolutions-082024-1)
 	
@@ -55,7 +55,7 @@
 - A hashing function creates a "fingerprint" of the block elements in a dynamic way, used as a key to connect the blocks.
 	
 ###### In-Depth Follow-Up
-[Blockchain Cheat Sheet - Hashing](./blockchain_hashing_cheatsheet)
+[Blockchain Cheat Sheet - Hashing](blockchain-hashing-cheatsheet.md)
   
 ### Private/Public Key System
 	
@@ -64,7 +64,7 @@
 - **Complicated to Trace back**: Public Key => Private Key
 	
 ###### In-Depth Follow-Up
-[**Blockchain Cheat Sheet - Cryptography & Signatures**](./blockchain_signatures_cheatsheet)
+[**Blockchain Cheat Sheet - Cryptography & Signatures**](blockchain-signatures-cheatsheet.md)
 	
 ### Public Address
 	
@@ -77,7 +77,7 @@
 - **Verification without Revelation:** They allow verification of the signature without revealing the private key.
 	
 ###### In-Depth Follow-Up
-[**Blockchain Cheat Sheet - Cryptography & Signatures**](./blockchain_signatures_cheatsheet)
+[**Blockchain Cheat Sheet - Cryptography & Signatures**](blockchain-signatures-cheatsheet.md)
 	  
 ### Transaction Mechanics
 	
@@ -101,7 +101,7 @@
 - **Usage:** It is used for generating private keys and storing encrypted data in the block.
 	
 ###### In-Depth Follow-Up
-[**Blockchain Cheat Sheet - Cryptography & Signatures**](./blockchain_signatures_cheatsheet)
+[**Blockchain Cheat Sheet - Cryptography & Signatures**](blockchain-signatures-cheatsheet.md)
 	  
 ### Consensus Mechanism
 	
@@ -110,7 +110,7 @@
     - **Proof-of-Stake (PoS):** Major token holders create consensus, as they have the most interest in validating correct transactions.
 	
 ###### In-Depth Follow-Up
-[**Blockchain Cheat Sheet - Consensus**](./blockchain_consensus_cheatsheet)
+[**Blockchain Cheat Sheet - Consensus**](blockchain-consensus-cheatsheet.md)
 	
 ### Incentives
 	
@@ -152,7 +152,7 @@
 	
 ---
 ###### Suggested Follow-up
-[**Blockchain Cheat Sheet - The Vision**](./blockchain_vision_cheatsheet.md)
+[**Blockchain Cheat Sheet - The Vision**](blockchain-vision-cheatsheet.md)
 	
 ---
 	

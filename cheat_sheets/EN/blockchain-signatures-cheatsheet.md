@@ -182,7 +182,7 @@ Verification of the signatures : We use the data, the coordinates as signatures 
 	
 ---
 ###### Suggested Follow-up
-[**Blockchain Cheat Sheet - Technical Use**](blockchain_technical_use_cheatsheet.md)
+[**Blockchain Cheat Sheet - Technical Use**](blockchain-technical-use-cheatsheet.md)
 	
 ---
 	

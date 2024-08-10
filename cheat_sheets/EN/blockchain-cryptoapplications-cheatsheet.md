@@ -171,7 +171,45 @@ We certainly can understand that ICOs will not stop as long as there will be new
 	
 	
 ---
+## **§ Fraudulent Crypto**
+	
+I want to infuse this section with a personal informal touch because it's deeply personal. I've seen friends fall prey to these schemes, targeting me or even my family multiple times. Thankfully, my understanding of manipulation tactics and emotional control has helped protect us. I really can't stand those who leverage emotional weaknesses to exploit power.
+	
+### **NO PONZI SCHEMES**
+**No work should go unpaid** if it's generating money. Don't expect returns on work you’ve done for free.
+	
+### **NO SURREAL RETURNS** 
+**Do the math** before investing time and money. It’s inherently impossible to have premium prices or guaranteed profit in exchange markets.
+	
+### **NO EMOTIONAL/HYPE DRIVEN MEETINGS**
+**Emotion can obscure reality.** While emotions are a fundamental aspect of human experience, they can cloud judgment. 
+	
+*Like on a scale, emotion can lead to the ruin of reality perception; the more you drive towards emotion, the more likely your vision will become blurred.*
+	
+These meetings are often meticulously crafted theaters designed to manipulate you. Common features include:
+	
+- **Late Evening Meetings**: Your defenses are lower when you're tired.
+- **Fast Talk**: Rapid-fire delivery of large numbers and complex calculations leaves little room for critical thinking.
+- **Leverage mob influence**: Often actors can be present to give a more credible atmosphere. These "actors" or fully manipulated individuals will try to lead you toward their ideals.
+- **Try to engage emotionally**: They talk about common societal weaknesses using impactful images to efficiently penetrate your defenses, as these are more immediately assimilated by a tired mind.
+	
+### **NO STRANGERS ABOUT MONEY**
+**Search names and people, reputations and identity** often they use fake images and names to simulate credibility by creating fictional characters that you could never question or consult.
+	
+### **RED FLAGS**
+***The presence of any of these features should be considered a red flag. Stay vigilant and question everything.***
+	
+	
+---
+## **§ Evaluating ICOs**
+	
+***"We got to look at Initial Coin Offerings carefully, be prepared, avoid mistakes, to invest sharp"***
+	
+### Checklist 
+	
 
+	
+*( This is a simplified checklist inspired by a version vetted by venture capitalists and improved by Harvey Campbell. ) *
 	
 	
 ---

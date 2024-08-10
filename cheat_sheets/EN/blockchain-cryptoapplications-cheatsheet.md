@@ -2,6 +2,9 @@
 ---
 ##### **Table of Contents**
 ###### [§ Money and Crypto](#-Money-and-Crypto-1)
+- [Money](#Money)
+- [Acquiring Cryptocurrency](#Acquiring-Cryptocurrency)
+- [Crypto Exchanges](#Crypto-Exchanges)
 ###### [§ Stablecoins](#-Stablecoins-1)
 ###### [§ Initial Coin Offerings (ICOs)](#-Initial-Coin-Offerings-ICOs-1)
 ###### [§ Fraudulent Crypto](#-Fraudulent-Crypto-1)
@@ -32,6 +35,13 @@
 Unlike traditional stock exchanges, crypto exchanges often adhere to strict Know Your Customer (KYC) policies due to the regulatory requirements associated with blockchain and cryptocurrencies.
 	
 It's important to note that these exchanges are not devoid of risks. Challenges include [frauds](#-Fraudulent-Crypto-1), hacks, and subpar business practices. Careful consideration is required when choosing an exchange to ensure security and reliability.
+	
+	
+---
+## **§ Stablecoins**
+	
+### Cryptocurrency Volatility
+
 	
 	
 ---

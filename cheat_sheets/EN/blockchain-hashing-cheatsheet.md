@@ -14,7 +14,7 @@
 ## **§ Fundamentals**
 	
 Hashing is not encryption because you cannot rebuild the original data from the hash as you can with encrypted files. 
-
+	
 We should consider hashing like a fingerprint; it provides a secure genetic reference to the data but is not the data "in person".
 	
 ### Key Characteristics of Good Cryptographic Hashing
@@ -33,31 +33,32 @@ We should consider hashing like a fingerprint; it provides a secure genetic refe
 **Salting** is the practice of adding a random value to the hashed password stored. This is the only way to securely hash passwords.
 	
 ### Miners
-
+	
 The task of miners is to take transactions or data from the blockchain buffer and group them into blocks. Each block header is 80 bytes in size.   
-
+	
 Before adding these blocks to the blockchain, miners must include a 32-byte hash and a nonce that meets the current difficulty requirement.  
-
+	
 They do this by cycling through different nonce values until they find one that produces a hash satisfying the proof-of-work condition.  
-  
-  
+	  
+	  
 ---
 ## **§ Hashing Math**
 	
 ### Overview
 	
 -  ***SHA (Secure Hash Algorithm)***:
-	1. **SHA-1**: 160 bits
-	2. **SHA-2**:
-	    - SHA-224: 224 bits
-	    - SHA-256: 256 bits
-	    - SHA-384: 384 bits
-	    - SHA-512: 512 bits
-	3. **SHA-3**:
-	    - SHA3-224: 224 bits
-	    - SHA3-256: 256 bits
-	    - SHA3-384: 384 bits
-	    - SHA3-512: 512 bits
+	
+		1. SHA-1: 160 bits
+		2. SHA-2:
+			- SHA-224: 224 bits
+			- SHA-256: 256 bits
+			- SHA-384: 384 bits
+			- SHA-512: 512 bits
+		3. SHA-3:
+			- SHA3-224: 224 bits
+			- SHA3-256: 256 bits
+			- SHA3-384: 384 bits
+			- SHA3-512: 512 bits
 	
 -  ***Technical Terms***:
 	- **Padding**: Adding bits to indicate the end of the message.

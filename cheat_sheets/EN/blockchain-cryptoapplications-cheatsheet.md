@@ -12,8 +12,17 @@
 - [Crypto Collateralized](#Crypto-Collateralized)
 - [Non-Collateralized](#Non-Collateralized)
 ###### [§ Initial Coin Offerings (ICOs)](#-Initial-Coin-Offerings-ICOs-1)
+- [Investors](#Investors)
+- [Value Criteria](#Value-Criteria)
+- [ICO Trends](#ICO-Trends)
 ###### [§ Fraudulent Crypto](#-Fraudulent-Crypto-1)
+- [NO PONZI SCHEMES](#NO-PONZI-SCHEMES)
+- [NO SURREAL RETURNS](#NO-SURREAL-RETURNS)
+- [NO EMOTIONAL/HYPE DRIVEN MEETINGS](#NO-EMOTIONALHYPE-DRIVEN-MEETINGS)
+- [NO STRANGERS ABOUT MONEY](#NO-STRANGERS-ABOUT-MONEY)
+- [RED FLAGS](#RED-FLAGS)
 ###### [§ Evaluating ICOs](#-Evaluating-ICOs-1)
+- [Checklist](#Checklist)
 	
 ---
 ## **§ Money and Crypto**
@@ -73,7 +82,7 @@ A prime example of this is Digix Gold (DGX) which 1DGX equals 1 gram of gold
 ##### Other
 - Swiss Real Coin (SRC): Backed by Swiss Real estate portfolio.
 - D1 Coin  ERC-20: Collateralized by diamonds.
-
+	
 ### Crypto Collateralized
 	
 This kind of Stablecoin works similarly to those pegged to a FIAT value but adds an intriguing twist based on the chosen cryptocurrency.
@@ -128,18 +137,40 @@ Some stable tokens leverage the programming frameworks of existing blockchains t
 ---
 ## **§ Initial Coin Offerings (ICOs)**
 	
+### Investors
 
+Initial Coin Offerings movements can be cause by a couple of factors
+	
+**Wales Manipulation**:
+	
+*"...the rising price has on its own generated additional buying enthusiasm, attracting purchasers who see the rise as validating an investment thesis. As 'bandwagon' investors join any party, they create their own truth—for a while."*
+	
+	Buffett not talking about bitcoin – he was talking about gold in 2012.
+	
+> Big investors may very well manipulate the market with this truth.
+
+**Bandwagon Investors**:
+	
+The ones ho sees price increase and buy high contributing to a certaint extent to the continuation of the rising prices and then inevitably sell low.
+	
+>I mean we are here to not be them.
+	
+### Value Criteria
+	
+1. **First gen/Gold 2.0**: As transaction mechanism.
+2. **Distributed Computational Tokens**: As powerful technologies.
+3. **Utility Tokens**: As an asset extension of technologies.
+4. **Security Tokens**: As tokenization of existing values as shares, bonds or other assets.
+5. **Fungible Tokens**: With mutable value based on use case.
+6. **Non-Fungible Tokens**: Well...
+7. **Stablecoins**: Easiest to give value by nature. 
+	
+### ICO Trends
+	
+We certainly can understand that ICOs will not stop as long as there will be new innovative technologies to invest on.
 	
 	
 ---
-## **§ Fraudulent Crypto**
-	
-
-	
-	
----
-## **§ Evaluating ICOs**
-	
 
 	
 	

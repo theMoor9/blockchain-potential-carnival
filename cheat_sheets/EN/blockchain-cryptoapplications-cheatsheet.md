@@ -21,8 +21,9 @@
 - [NO EMOTIONAL/HYPE DRIVEN MEETINGS](#NO-EMOTIONALHYPE-DRIVEN-MEETINGS)
 - [NO STRANGERS ABOUT MONEY](#NO-STRANGERS-ABOUT-MONEY)
 - [RED FLAGS](#RED-FLAGS)
-###### [§ Evaluating ICOs](#-Evaluating-ICOs-1)
-- [Checklist](#Checklist)
+###### [§ Evaluation Framework](#-Evaluation-Framework-1)
+- [App](#App)
+- [Sheet](#Sheet)
 	
 ---
 ## **§ Money and Crypto**
@@ -201,15 +202,20 @@ These meetings are often meticulously crafted theaters designed to manipulate yo
 	
 	
 ---
-## **§ Evaluating ICOs**
+## **§ Evaluation Framework**
 	
 ***"We got to look at Initial Coin Offerings carefully, be prepared, avoid mistakes, to invest sharp"***
 	
-### Checklist 
+Following we have a little application that i build in Rust programming language (Technology used by Solana) which helps you better evaluate ICOs with a comprehensive explanation sheet. 
 	
-
+*( This is inspired by a checklist vetted by venture capitalists and improved by Dr. Harvey R. Campbell )*
 	
-*( This is a simplified checklist inspired by a version vetted by venture capitalists and improved by Harvey Campbell. ) *
+### [App](../../code/evframework/main.exe)
+click on title
+### [Sheet](./evaluation_sheet.md)
+click on title
+	
+*( This is a simplified checklist inspired by a version vetted by venture capitalists and improved by Harvey Campbell. )*
 	
 	
 ---

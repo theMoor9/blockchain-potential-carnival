@@ -1,0 +1,14 @@
+[package]
+name = "evframework"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+
+[[bin]]
+name = "evframework"
+path = "main.rs"
+
+[lib]
+name = "monitor"
+path = "src/lib/monitor.rs"

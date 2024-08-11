@@ -233,7 +233,6 @@ This evaluation framework is intended to provide investors, analysts, and enthus
 			Blockchain is integral to the solution, offering unique advantages such as decentralization, security, or transparency that are critical for solving the problem effective
 		</p>
 	</div> 
-	
 	<h3  style="text-align: center; page-break-before: always;">
 		<p>Question 4</p>
 		<p style="font-size: 15px;">Is the solution feasible today or does it rely on future events?</p>
@@ -340,7 +339,6 @@ This evaluation framework is intended to provide investors, analysts, and enthus
 		 <p style="font-size: 13px;"> 
 			The project justifiably requires its own coin to offer unique features or functionalities not provided by existing cryptocurrencies.
 		</p>
-		
 	</div> 
 	<div style="margin: 5px;">
 		<p><span style="font-size: 50px;">+5</span><br><b>Excellent</b></p>
@@ -685,7 +683,6 @@ This evaluation framework is intended to provide investors, analysts, and enthus
 			All necessary licenses, including money transfer, are secured, ensuring legal operations and avoiding any potential disruptions.
 		</p>
 	</div> 
-	
 	<h3  style="text-align: center; page-break-before: always;">
 		<p>Question 4</p>
 		<p style="font-size: 15px;">

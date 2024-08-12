@@ -20,9 +20,15 @@ I believe that humans can explain things better than an AI can. Why? Because unl
 - [Where the Knowledge Comes From](#documentation)
 
 
-## Cheat Sheet
+## Cheat Sheets
 
-You can find a detailed Rust cheat sheet [here](./cheat_sheets).
+### File pdf
+- [EN](./cheat_sheets/EN/pdf/)
+- [IT](./cheat_sheets/IT/pdf/)
+- [DE](./cheat_sheets/DE/pdf/)
+- [FR](./cheat_sheets/FR/pdf/)
+
+You can find the Blockchain cheat sheet folder [here](./cheat_sheets).
 
 ## Documentation
 

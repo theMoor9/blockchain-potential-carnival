@@ -31,12 +31,13 @@ As i learn i build the cheatsheets and code what i got to seer the knowledge
 
 "This framework introduces a systematic approach to assessing the viability and potential of Initial Coin Offerings (ICOs) through a detailed scoring system. Designed to guide users through a structured evaluation process, it helps uncover the strengths and weaknesses of different ICO projects."
  
-#### Documentation
-You can find a ICOs evaluation app documentation[here](./cheat_sheets/EN/evaluation_sheet.md)
+### Documentation
+You can find a ICOs evaluation app documentation [here](./cheat_sheets/EN/evaluation_sheet.md)
 
-#### Source
-You can find a ICOs evaluation app folder [here](./code/evframework)
-[Start](./code/evframework/target/release/evframework.exe).
+### Source
+You can find a ICOs evaluation app folder [here](./code/evframework) 
+- [Executable folder](./code/evframework/target/release).
+- [Main folder](./code/evframework/src) 
 
 ## Contributing
 

@@ -4,11 +4,9 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-
-[[bin]]
-name = "evframework"
-path = "main.rs"
+textwrap = { version = "0.16", features = ["terminal_size"] }
+crossterm = "0.28.1"
 
 [lib]
-name = "monitor"
-path = "src/lib/monitor.rs"
+name = "terminal"
+path = "src/lib/terminal.rs"

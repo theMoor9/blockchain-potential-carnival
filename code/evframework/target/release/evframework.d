@@ -1,0 +1,1 @@
+C:\Users\Kenneth\Projects\GIT\Public\blockchain_learning\code\evframework\target\release\evframework.exe: C:\Users\Kenneth\Projects\GIT\Public\blockchain_learning\code\evframework\src\lib\terminal.rs C:\Users\Kenneth\Projects\GIT\Public\blockchain_learning\code\evframework\src\main.rs

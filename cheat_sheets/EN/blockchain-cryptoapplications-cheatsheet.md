@@ -69,7 +69,7 @@ In order of complexity this are the four types of Stablecoins:
 	
 ##### The idea
 FIAT Collateralized Stablecoins are designed to provide everyone with access to optimized transfers at any time, including low-fee transactions at unusual hours, like 02:00 on a Sunday morning. This approach partly addresses the issue of high volatility, such as that seen with Bitcoin exchanges.
-
+	
 Additionally, if the issuer of the stablecoins that you exchanged for the FIAT-pegged coins encounters financial difficulties, you should be able to recover your FIAT value.
 	
 ### Real Asset Collateralized

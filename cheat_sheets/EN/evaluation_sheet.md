@@ -3,45 +3,47 @@
 ### Introduction to the ICO Evaluation Framework
 
 #### **Overview of the Evaluation System**
-
+	
 This framework introduces a systematic approach to assessing the viability and potential of Initial Coin Offerings (ICOs) through a detailed scoring system. Designed to guide users through a structured evaluation process, it helps uncover the strengths and weaknesses of different ICO projects.
-
+	
 #### **Application-Driven Evaluation**
-
+	
 The evaluation will be facilitated by a smart application, developed in Rust, with a user-friendly interface accessible via .exe displayed in CMD. This application will automate the scoring and weighting process, ensuring a streamlined and consistent evaluation experience.
-
+	
 #### **Scoring System**
-
+	
 The evaluation is based on a series of ratings ranging from -5 to +5, where:
-
+	
 - **-5** indicates that an aspect of the ICO is extremely inadequate, suggesting significant concerns or risks.
 - **0** represents a neutral stance, indicating that the aspect meets basic expectations without significant strengths or weaknesses.
 - **+5** signifies that an aspect is excellent, demonstrating outstanding qualities or advantages that significantly enhance the ICO's appeal.
-
+	
 #### **Macro Areas of Evaluation**
-
+	
 The system categorizes ICO characteristics into six major areas, each containing specific elements to be evaluated:
-
+	
 1. **Idea**: Evaluates the novelty, necessity, and economic impact of the ICO's core concept.
 2. **Technology**: Assesses the technical feasibility, innovation, and scalability of the technology used.
 3. **Blockchain Specifics**: Examines the choice of blockchain, token economics, and alignment with project needs.
 4. **Team**: Reviews the experience, expertise, and reliability of the team behind the ICO.
 5. **Execution**: Considers the operational strategy, legal compliance, and financial planning of the ICO.
 6. **Market Potential**: Analyzes the market demand, competition, and growth potential of the ICO.
-
+	
 #### **Weighting System**
-
+	
 Each macro area carries a different weight, reflecting its relative importance in the overall evaluation of an ICO. Users can assign multipliers to each macro area based on their individual assessment priorities, with values ranging from 1 to 3:
-
+	
 - A multiplier of **1** suggests standard importance.
 - A multiplier of **2** indicates increased importance.
 - A multiplier of **3** denotes critical importance.
-
+	
 These multipliers are used to adjust the impact of each macro area's score on the overall evaluation, allowing for a customized and prioritized assessment that aligns with the user's strategic investment criteria.
-
+	
 #### **Purpose of the Framework**
-
-This evaluation framework is intended to provide investors, analysts, and enthusiasts with a comprehensive tool to assess ICOs systematically. It facilitates informed decision-making by providing a clear, quantifiable method to compare and contrast various ICO projects based on multiple dimensions of performance and potential.
+	
+This evaluation framework is intended to provide investors, analysts, and enthusiasts with a comprehensive tool to assess ICOs systematically. It facilitates informed decision-making by providing a clear, quantifiable method to compare and contrast various ICO projects based on multiple dimensions of performance and potential.+
+	
+#### **Legend**
 
 
 <h1 style="page-break-before: always; text-align:center;">IDEA</h1>
@@ -739,7 +741,7 @@ This evaluation framework is intended to provide investors, analysts, and enthus
 	<div style="margin: 5px;">
 	</div>   
 </div>
-<h1 style="page-break-before: always; text-align:center;">UPSIDE</h1>
+<h1 style="page-break-before: always; text-align:center;">MARKET POTENTIAL</h1>
 
 ---
 <div style="display: grid; grid-template-columns: auto auto auto; font-size: 100%;"> 
@@ -800,3 +802,7 @@ This evaluation framework is intended to provide investors, analysts, and enthus
 	<div style="margin: 5px;">
 	</div> 
 </div> 
+
+---
+	
+**Author**: Kenneth Boldrini

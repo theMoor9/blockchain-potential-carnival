@@ -15,7 +15,7 @@ I believe that humans can explain things better than an AI can. Why? Because unl
 
 - [Code](#Code)
 - [Cheat Sheet](#cheat-sheet)
-- [Where the knowledge comes from](#documentation)
+- [Where the Knowledge Comes From](#documentation)
 
 
 ## Cheat Sheet
@@ -35,9 +35,9 @@ As i learn i build the cheatsheets and code what i got to seer the knowledge
 You can find a ICOs evaluation app documentation [here](./cheat_sheets/EN/evaluation_sheet.md)
 
 ### Source
-You can find a ICOs evaluation app folder [here](./code/evframework) 
-- [Executable folder](./code/evframework/target/release).
-- [Main folder](./code/evframework/src) 
+You can find a ICOs evaluation app folder [here](./code/evframework):
+- [App's Executable Folder](./code/evframework/target/release).
+- [Main Folder](./code/evframework/src) 
 
 ## Contributing
 

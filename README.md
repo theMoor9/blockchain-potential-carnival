@@ -30,11 +30,6 @@ I believe that humans can explain things better than an AI can. Why? Because unl
 
 You can find the Blockchain cheat sheet folder [here](./cheat_sheets).
 
-## Documentation
-
-I'm learning Blockchain Business model with the lectures of mr. Campbell R. Harvey at Duke's Fuqua School of Business course.
-As i learn i build the cheatsheets and code what i got to seer the knowledge
-
 ## App
 
 "This framework introduces a systematic approach to assessing the viability and potential of Initial Coin Offerings (ICOs) through a detailed scoring system. Designed to guide users through a structured evaluation process, it helps uncover the strengths and weaknesses of different ICO projects."

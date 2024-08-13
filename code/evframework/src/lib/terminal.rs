@@ -1,4 +1,5 @@
-use std::io::{self, Write, Read};
+pub mod models;
+use std::io::{self, Write, Read, Error};
 use std::thread;
 use std::time::Duration;
 use textwrap::{fill, termwidth};
@@ -8,13 +9,15 @@ use crossterm::{
     terminal::{Clear, ClearType},
 };
 
+
 pub mod output_manager {
     use super::*;
     use crate::input_manager::{get_user_input, get_choice_input};
 
     const typing_speed: u64 = 23; //ms per character
 
-    fn type_wrapped_print(message: &str, delay: u64) -> io::Result<()> {
+    pub fn type_wrapped_print(message: &str, delay: u64) -> io::Result<()> {
+
         let width = termwidth(); // Get the current terminal width
         let wrapped = fill(message, width); 
 
@@ -57,7 +60,7 @@ pub mod output_manager {
         match get_choice_input("")?.as_str() {
                 "1" => scoring_system_info()?,
                 "2" => { 
-                    Ok(())
+                    return Ok(());
                 },
                 "3" => {
                     clear_screen()?;
@@ -135,7 +138,7 @@ pub mod output_manager {
 
     }
 
-    fn clear_screen() -> io::Result<()> {
+    pub fn clear_screen() -> io::Result<()> {
         print!("\x1B[2J\x1B[1;1H"); // Clear the terminal screen
         io::stdout().flush()?; // Ensure the screen is cleared before moving on
         Ok(())
@@ -143,6 +146,7 @@ pub mod output_manager {
 }
 
 mod input_manager {
+
     use super::*;
 
     pub fn get_user_input() -> io::Result<String> {
@@ -195,20 +199,85 @@ mod input_manager {
         println!();
         Ok(input.trim().to_string()) // Rimuovi spazi indesiderati prima di restituire l'input
     }
+
 }
 
 pub mod questionary {
 
     use super::*;
+    use crate::input_manager::{get_user_input, get_choice_input};
+    use crate::output_manager::{clear_screen, type_wrapped_print};
+    use models::{ValidScore, ValidMultiplier, Question, Macro};
+    
+    const typing_speed: u64 = 23; //ms per character
 
-    // fn display(area: Macro) -> Vec<Macro> {
-    //     let header = "Macro Areas and Questions:"; 
-    //     for subheader in area::Question::question {
-    //         println!("{}\n{}",header,subheader); 
-    //         for question in questions {
-    //             type_wrapped_print(question);
-    //         }  
-    //     }   
-    // }
+    /// Display the questionnaire for each Macro area
+    pub fn display(areas: &mut Vec<Macro>) -> io::Result<()>{
+        for a in areas.iter_mut(){
+            let header = "Macro Area"; 
+            println!("{}: {:?}", header, a.name); // print Area name
+            type_wrapped_print("\n\nDoes this Macro have a particular relavance?\n
+                                [1] Standard\n\
+                                [2] Relevant\n\
+                                [3] Crucial\n\n", typing_speed);//twprint Area questionay value
+            //get_choice_input multiplier & control multiplier & update multiplier value 
+             ;
+             while let Some(s) = mult_validation(get_choice_input("")) {
+                a.weight = Some(s);// Macro.weight
+                break;
+             }
+            println!("\nReply to the questions with a score from -5 to 5\n"); // print question
+            for q in a.questions.iter_mut() {
+                if let Some(ref question) = q.question.as_deref() {
+                    type_wrapped_print(question, typing_speed);
+                } 
+                while let Some(s) = score_validation(get_choice_input("")) {
+                    q.score = Some(s);
+                    break;
+                }
+            } 
+            clear_screen(); 
+        }   
+        //twprint exit message
+        //get_user_input
+        //match get_user_input for easteregg
+            //clearscreen
+            //twprint fast easteregg_function
+            //9 second delay befor exit - code: thread::sleep(Duration::from_secs(9));
+        Ok(())
+    }
+
+    fn score_validation(score: Result<String, Error>) -> Option<ValidScore> {
+        match score {
+            Ok(s) => match s.as_str() {
+                "-5" => Some(ValidScore::NFive),
+                "-4" => Some(ValidScore::NFour),
+                "-3" => Some(ValidScore::NThree),
+                "-2" => Some(ValidScore::NTwo),
+                "-1" => Some(ValidScore::NOne),
+                "0" => Some(ValidScore::Zero),
+                "1" => Some(ValidScore::POne),
+                "2" => Some(ValidScore::PTwo),
+                "3" => Some(ValidScore::PThree),
+                "4" => Some(ValidScore::PFour),
+                "5" => Some(ValidScore::PFive),
+                _ => None,
+            },
+            Err(_) => None, // Gestione dell'errore, restituisci None se c'è un errore
+        }
+    }
+    
+    fn mult_validation(mlt: Result<String, Error>) -> Option<ValidMultiplier> {
+        match mlt {
+            Ok(s) => match s.as_str() {
+                "1" => Some(ValidMultiplier::One),
+                "2" => Some(ValidMultiplier::Two),
+                "3" => Some(ValidMultiplier::Three),
+                _ => None,
+            },
+            Err(_) => None, // Gestione dell'errore, restituisci None se c'è un errore
+        }
+    }
+
     
 }

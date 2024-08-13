@@ -1,5 +1,6 @@
 pub mod models;
 use std::io::{self, Write, Read, Error};
+use std::env;
 use std::fs::File;
 use std::thread;
 use std::time::Duration;
@@ -9,7 +10,6 @@ use crossterm::{
     execute,
     terminal::{Clear, ClearType},
 };
-
 
 pub mod output_manager {
     use super::*;
@@ -148,22 +148,23 @@ pub mod output_manager {
     }
 
     pub fn print_txt(a: bool) -> io::Result<String>{
+
         match a {
             true => {
-                // Apri il file .txt
-                let mut file = File::open("src/lib/easteregg.txt")?;
+                // open .txt
+                let mut file = File::open("../../src/lib/easteregg.txt")?;
 
-                // Leggi il contenuto del file in una String
+                // read the file content into a String
                 let mut content = String::new();
                 file.read_to_string(&mut content)?;
 
                 Ok(content)
             },
             false => {
-                // Apri il file .txt
-                let mut file = File::open("src/lib/evframework.txt")?;
+                // open .txt
+                let mut file = File::open("../../src/lib/evframework.txt")?;
 
-                // Leggi il contenuto del file in una String
+                // reads the file content into a String
                 let mut content = String::new();
                 file.read_to_string(&mut content)?;
 

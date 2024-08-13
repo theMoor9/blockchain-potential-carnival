@@ -1,5 +1,6 @@
 pub mod models;
 use std::io::{self, Write, Read, Error};
+use std::fs::File;
 use std::thread;
 use std::time::Duration;
 use textwrap::{fill, termwidth};
@@ -14,7 +15,7 @@ pub mod output_manager {
     use super::*;
     use crate::input_manager::{get_user_input, get_choice_input};
 
-    const typing_speed: u64 = 23; //ms per character
+    const typing_speed: u64 = 23000; //1000 = 1ms per character
 
     pub fn type_wrapped_print(message: &str, delay: u64) -> io::Result<()> {
 
@@ -24,7 +25,7 @@ pub mod output_manager {
         for c in wrapped.chars() {
             io::stdout().lock().write_all(c.to_string().as_bytes())?;
             io::stdout().lock().flush()?; // Flush at the end of the loop to ensure immediate output
-            thread::sleep(Duration::from_millis(delay)); // Allow customizable typing speed
+            thread::sleep(Duration::from_micros(delay)); // Allow customizable typing speed
         }
         println!(); // Add a newline after the message is fully typed out
         Ok(())
@@ -32,13 +33,14 @@ pub mod output_manager {
 
     pub fn welcome() -> io::Result<()> {
         clear_screen()?;
-        println!("EvFramework\n");
+        thread::sleep(Duration::from_secs(3));
+        println!("{}",print_txt(false)?.as_str());
         type_wrapped_print(
-            "Welcome to the Evaluation Framework App!\n\
-            Through the app i introduce a systematic approach to assessing the viability and \
+            "Welcome to the Evaluation Framework App!\n\n\
+            With this app i introduce a systematic approach to assessing the viability and \
             potential of Initial Coin Offerings (ICOs) through a detailed scoring system. Designed \
             to guide users through a structured evaluation process, it helps uncover the strengths \
-            and weaknesses of different ICO projects.",
+            and weaknesses of different ICO projects.\n",
             typing_speed,
         )?;
         println!("\nWhen you are ready, press enter to Start.");
@@ -60,6 +62,7 @@ pub mod output_manager {
         match get_choice_input("")?.as_str() {
                 "1" => scoring_system_info()?,
                 "2" => { 
+                    clear_screen()?;
                     return Ok(());
                 },
                 "3" => {
@@ -70,7 +73,7 @@ pub mod output_manager {
                         ( This app is inspired by a checklist vetted by venture capitalists and improved by Dr. Harvey R. Campbell )\n",
                         typing_speed
                     )?;
-                    println!("\nWhen you are ready, press enter to progress.\n");
+                    println!("\nWhen you are ready, press enter to go back.\n");
                     get_user_input()?;
                     clear_screen()?;
                     menu();
@@ -80,7 +83,7 @@ pub mod output_manager {
                     println!("Exiting the Evaluation Framework App. Goodbye!");
                     thread::sleep(Duration::from_secs(6)); // Time delay before exiting 6 seconds
                     clear_screen()?;
-                    return Ok(());
+                    return Err(Error::new(io::ErrorKind::Other, "User exited the program."));
                 },
                 _ => {
                     clear_screen()?;
@@ -129,7 +132,7 @@ pub mod output_manager {
             typing_speed,
         )?;
 
-        println!("\nWhen you are ready, press enter to progress.");
+        println!("\nWhen you are ready, press enter to go back.");
 
         get_user_input()?; 
 
@@ -142,6 +145,31 @@ pub mod output_manager {
         print!("\x1B[2J\x1B[1;1H"); // Clear the terminal screen
         io::stdout().flush()?; // Ensure the screen is cleared before moving on
         Ok(())
+    }
+
+    pub fn print_txt(a: bool) -> io::Result<String>{
+        match a {
+            true => {
+                // Apri il file .txt
+                let mut file = File::open("src/lib/easteregg.txt")?;
+
+                // Leggi il contenuto del file in una String
+                let mut content = String::new();
+                file.read_to_string(&mut content)?;
+
+                Ok(content)
+            },
+            false => {
+                // Apri il file .txt
+                let mut file = File::open("src/lib/evframework.txt")?;
+
+                // Leggi il contenuto del file in una String
+                let mut content = String::new();
+                file.read_to_string(&mut content)?;
+
+                Ok(content)
+            },
+        }
     }
 }
 
@@ -206,10 +234,10 @@ pub mod questionary {
 
     use super::*;
     use crate::input_manager::{get_user_input, get_choice_input};
-    use crate::output_manager::{clear_screen, type_wrapped_print};
+    use crate::output_manager::{clear_screen, type_wrapped_print, print_txt};
     use models::{ValidScore, ValidMultiplier, Question, Macro};
     
-    const typing_speed: u64 = 23; //ms per character
+    const typing_speed: u64 = 23000; //1000 = 1ms per character
 
     /// Display the questionnaire for each Macro area
     pub fn display(areas: &mut Vec<Macro>) -> io::Result<()>{
@@ -219,9 +247,8 @@ pub mod questionary {
             type_wrapped_print("\n\nDoes this Macro have a particular relavance?\n
                                 [1] Standard\n\
                                 [2] Relevant\n\
-                                [3] Crucial\n\n", typing_speed);//twprint Area questionay value
+                                [3] Crucial\n\n", typing_speed)?;//twprint Area questionay value
             //get_choice_input multiplier & control multiplier & update multiplier value 
-             ;
              while let Some(s) = mult_validation(get_choice_input("")) {
                 a.weight = Some(s);// Macro.weight
                 break;
@@ -239,11 +266,20 @@ pub mod questionary {
             clear_screen(); 
         }   
         //twprint exit message
+        type_wrapped_print("Thank you for completing the evaluation. Your scores have been recorded.\n\
+                            \nPress enter to quit || theMoor9.", typing_speed);
+        
         //get_user_input
         //match get_user_input for easteregg
-            //clearscreen
-            //twprint fast easteregg_function
-            //9 second delay befor exit - code: thread::sleep(Duration::from_secs(9));
+        match get_choice_input("")?.as_str() {
+            "theMoor9" => {
+                clear_screen()?;
+                type_wrapped_print(print_txt(true)?.as_str(), typing_speed-22600);
+                thread::sleep(Duration::from_secs(9)); // Time delay before exiting 9 seconds
+            }   
+            _ => (),
+        }
+
         Ok(())
     }
 

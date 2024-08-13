@@ -26,8 +26,6 @@ fn main() {
         summatory_total_score(areas);
 
         // Generazione del documento PDF con i punteggi e le domande
-    } else {
-        println!("Menu returned an error.");
     }
 }
 

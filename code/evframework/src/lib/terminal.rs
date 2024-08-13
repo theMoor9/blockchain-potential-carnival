@@ -11,6 +11,14 @@ use crossterm::{
     terminal::{Clear, ClearType},
 };
 
+pub enum AsciiFile {
+    EvFramework,
+    Easteregg,
+    Credits,
+    MacroAreas,
+    System
+}
+
 pub mod output_manager {
     use super::*;
     use crate::input_manager::{get_user_input, get_choice_input};
@@ -34,7 +42,7 @@ pub mod output_manager {
     pub fn welcome() -> io::Result<()> {
         clear_screen()?;
         thread::sleep(Duration::from_secs(3));
-        println!("{}",print_txt(false)?.as_str());
+        println!("{}",print_txt(AsciiFile::EvFramework)?.as_str());//Title
         type_wrapped_print(
             "Welcome to the Evaluation Framework App!\n\n\
             With this app i introduce a systematic approach to assessing the viability and \
@@ -67,7 +75,7 @@ pub mod output_manager {
                 },
                 "3" => {
                     clear_screen()?;
-                    println!("Credits\n");
+                    println!("{}",print_txt(AsciiFile::Credits)?.as_str());//Credits
                     type_wrapped_print(
                         "This Evaluation Framework App was developed by Kenneth Boldrini as part of the blockchain-potential-carnival CheatSheet Repository.\n\
                         ( This app is inspired by a checklist vetted by venture capitalists and improved by Dr. Harvey R. Campbell )\n",
@@ -80,7 +88,7 @@ pub mod output_manager {
                 }
                 "4" => {
                     clear_screen()?;
-                    println!("Exiting the Evaluation Framework App. Goodbye!");
+                    println!("Exiting EvFramework. Goodbye!");
                     thread::sleep(Duration::from_secs(6)); // Time delay before exiting 6 seconds
                     clear_screen()?;
                     return Err(Error::new(io::ErrorKind::Other, "User exited the program."));
@@ -99,24 +107,23 @@ pub mod output_manager {
 
     pub fn scoring_system_info() -> io::Result<()> {
         clear_screen()?;
-        println!("SCORING SYSTEM\n");
+        println!("{}",print_txt(AsciiFile::System)?.as_str());//System
         type_wrapped_print(
-            "The evaluation is based on a series of ratings ranging from -5 to +5, where:\n\n\
+            "\n\nThe evaluation of the questionnaire is based on a series of ratings ranging from -5 to +5, where:\n\n\
             [-5] indicates that an aspect of the ICO is extremely inadequate, suggesting significant concerns or risks.\n\
             [ 0] represents a neutral stance, indicating that the aspect meets basic expectations without significant strengths or weaknesses.\n\
-            [+5] signifies that an aspect is excellent, demonstrating outstanding qualities or advantages that significantly enhance the ICO's appeal.",
-            typing_speed,
+            [+5] signifies that an aspect is excellent, demonstrating outstanding qualities or advantages that significantly enhance the ICO's appeal.\n\n\n",
+            typing_speed-22600,
         )?;
-        type_wrapped_print(
-            "\n\nMACRO AREAS\n\n\
-            The system categorizes ICO characteristics into six major areas, each containing specific elements to be evaluated:\n\n\
+        println!("{}",print_txt(AsciiFile::MacroAreas)?.as_str());//Macro Areas
+        type_wrapped_print("\n\nThe system categorizes ICO characteristics into six major areas, each containing specific elements to be evaluated:\n\n\
             1. Idea: Evaluates the novelty, necessity, and economic impact of the ICO's core concept.\n\
             2. Technology: Assesses the technical feasibility, innovation, and scalability of the technology used.\n\
             3. Blockchain Specifics: Examines the choice of blockchain, token economics, and alignment with project needs.\n\
             4. Team: Reviews the experience, expertise, and reliability of the team behind the ICO.\n\
             5. Execution: Considers the operational strategy, legal compliance, and financial planning of the ICO.\n\
             6. Market Potential: Analyzes the market demand, competition, and growth potential of the ICO.",
-            typing_speed,
+            typing_speed-22600,
         )?;
         type_wrapped_print(
             "\n\nEach macro area carries a different weight, reflecting its relative importance in the overall evaluation of an ICO. \
@@ -124,7 +131,7 @@ pub mod output_manager {
             - A multiplier of 1 suggests standard importance.\n\
             - A multiplier of 2 indicates increased importance.\n\
             - A multiplier of 3 denotes critical importance.",
-            typing_speed,
+            typing_speed-22600,
         )?;
         type_wrapped_print(
             "\n\nThese multipliers are used to adjust the impact of each macro area's score on the overall evaluation, \
@@ -147,12 +154,12 @@ pub mod output_manager {
         Ok(())
     }
 
-    pub fn print_txt(a: bool) -> io::Result<String>{
+    pub fn print_txt(a: AsciiFile) -> io::Result<String>{
 
         match a {
-            true => {
+            AsciiFile::Easteregg => {
                 // open .txt
-                let mut file = File::open("../../src/lib/easteregg.txt")?;
+                let mut file = File::open("../../assets/ascii/easteregg.txt")?;
 
                 // read the file content into a String
                 let mut content = String::new();
@@ -160,9 +167,39 @@ pub mod output_manager {
 
                 Ok(content)
             },
-            false => {
+            AsciiFile::EvFramework => {
                 // open .txt
-                let mut file = File::open("../../src/lib/evframework.txt")?;
+                let mut file = File::open("../../assets/ascii/evframework.txt")?;
+
+                // reads the file content into a String
+                let mut content = String::new();
+                file.read_to_string(&mut content)?;
+
+                Ok(content)
+            },
+            AsciiFile::Credits => {
+                // open .txt
+                let mut file = File::open("../../assets/ascii/credits.txt")?;
+
+                // reads the file content into a String
+                let mut content = String::new();
+                file.read_to_string(&mut content)?;
+
+                Ok(content)
+            },
+            AsciiFile::MacroAreas => {
+                // open .txt
+                let mut file = File::open("../../assets/ascii/macroareas.txt")?;
+
+                // reads the file content into a String
+                let mut content = String::new();
+                file.read_to_string(&mut content)?;
+
+                Ok(content)
+            },
+            AsciiFile::System => {
+                // open .txt
+                let mut file = File::open("../../assets/ascii/system.txt")?;
 
                 // reads the file content into a String
                 let mut content = String::new();
@@ -268,14 +305,14 @@ pub mod questionary {
         }   
         //twprint exit message
         type_wrapped_print("Thank you for completing the evaluation. Your scores have been recorded.\n\
-                            \nPress enter to quit || theMoor9.", typing_speed);
+                            \nDigit Enter to quit || theMoor9.", typing_speed);
         
         //get_user_input
         //match get_user_input for easteregg
         match get_choice_input("")?.as_str() {
             "theMoor9" => {
                 clear_screen()?;
-                type_wrapped_print(print_txt(true)?.as_str(), typing_speed-22600);
+                type_wrapped_print(print_txt(AsciiFile::Easteregg)?.as_str(), typing_speed-22600);//twprint easteregg
                 thread::sleep(Duration::from_secs(9)); // Time delay before exiting 9 seconds
             }   
             _ => (),
@@ -315,6 +352,4 @@ pub mod questionary {
             Err(_) => None, // Gestione dell'errore, restituisci None se c'è un errore
         }
     }
-
-    
 }

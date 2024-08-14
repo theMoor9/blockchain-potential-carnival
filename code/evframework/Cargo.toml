@@ -1,5 +1,5 @@
 [package]
-name = "evframework"
+name = "EvFramework"
 version = "0.1.0"
 edition = "2021"
 
@@ -11,3 +11,6 @@ unicode-width = "0.1.13"
 [lib]
 name = "terminal"
 path = "src/lib/terminal.rs"
+
+[build-dependencies]
+winres = "0.1"

@@ -22,6 +22,7 @@ pub enum AsciiFile {
     Execution,
     MarketPotential,
     Scope,
+    MainMenu,
 }
 pub enum MenuAction {
     Start,
@@ -30,7 +31,7 @@ pub enum MenuAction {
 
 pub mod output_manager {
     use super::*;
-    use crate::input_manager::{get_input, get_user_input};
+    use crate::input_manager::{skip_input, get_user_input};
 
     pub fn type_print_wrppd(message: &str, delay: u64) -> io::Result<()> {
 
@@ -181,6 +182,16 @@ pub mod output_manager {
 
                 Ok(content)
             },
+            AsciiFile::MainMenu => {
+                // open .txt
+                let mut file = File::open("../../assets/ascii/mainmenu.txt")?;
+
+                // reads the file content into a String
+                let mut content = String::new();
+                file.read_to_string(&mut content)?;
+
+                Ok(content)
+            },
         }
     }
 
@@ -188,28 +199,30 @@ pub mod output_manager {
         clear_screen()?;
         thread::sleep(Duration::from_secs(3));
         print_cntrd_txt(print_txt(AsciiFile::EvFramework)?.as_str());//Title
-        type_print_wrppd("\nWelcome to EvFramework!\n\n",TYPING_SPEED)?;
-        type_print_wrppd("This framework provides a focused and structured approach to evaluate ICOs across various dimensions,\n\
-                          aiming to assist investors, analysts, and enthusiasts in making informed decisions.\n\n\n",
-                          TYPING_SPEED-22600)?;
-        type_print_wrppd("ONGOING COMMANDS\n\
+        print_cntrd_txt("\nEvaluation Framework\n\n\n\n\n\n");//SubTitle
+        print_cntrd_txt("ONGOING COMMANDS\n\
                           ----------------\n\n\
-                          [Ctrl + C] Exit",TYPING_SPEED-22600)?;
-        println!("\n\n\nWhen you are ready, press enter to Start.");
+                          [Ctrl + C]  Exit");
+        print_cntrd_txt("\n\n\nWhen you are ready, press enter to Start.");
 
-        get_input()?; // Read input only after typing is done
+        skip_input()?; // Read input only after typing is done
 
         clear_screen()?;
+
         Ok(())
     }
     pub fn menu() -> io::Result<MenuAction> {
-        println!("Main Menu\n");
+        print_cntrd_txt(print_txt(AsciiFile::MainMenu)?.as_str());//Main Menu
+        type_print_wrppd("\n\n\n\n\n\nWelcome to EvFramework!\n\n",TYPING_SPEED)?;
+        type_print_wrppd("This tool provides a focused and structured approach to evaluate ICOs across various dimensions,\n\
+                          aiming to assist investors, analysts, and enthusiasts in making informed decisions.\n\n",
+                          TYPING_SPEED-22600)?;
         type_print_wrppd("[1] Start Evaluation", TYPING_SPEED)?;
         type_print_wrppd("[2] Scoring System Information", TYPING_SPEED)?;
         type_print_wrppd("[3] Scope", TYPING_SPEED)?;
         type_print_wrppd("[4] Credits", TYPING_SPEED)?;
         type_print_wrppd("[5] Exit", TYPING_SPEED)?;
-        println!("\nPlease select an option by entering the corresponding number:");
+        println!("\n\nPlease select an option by entering the corresponding number:");
 
         match get_user_input()?.as_str() {
                 "2" => scoring_system_info()?,
@@ -267,17 +280,12 @@ pub mod output_manager {
         type_print_wrppd(
             "\nThese multipliers are used to adjust the impact of each macro area's score on the overall evaluation, \
             allowing for a customized and prioritized assessment that aligns with the user's strategic investment criteria.",
-            TYPING_SPEED-22600,
+            TYPING_SPEED,
         )?;
 
-        type_print_wrppd("\n\nWith this app i introduce a systematic approach to assessing the viability and \
-            potential of Initial Coin Offerings (ICOs) through a detailed scoring system. Designed \
-            to guide users through a structured evaluation process, it helps uncover the strengths \
-            and weaknesses of different ICO projects.",TYPING_SPEED)?;
+        print_cntrd_txt("\n\n\nWhen you are ready, press enter to go back.");
 
-        println!("\n\n\nWhen you are ready, press enter to go back.");
-
-        get_input()?; 
+        skip_input()?; 
 
         clear_screen()?;
         menu()?;
@@ -290,15 +298,17 @@ pub mod output_manager {
         type_print_wrppd(
             "\n\nEvaluating an investment requires meticulous attention to numerous details. Thanks to this \
             framework, it is possible to organize a vast array of information into a single document that, through \
-            a scoring system, provides a clear and defined picture of the situation.\n\n\
-            This framework represents an essential tool for the in-depth evaluation of ICOs, offering an \
+            a scoring system, provides a clear and defined picture of the situation.\n\n",
+            TYPING_SPEED-22600,
+        )?;
+        type_print_wrppd("This framework represents an essential tool for the in-depth evaluation of ICOs, offering an \
             organized method focused on several critical dimensions. It has been designed to facilitate investors, \
             analysts, and enthusiasts in making informed choices, consolidating a wide range of information into \
             a clear and comprehensible scoring system.",
-            TYPING_SPEED-22600,
+            TYPING_SPEED,
         )?;
-        println!("\n\n\nWhen you are ready, press enter to go back.\n");
-        get_input()?; 
+        print_cntrd_txt("\n\n\nWhen you are ready, press enter to go back.\n");
+        skip_input()?; 
         clear_screen()?;
         menu()?;
         Ok(())
@@ -306,12 +316,11 @@ pub mod output_manager {
     fn credits_info() -> io::Result<()> {
         clear_screen()?;
         print_cntrd_txt(print_txt(AsciiFile::Credits)?.as_str());//Credits
-        type_print_wrppd(
-            "\nThis Evaluation Framework App was developed by Kenneth Boldrini as part of the blockchain-potential-carnival CheatSheet Repository.\n\
-            \n( This app is inspired by a checklist vetted by venture capitalists and improved by Dr. Harvey R. Campbell )\n",
-            TYPING_SPEED-22600)?;
-        println!("\n\n\nWhen you are ready, press enter to go back.\n");
-        get_input()?;
+        print_cntrd_txt(
+            "\n\nThis Evaluation Framework App was developed by Kenneth Boldrini as part of the blockchain-potential-carnival CheatSheet Repository.\n\
+            \n( This app is inspired by a checklist vetted by venture capitalists and improved by Dr. Harvey R. Campbell )\n");
+        print_cntrd_txt("\n\n\nWhen you are ready, press enter to go back.\n");
+        skip_input()?;
         clear_screen()?;
         menu()?;
         Ok(())
@@ -329,7 +338,7 @@ pub mod input_manager {
 
     use super::*;
 
-    pub fn get_input() -> io::Result<String> {
+    pub fn skip_input() -> io::Result<String> {
         let mut input = String::new();
         io::stdin().read_line(&mut input)?;
         Ok(input.trim().to_string()) // Trim to remove newlines
@@ -407,11 +416,11 @@ pub mod questionary {
             clear_screen()?; 
         }   
         //twprint exit message
-        type_print_wrppd("Thank you for completing the evaluation. Your scores have been recorded.\n\
-                            \nDigit Enter to quit || theMoor9.", TYPING_SPEED)?;
+        type_print_wrppd("Thank you for completing the evaluation. Your scores have been recorded.\n", TYPING_SPEED)?;
+        print_cntrd_txt("\nDigit Enter to quit || theMoor9.");
         
-        //get_input
-        //match get_input for easteregg
+        //get_user_input
+        //match get_user_input for easteregg
         match get_user_input()?.as_str() {
             "theMoor9" => {
                 clear_screen()?;

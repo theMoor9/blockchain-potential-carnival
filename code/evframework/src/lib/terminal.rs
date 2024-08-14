@@ -1,16 +1,13 @@
 pub mod models;
 use std::io::{self, Write, Read, Error};
-use std::env;
 use std::fs::File;
 use std::thread;
 use std::time::Duration;
 use textwrap::{fill, termwidth};
 use unicode_width::UnicodeWidthStr;
-use crossterm::{
-    cursor::{MoveTo, RestorePosition, SavePosition},
-    execute,
-    terminal::{self, size, Clear, ClearType},
-};
+use crossterm::terminal::size;
+
+const TYPING_SPEED: u64 = 23000; //1000 = 1ms per character
 
 pub enum AsciiFile {
     EvFramework,
@@ -32,9 +29,7 @@ pub enum MenuAction {
 
 pub mod output_manager {
     use super::*;
-    use crate::input_manager::{get_user_input, get_choice_input};
-
-    const typing_speed: u64 = 23000; //1000 = 1ms per character
+    use crate::input_manager::{get_input, get_user_input};
 
     pub fn type_print_wrppd(message: &str, delay: u64) -> io::Result<()> {
 
@@ -182,29 +177,29 @@ pub mod output_manager {
         clear_screen()?;
         thread::sleep(Duration::from_secs(3));
         print_cntrd_txt(print_txt(AsciiFile::EvFramework)?.as_str());//Title
-        type_print_wrppd("\nWelcome to the Evaluation Framework App!\n\n",typing_speed)?;
+        type_print_wrppd("\nWelcome to the Evaluation Framework App!\n\n",TYPING_SPEED)?;
         type_print_wrppd("This framework provides a structured approach to evaluate ICOs across various dimensions,\n\
                           aiming to assist investors, analysts, and enthusiasts in making informed decisions.\n\n\n",
-                          typing_speed-22600)?;
+                          TYPING_SPEED-22600)?;
         type_print_wrppd("ONGOING COMMANDS\n\
                           ----------------\n\n\
-                          [Ctrl + C] Exit",typing_speed-22600);
+                          [Ctrl + C] Exit",TYPING_SPEED-22600)?;
         println!("\n\n\nWhen you are ready, press enter to Start.");
 
-        get_user_input()?; // Read input only after typing is done
+        get_input()?; // Read input only after typing is done
 
         clear_screen()?;
         Ok(())
     }
     pub fn menu() -> io::Result<MenuAction> {
         println!("Main Menu\n");
-        type_print_wrppd("[1] Scoring System Information", typing_speed)?;
-        type_print_wrppd("[2] Start Evaluation", typing_speed)?;
-        type_print_wrppd("[3] Credits", typing_speed)?;
-        type_print_wrppd("[4] Exit", typing_speed)?;
+        type_print_wrppd("[1] Scoring System Information", TYPING_SPEED)?;
+        type_print_wrppd("[2] Start Evaluation", TYPING_SPEED)?;
+        type_print_wrppd("[3] Credits", TYPING_SPEED)?;
+        type_print_wrppd("[4] Exit", TYPING_SPEED)?;
         println!("\nPlease select an option by entering the corresponding number:");
 
-        match get_choice_input()?.as_str() {
+        match get_user_input()?.as_str() {
                 "1" => scoring_system_info()?,
                 "2" => { 
                     clear_screen()?;
@@ -216,11 +211,11 @@ pub mod output_manager {
                     type_print_wrppd(
                         "\nThis Evaluation Framework App was developed by Kenneth Boldrini as part of the blockchain-potential-carnival CheatSheet Repository.\n\
                         \n( This app is inspired by a checklist vetted by venture capitalists and improved by Dr. Harvey R. Campbell )\n",
-                        typing_speed-22600)?;
+                        TYPING_SPEED-22600)?;
                     println!("\n\n\nWhen you are ready, press enter to go back.\n");
-                    get_user_input()?;
+                    get_input()?;
                     clear_screen()?;
-                    menu();
+                    menu()?;
                 }
                 "4" => {
                     clear_screen()?;
@@ -247,7 +242,7 @@ pub mod output_manager {
             [-5] indicates that an aspect of the ICO is extremely inadequate, suggesting significant concerns or risks.\n\
             [ 0] represents a neutral stance, indicating that the aspect meets basic expectations without significant strengths or weaknesses.\n\
             [+5] signifies that an aspect is excellent, demonstrating outstanding qualities or advantages that significantly enhance the ICO's appeal.\n\n\n",
-            typing_speed-22600,
+            TYPING_SPEED-22600,
         )?;
         print_cntrd_txt(print_txt(AsciiFile::MacroAreas)?.as_str());//Macro Areas
         type_print_wrppd("\n\nThe system categorizes ICO characteristics into six major areas, each containing specific elements to be evaluated:\n\n\
@@ -257,7 +252,7 @@ pub mod output_manager {
             4. Team: Reviews the experience, expertise, and reliability of the team behind the ICO.\n\
             5. Execution: Considers the operational strategy, legal compliance, and financial planning of the ICO.\n\
             6. Market Potential: Analyzes the market demand, competition, and growth potential of the ICO.",
-            typing_speed-22600,
+            TYPING_SPEED-22600,
         )?;
         type_print_wrppd(
             "\nEach macro area carries a different weight, reflecting its relative importance in the overall evaluation of an ICO. \
@@ -265,22 +260,22 @@ pub mod output_manager {
             - A multiplier of 1 suggests standard importance.\n\
             - A multiplier of 2 indicates increased importance.\n\
             - A multiplier of 3 denotes critical importance.",
-            typing_speed-22600,
+            TYPING_SPEED-22600,
         )?;
         type_print_wrppd(
             "\nThese multipliers are used to adjust the impact of each macro area's score on the overall evaluation, \
             allowing for a customized and prioritized assessment that aligns with the user's strategic investment criteria.",
-            typing_speed-22600,
+            TYPING_SPEED-22600,
         )?;
 
         type_print_wrppd("\n\nWith this app i introduce a systematic approach to assessing the viability and \
             potential of Initial Coin Offerings (ICOs) through a detailed scoring system. Designed \
             to guide users through a structured evaluation process, it helps uncover the strengths \
-            and weaknesses of different ICO projects.",typing_speed)?;
+            and weaknesses of different ICO projects.",TYPING_SPEED)?;
 
         println!("\n\n\nWhen you are ready, press enter to go back.");
 
-        get_user_input()?; 
+        get_input()?; 
 
         clear_screen()?;
         menu()?;
@@ -296,17 +291,17 @@ pub mod output_manager {
 
 }
 
-mod input_manager {
+pub mod input_manager {
 
     use super::*;
 
-    pub fn get_user_input() -> io::Result<String> {
+    pub fn get_input() -> io::Result<String> {
         let mut input = String::new();
         io::stdin().read_line(&mut input)?;
         Ok(input.trim().to_string()) // Trim to remove newlines
     }
 
-    pub fn get_choice_input() -> io::Result<String> {
+    pub fn get_user_input() -> io::Result<String> {
         let mut input = String::new();
 
         // Stampa il prompt ">>"
@@ -325,11 +320,11 @@ mod input_manager {
 pub mod questionary {
 
     use super::*;
-    use crate::input_manager::{get_user_input, get_choice_input};
+    use crate::input_manager::{get_user_input};
     use crate::output_manager::{clear_screen, type_print_wrppd, print_txt, print_cntrd_txt};
-    use models::{ValidScore, ValidMultiplier, Question, Macro};
+    use models::{ValidScore, ValidMultiplier, Macro};
     
-    const typing_speed: u64 = 23000; //1000 = 1ms per character
+    
 
     /// Display the questionnaire for each Macro area
     pub fn display(areas: &mut Vec<Macro>) -> io::Result<()>{
@@ -341,7 +336,7 @@ pub mod questionary {
                 Some("TEAM") => print_cntrd_txt(print_txt(AsciiFile::Team)?.as_str()),//Team,
                 Some("EXECUTION") => print_cntrd_txt(print_txt(AsciiFile::Execution)?.as_str()),//Execution,
                 Some("MARKET POTENTIAL") => print_cntrd_txt(print_txt(AsciiFile::MarketPotential)?.as_str()),//MarketPotential,
-                Some(other) => (),
+                Some(_other) => (),
                 None => (),
             }
 
@@ -351,15 +346,15 @@ pub mod questionary {
                 None => println!("Unnamed"),
             }
             match a.description {
-                Some(ref description) => type_print_wrppd(description, typing_speed)?,//twprint description
-                None => type_print_wrppd("No description available", typing_speed)?,
+                Some(ref description) => type_print_wrppd(description, TYPING_SPEED)?,//twprint description
+                None => type_print_wrppd("No description available", TYPING_SPEED)?,
             }
             type_print_wrppd("\n\nDoes this Macro have a particular relavance, this will influence the evaluation weight?\n\
                                 [1] Standard\n\
                                 [2] Relevant\n\
-                                [3] Crucial\n", typing_speed)?;//twprint Area questionay value
-            //get_choice_input multiplier & control multiplier & update multiplier value 
-             while let Some(s) = mult_validation(get_choice_input()) {
+                                [3] Crucial\n", TYPING_SPEED)?;//twprint Area questionay value
+            //get_user_input multiplier & control multiplier & update multiplier value 
+             while let Some(s) = mult_validation(get_user_input()) {
                 a.weight = Some(s);// Macro.weight
                 break;
              }
@@ -367,26 +362,26 @@ pub mod questionary {
                         (Wrong inputs will set neutral score 0)*\n"); // print question
             for q in a.questions.iter_mut() {
                 if let Some(ref question) = q.question.as_deref() {
-                    type_print_wrppd(question, typing_speed);
+                    type_print_wrppd(question, TYPING_SPEED)?;
                 } 
-                while let Some(s) = score_validation(get_choice_input()) {
+                while let Some(s) = score_validation(get_user_input()) {
                     q.score = Some(s);
                     break;
                 }
                 println!();
             } 
-            clear_screen(); 
+            clear_screen()?; 
         }   
         //twprint exit message
         type_print_wrppd("Thank you for completing the evaluation. Your scores have been recorded.\n\
-                            \nDigit Enter to quit || theMoor9.", typing_speed);
+                            \nDigit Enter to quit || theMoor9.", TYPING_SPEED)?;
         
-        //get_user_input
-        //match get_user_input for easteregg
-        match get_choice_input()?.as_str() {
+        //get_input
+        //match get_input for easteregg
+        match get_user_input()?.as_str() {
             "theMoor9" => {
                 clear_screen()?;
-                type_print_wrppd(print_txt(AsciiFile::Easteregg)?.as_str(), typing_speed-22600);//twprint easteregg
+                type_print_wrppd(print_txt(AsciiFile::Easteregg)?.as_str(), TYPING_SPEED-22600)?;//twprint easteregg
                 thread::sleep(Duration::from_secs(9)); // Time delay before exiting 9 seconds
             }   
             _ => (),

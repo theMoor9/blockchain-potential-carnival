@@ -1,6 +1,6 @@
-use terminal::{output_manager, MenuAction};
+use terminal::{output_manager, MenuAction, input_manager::get_user_input};
 use terminal::questionary;
-use terminal::models::{ValidScore, ValidMultiplier, Question, Macro, IcoEvaluation};
+use terminal::models::{Question, Macro, IcoEvaluation};
 
 /* 
 ICO Evaluation Framework: Macro Areas and Questions Overview
@@ -57,7 +57,7 @@ ICO Evaluation Framework: Macro Areas and Questions Overview
      * Is there positive convexity to apply a similar idea in related applications?
 */
 
-fn summatory_total_score(areas : Vec<Macro>) -> i16 {
+fn summatory_total_score(_areas : &Vec<Macro>) -> i16 {
     let _abslt_score: i16 = 405; //±405
     /*  
     Multiply the area's Macro's ValidMultiplier value
@@ -65,7 +65,7 @@ fn summatory_total_score(areas : Vec<Macro>) -> i16 {
     Return then the summatory of the Macro's moltiplications
     Normalized with the _abslt_score
     */
-    return 0;
+    0
 }
 
 
@@ -224,26 +224,55 @@ fn main() {
         },
     ];
 
-    
-
-
-    output_manager::welcome();
+    match output_manager::welcome() {
+        Ok(_) => (),
+        Err(e) => {
+            eprintln!("Error: {}", e);
+            return;
+        }
+    }
     
     match output_manager::menu() {
         Ok(MenuAction::Exit) => return,
         Ok(MenuAction::Start) => {
             // Directly updates six_macro_areas
-            questionary::display(&mut six_macro_areas);
-            summatory_total_score(six_macro_areas);
+            match questionary::display(&mut six_macro_areas) {
+                Ok(_) => (),
+                Err(e) => {
+                    eprintln!("Error: {}", e);
+                    return;
+                }
+            }
             // Generazione del documento PDF con i punteggi e le domande
             // would you like to create a a pdf report?
-            // if yes, ask for ICO name, Name of creator and create a pdf report
+            // if yes, ask for ICO name, Name of creator and create a pdf(formati aggiuntivi word/md/txt) report
                 // All the data will be saved in a pdf file with questions ecaluation and total score %
                 // ICOs Name
                 // Report
                 // total score
                 // date
             // if no, exit the program
+
+            let  ico_name = match get_user_input(){
+                Ok(ico_name) => ico_name,
+                Err(e) => {
+                    eprintln!("Error: {}", e);
+                    return;
+                }
+            };
+
+            let owner_name = match get_user_input() {
+                Ok(owner_name) => owner_name,
+                Err(e) => {
+                    eprintln!("Error: {}", e);
+                    return;
+                }
+            };
+
+            IcoEvaluation::new(ico_name, 
+                               owner_name, 
+                               summatory_total_score(&six_macro_areas), 
+                               six_macro_areas);
         },
         Err(e) => {
             eprintln!("Error: {}", e);

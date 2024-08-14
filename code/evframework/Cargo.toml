@@ -6,6 +6,7 @@ edition = "2021"
 [dependencies]
 textwrap = { version = "0.16", features = ["terminal_size"] }
 crossterm = "0.28.1"
+unicode-width = "0.1.13"
 
 [lib]
 name = "terminal"

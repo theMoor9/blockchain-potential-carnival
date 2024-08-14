@@ -24,17 +24,13 @@ pub struct Question  {
 
 pub struct Macro {
     pub name: Option<String>,
+    pub description: Option<String>,
     pub weight: Option<ValidMultiplier>,
     pub questions: Vec<Question>,
 }
-//Implementa la creazione vuota!!!!!
-impl Macro {
-    pub fn new() -> Macro {
-        Macro {
-            name: None,
-            weight: None,
-            questions: Vec::new(),
-        }
-    }
 
+pub struct IcoEvaluation {
+    pub name: String,
+    pub macros: Vec<Macro>,
+    pub total_score: i32,
 }

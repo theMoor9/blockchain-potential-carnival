@@ -93,16 +93,19 @@ mod score_math {
     }
 }
 
-fn create_document(ico_name: String, owner_name: String, updated_assessment: Vec<Macro>){
+fn create_document(ico_name: String, updated_assessment: Vec<Macro>){
     
     IcoEvaluation::new(
         ico_name, 
-        owner_name, 
         score_math::to_normalize(
             score_math::weighted_summation(&updated_assessment)
         ), 
         updated_assessment);
-        // Txt per esportazione su editor personale o PDF
+
+        // PDF or Txt to export on personal editor
+            // Add Why? sections at the end of question with brief spaces for comments
+            // Be sure to add a like at the end of the pdf for pen writings
+
 }
 
 
@@ -196,11 +199,7 @@ fn main() {
             }
             match output_manager::ask_document() {
                 None => (),
-                Some(ico_ownr_tuple) => create_document(
-                                            ico_ownr_tuple.0, 
-                                            ico_ownr_tuple.1, 
-                                            assesment
-                                        ),
+                Some(ico) => create_document(ico, assesment),
             }
             match output_manager::quit_message() {
                 Ok(_) => (),

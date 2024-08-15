@@ -52,16 +52,14 @@ impl Question {
 
 pub struct IcoEvaluation {
     pub name: String,
-    pub owner: String,
     pub total_score: i16,
     pub macros: Vec<Macro>,
 }
 
 impl IcoEvaluation {
-    pub fn new(ico_name:String, owner_name:String, score: i16, questionnaire: Vec<Macro>) -> IcoEvaluation {
+    pub fn new(ico_name:String, score: i16, questionnaire: Vec<Macro>) -> IcoEvaluation {
         IcoEvaluation {
             name: ico_name,
-            owner: owner_name,
             total_score: score,
             macros: questionnaire,
         }

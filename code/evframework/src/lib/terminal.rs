@@ -380,26 +380,24 @@ pub mod output_manager {
         Ok(())
     }
 
-    pub fn ask_document() -> Option<(String,String)> {
+    pub fn ask_document() -> Option<String> {
         
-        //Ask if user wants to create a doc
+        //Asks if user wants to create a doc
+        type_print_wrppd("\n\n\nWould you like to generate the report document?",TYPING_SPEED).ok()?;
 
         loop{    
             match get_user_input().ok()?.to_uppercase().as_str() {
                 "YES" => {
-
                     // Name of the ICO
+                    type_print_wrppd("\nPlease enter target cryptocurrency name:",TYPING_SPEED).ok()?;
 
-                    let  ico_name = get_user_input().ok()?.to_owned();
+                    let ico_name = get_user_input().ok()?.to_owned();
 
-                    // Personal Name question
-                
-                    let owner_name = get_user_input().ok()?.to_owned();
-                    Some((ico_name,owner_name))
+                    return Some(ico_name)
                 },
-                "NO" => None,
+                "NO" => return None,
                 _ => {
-                    lear_screen().ok()?
+                    clear_screen().ok()?;
                     println!("Invalid input. Please select a valid option.");
                     thread::sleep(Duration::from_secs(6)); // Time delay before exiting 6 seconds
                     clear_screen().ok()?;

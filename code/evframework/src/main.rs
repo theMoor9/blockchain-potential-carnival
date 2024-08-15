@@ -87,9 +87,9 @@ mod score_math {
         }
         w_summation
     }
-    pub fn to_normalize(score_x: i16) -> i16 {
+    pub fn to_normalize(score_x: i16) -> u8 {
         let abslt_score: i16 = 405; //±405
-        ((score_x + abslt_score) * 100) / (abslt_score * 2)
+        (((score_x + abslt_score) * 100) / (abslt_score * 2)) as u8
     }
 }
 
@@ -97,9 +97,10 @@ fn create_document(ico_name: String, updated_assessment: Vec<Macro>){
     
     IcoEvaluation::new(
         ico_name, 
+        score_math::weighted_summation(&updated_assessment),
         score_math::to_normalize(
             score_math::weighted_summation(&updated_assessment)
-        ), 
+        ), //investment_suitability_score
         updated_assessment);
 
         // PDF or Txt to export on personal editor

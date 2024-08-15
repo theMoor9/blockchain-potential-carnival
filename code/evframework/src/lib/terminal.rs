@@ -352,11 +352,26 @@ pub mod output_manager {
             a scoring system, provides a clear and defined picture of the situation.\n\n",
             TYPING_SPEED-22600,
         )?;
-        type_print_wrppd("This framework represents an essential tool for the in-depth evaluation of ICOs, offering an \
-                        organized method focused on several critical dimensions. It has been designed to facilitate investors, \
-                        analysts, and enthusiasts in making informed choices, consolidating a wide range of information into \
-                        a clear and comprehensible scoring system.",
+   
+        type_print_wrppd(
+            "\n\nThis type of scoring is crucial for the following reasons:\n\n\
+            - Quantifies the Decision: It transforms subjective impressions and qualitative \
+            assessments into an objective number that can be easily compared and analyzed.\n\
+            - Guides Investors: It provides a clear foundation upon which investors can base \
+            their decisions, especially in a complex field like cryptocurrencies and ICOs, where \
+            the amount of information can be overwhelming.\n\
+            - Standardizes Evaluations: It creates a standardized method for assessing \
+            different ICOs, making it easier for investors to compare various investment \
+            opportunities based on consistent metrics.\n\n",
+            TYPING_SPEED-22600,
+        )?;
+
+        type_print_wrppd("\n\n\
+            Therefore, this type of scoring system not only helps simplify the decision-making process but \
+            also contributes to reducing uncertainty and providing greater clarity, making the ICO investment \
+            evaluation process more transparent.",
                         TYPING_SPEED,)?;
+
         print_cntrd_txt("\n\n\nWhen you are ready, press enter to go back.\n");
         skip_input()?; 
         clear_screen()?;

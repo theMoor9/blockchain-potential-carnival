@@ -1,8 +1,10 @@
 pub mod models;
-use std::io::{self, Write, Read, Error};
-use std::fs::File;
-use std::thread;
-use std::time::Duration;
+use std::{
+    io::{self, Write, Read, Error},
+    fs::File,
+    thread,
+    time::Duration,
+};
 use textwrap::{fill, termwidth};
 use unicode_width::UnicodeWidthStr;
 use crossterm::{

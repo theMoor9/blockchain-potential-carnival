@@ -10,6 +10,10 @@ use terminal::models::{
     ValidMultiplier, 
     ValidScore
 };
+use std::{
+    fs::File,
+    io::{self, Write},
+};
 
 /* 
 ICO Evaluation Framework: Macro Areas and Questions Overview
@@ -93,21 +97,94 @@ mod score_math {
     }
 }
 
-fn create_document(ico_name: String, updated_assessment: Vec<Macro>){
-    
-    IcoEvaluation::new(
-        ico_name, 
-        score_math::weighted_summation(&updated_assessment),
-        score_math::to_normalize(
-            score_math::weighted_summation(&updated_assessment)
-        ), //investment_suitability_score
-        updated_assessment);
+mod create_document {
+    use super::*;
+    // PDF or Txt to export on personal editor
+        // Add Personal Observations sections at the end of question with brief spaces for comments
+        // Be sure to add a line at the end of the pdf for signatures
+        // Add a footer with the date of the report
 
-        // PDF or Txt to export on personal editor
-            // Add Why? sections at the end of question with brief spaces for comments
-            // Be sure to add a like at the end of the pdf for pen writings
+    pub fn start(ico_name: String, updated_assessment: Vec<Macro>){
+
+        let new_ico_assessment = IcoEvaluation::new(
+            ico_name, 
+            score_math::weighted_summation(&updated_assessment),
+            score_math::to_normalize(
+                score_math::weighted_summation(&updated_assessment)
+            ), //investment_suitability_score
+            updated_assessment
+        );
+
+        let txt_file_path = "assets/txt/buffer.txt";
+        let pdf_file_path = "assets/pdf/report.pdf";
+
+        match create_buffer(new_ico_assessment, txt_file_path){
+            Ok(_) => (),
+            Err(e) => {
+                eprintln!("Error: {}", e);
+                return;
+            }
+        };
+        create_pdf(txt_file_path, pdf_file_path);
+
+    }
+
+    fn create_buffer(ico: IcoEvaluation, file_path: &str) -> io::Result<()> {
+        // Create a buffer to write the data
+        let mut buffer = File::create(file_path)?;
+
+        // ICO's info
+        writeln!(buffer, "ICO Name: {}", ico.name)?;
+        writeln!(buffer, "Total Score: {}", ico.total_score)?;
+        writeln!(
+            buffer,
+            "Investment Suitability Score: {}",
+            ico.investment_suitability_score
+        )?;
+
+        writeln!(buffer)?;
+
+        // Macro Areas and Questions
+        for macro_item in &ico.macros {
+            if let Some(ref name) = macro_item.name {
+                writeln!(buffer, "Macro Name: {}", name)?;
+            }
+            if let Some(ref description) = macro_item.description {
+                writeln!(buffer, "Description: {}", description)?;
+            }
+            
+            writeln!(buffer, "Weight: {}", macro_item.weight.unwrap_or(ValidMultiplier::One) as i16)?;
+            
+            writeln!(buffer, "Questions:")?;
+            for question in &macro_item.questions {
+                if let Some(ref question_text) = question.question {
+                    writeln!(buffer, "  Question: {}", question_text)?;
+                    writeln!(buffer, "  Personal Observations: ")?;
+                }
+                
+                writeln!(buffer, "  Score: {:?}",  question.score.unwrap_or(ValidScore::Zero) as i16)?;
+                
+                writeln!(buffer)?;
+            }
+            writeln!(buffer)?;
+        }
+
+        writeln!(buffer)?;
+        writeln!(buffer)?;
+        writeln!(buffer)?;
+
+        // Footer
+        writeln!(buffer, "Date: {}", chrono::Local::now())?;
+        Ok(())
+
+    }
+    fn create_pdf(_txt_file_path: &str, _pdf_file_path: &str){
+        // Create a pdf file from the buffer
+    }
+
 
 }
+
 
 
 
@@ -200,7 +277,10 @@ fn main() {
             }
             match output_manager::ask_document() {
                 None => (),
-                Some(ico) => create_document(ico, assesment),
+                Some(ico) => {
+                    create_document::start(ico, assesment)
+                    
+                },
             }
             match output_manager::quit_message() {
                 Ok(_) => (),

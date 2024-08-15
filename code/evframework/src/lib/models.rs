@@ -18,7 +18,7 @@ pub enum ValidMultiplier {
     Two = 2,
     Three = 3
 }
-/// Macro
+
 pub struct Question  {
     pub question: Option<String> ,
     pub score: Option<ValidScore>,

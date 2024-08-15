@@ -1,3 +1,4 @@
+#[derive(Copy,Clone)]
 pub enum ValidScore {
     NFive = -5,
     NFour = -4,
@@ -11,6 +12,7 @@ pub enum ValidScore {
     PFour = 4,
     PFive = 5,
 }
+#[derive(Copy,Clone)]
 pub enum ValidMultiplier {
     One = 1,
     Two = 2,
@@ -29,11 +31,30 @@ pub struct Macro {
     pub questions: Vec<Question>,
 }
 
+impl Macro {
+    pub fn new(name: String, description: String, questions: Vec<Question>) -> Macro {
+        Macro {
+            name: Some(name),
+            description: Some(description),
+            weight: None,
+            questions: questions,
+        }
+    }
+}
+impl Question {
+    pub fn new(question: String) -> Question {
+        Question {
+            question: Some(question),
+            score: None,
+        }
+    }
+}
+
 pub struct IcoEvaluation {
     pub name: String,
     pub owner: String,
-    pub macros: Vec<Macro>,
     pub total_score: i16,
+    pub macros: Vec<Macro>,
 }
 
 impl IcoEvaluation {
@@ -41,8 +62,8 @@ impl IcoEvaluation {
         IcoEvaluation {
             name: ico_name,
             owner: owner_name,
-            macros: questionnaire,
             total_score: score,
+            macros: questionnaire,
         }
     }
 }

@@ -5,7 +5,20 @@ use std::thread;
 use std::time::Duration;
 use textwrap::{fill, termwidth};
 use unicode_width::UnicodeWidthStr;
-use crossterm::terminal::size;
+use crossterm::{
+        execute,
+        terminal::{
+            size,
+            Clear,
+            ClearType
+        },
+        event::{
+            self,
+            Event,
+            KeyCode
+        },
+        cursor::MoveToColumn,
+};
 
 const TYPING_SPEED: u64 = 23000; //1000 = 1ms per character
 
@@ -29,16 +42,55 @@ pub enum MenuAction {
     Exit,
 }
 
+pub mod input_manager {
+
+    use super::*;
+    
+    pub fn skip_input() -> io::Result<String> {
+        let mut input = String::new();
+        io::stdin().read_line(&mut input)?;
+        Ok(input.trim().to_string()) // Trim to remove newlines
+    }
+    pub fn get_user_input() -> io::Result<String> {
+        
+
+        let mut input = String::new();
+
+        // Stampa il prompt ">>"
+        print!(">> ");
+        io::stdout().flush()?;  // Flush per assicurarsi che ">>" sia visualizzato prima di leggere l'input
+
+        // Legge l'input dall'utente
+        io::stdin().read_line(&mut input)?;
+        
+        // Restituisce l'input dell'utente, rimuovendo eventuali spazi bianchi (come newline)
+        Ok(input.trim().to_string())
+        
+    }
+}
+
 pub mod output_manager {
+
     use super::*;
     use crate::input_manager::{skip_input, get_user_input};
 
     pub fn type_print_wrppd(message: &str, delay: u64) -> io::Result<()> {
-
         let width = termwidth(); // Get the current terminal width
         let wrapped = fill(message, width); 
+        let mut stdout = io::stdout();
 
         for c in wrapped.chars() {
+            // Skip if Enter is pressed
+            if event::poll(Duration::from_millis(0))? {
+                if let Event::Key(event) = event::read()? {
+                    if event.code == KeyCode::Enter {
+                        execute!(stdout, Clear(ClearType::CurrentLine), MoveToColumn(0))?;
+                        println!("{}",wrapped);
+                        return Ok(());
+                    }
+                }
+            }
+
             io::stdout().lock().write_all(c.to_string().as_bytes())?;
             io::stdout().lock().flush()?; // Flush at the end of the loop to ensure immediate output
             thread::sleep(Duration::from_micros(delay)); // Allow customizable typing speed
@@ -212,42 +264,42 @@ pub mod output_manager {
         Ok(())
     }
     pub fn menu() -> io::Result<MenuAction> {
-        print_cntrd_txt(print_txt(AsciiFile::MainMenu)?.as_str());//Main Menu
-        type_print_wrppd("\n\n\n\n\n\nWelcome to EvFramework!\n\n",TYPING_SPEED)?;
-        type_print_wrppd("This tool provides a focused and structured approach to evaluate ICOs across various dimensions,\n\
-                          aiming to assist investors, analysts, and enthusiasts in making informed decisions.\n\n",
-                          TYPING_SPEED-22600)?;
-        type_print_wrppd("[1] Start Evaluation", TYPING_SPEED)?;
-        type_print_wrppd("[2] Scoring System Information", TYPING_SPEED)?;
-        type_print_wrppd("[3] Scope", TYPING_SPEED)?;
-        type_print_wrppd("[4] Credits", TYPING_SPEED)?;
-        type_print_wrppd("[5] Exit", TYPING_SPEED)?;
-        println!("\n\nPlease select an option by entering the corresponding number:");
+        loop {    
+            print_cntrd_txt(print_txt(AsciiFile::MainMenu)?.as_str());//Main Menu
+            type_print_wrppd("\n\n\n\n\n\nWelcome to EvFramework!\n\n",TYPING_SPEED)?;
+            type_print_wrppd("This tool provides a focused and structured approach to evaluate ICOs across various dimensions,\n\
+                            aiming to assist investors, analysts, and enthusiasts in making informed decisions.\n\n",
+                            TYPING_SPEED-22600)?;
+            type_print_wrppd("[1] Start Evaluation", TYPING_SPEED)?;
+            type_print_wrppd("[2] Scoring System Information", TYPING_SPEED)?;
+            type_print_wrppd("[3] Scope", TYPING_SPEED)?;
+            type_print_wrppd("[4] Credits", TYPING_SPEED)?;
+            type_print_wrppd("[5] Exit", TYPING_SPEED)?;
+            println!("\n\nPlease select an option by entering the corresponding number:");
 
-        match get_user_input()?.as_str() {
-                "2" => scoring_system_info()?,
-                "1" => { 
-                    clear_screen()?;
-                    return Ok(MenuAction::Start);
-                },
-                "3" => scope_info()?,
-                "4" => credits_info()?,
-                "5" => {
-                    clear_screen()?;
-                    println!("Exiting EvFramework. Goodbye!");
-                    thread::sleep(Duration::from_secs(6)); // Time delay before exiting 6 seconds
-                    clear_screen()?;
-                    return Ok(MenuAction::Exit);
-                },
-                _ => {
-                    clear_screen()?;
-                    println!("Invalid input. Please select a valid option.");
-                    thread::sleep(Duration::from_secs(6)); // Time delay before exiting 6 seconds
-                    clear_screen()?;
-                    menu()?;
-                },
+            match get_user_input()?.as_str() {
+                    "2" => scoring_system_info()?,
+                    "1" => { 
+                        clear_screen()?;
+                        return Ok(MenuAction::Start);
+                    },
+                    "3" => scope_info()?,
+                    "4" => credits_info()?,
+                    "5" => {
+                        clear_screen()?;
+                        println!("Exiting EvFramework. Goodbye!");
+                        thread::sleep(Duration::from_secs(6)); // Time delay before exiting 6 seconds
+                        clear_screen()?;
+                        return Ok(MenuAction::Exit);
+                    },
+                    _ => {
+                        clear_screen()?;
+                        println!("Invalid input. Please select a valid option.");
+                        thread::sleep(Duration::from_secs(6)); // Time delay before exiting 6 seconds
+                        clear_screen()?;
+                    },
+            }
         }
-        Ok(MenuAction::Exit)
     }
     fn scoring_system_info() -> io::Result<()> {
         clear_screen()?;
@@ -286,9 +338,8 @@ pub mod output_manager {
         print_cntrd_txt("\n\n\nWhen you are ready, press enter to go back.");
 
         skip_input()?; 
-
+        
         clear_screen()?;
-        menu()?;
         Ok(())
 
     }
@@ -302,15 +353,13 @@ pub mod output_manager {
             TYPING_SPEED-22600,
         )?;
         type_print_wrppd("This framework represents an essential tool for the in-depth evaluation of ICOs, offering an \
-            organized method focused on several critical dimensions. It has been designed to facilitate investors, \
-            analysts, and enthusiasts in making informed choices, consolidating a wide range of information into \
-            a clear and comprehensible scoring system.",
-            TYPING_SPEED,
-        )?;
+                        organized method focused on several critical dimensions. It has been designed to facilitate investors, \
+                        analysts, and enthusiasts in making informed choices, consolidating a wide range of information into \
+                        a clear and comprehensible scoring system.",
+                        TYPING_SPEED,)?;
         print_cntrd_txt("\n\n\nWhen you are ready, press enter to go back.\n");
         skip_input()?; 
         clear_screen()?;
-        menu()?;
         Ok(())
     }
     fn credits_info() -> io::Result<()> {
@@ -322,7 +371,6 @@ pub mod output_manager {
         print_cntrd_txt("\n\n\nWhen you are ready, press enter to go back.\n");
         skip_input()?;
         clear_screen()?;
-        menu()?;
         Ok(())
     }
 
@@ -332,39 +380,57 @@ pub mod output_manager {
         Ok(())
     }
 
-}
+    pub fn ask_document() -> Option<(String,String)> {
+        
+        //Ask if user wants to create a doc
 
-pub mod input_manager {
+        loop{    
+            match get_user_input().ok()?.to_uppercase().as_str() {
+                "YES" => {
 
-    use super::*;
+                    // Name of the ICO
 
-    pub fn skip_input() -> io::Result<String> {
-        let mut input = String::new();
-        io::stdin().read_line(&mut input)?;
-        Ok(input.trim().to_string()) // Trim to remove newlines
+                    let  ico_name = get_user_input().ok()?.to_owned();
+
+                    // Personal Name question
+                
+                    let owner_name = get_user_input().ok()?.to_owned();
+                    Some((ico_name,owner_name))
+                },
+                "NO" => None,
+                _ => {
+                    lear_screen().ok()?
+                    println!("Invalid input. Please select a valid option.");
+                    thread::sleep(Duration::from_secs(6)); // Time delay before exiting 6 seconds
+                    clear_screen().ok()?;
+                }
+            }
+        }
     }
-
-    pub fn get_user_input() -> io::Result<String> {
-        let mut input = String::new();
-
-        // Stampa il prompt ">>"
-        print!(">> ");
-        io::stdout().flush()?;  // Flush per assicurarsi che ">>" sia visualizzato prima di leggere l'input
-
-        // Legge l'input dall'utente
-        io::stdin().read_line(&mut input)?;
-
-        // Restituisce l'input dell'utente, rimuovendo eventuali spazi bianchi (come newline)
-        Ok(input.trim().to_string())
+    pub fn quit_message() -> io::Result<()> {
+        //twprint exit message
+        type_print_wrppd("Thank you for completing the evaluation. Your scores have been recorded.\n", TYPING_SPEED)?;
+        print_cntrd_txt("\nDigit Enter to quit || theMoor9.");
+        
+        //get_user_input
+        //match get_user_input for easteregg
+        match get_user_input()?.as_str() {
+            "theMoor9" => {
+                clear_screen()?;
+                type_print_wrppd(print_txt(AsciiFile::Easteregg)?.as_str(), TYPING_SPEED-22600)?;//twprint easteregg
+                thread::sleep(Duration::from_secs(9)); // Time delay before exiting 9 seconds
+                return Ok(())
+            }   
+            _ => return Ok(()),
+        }
     }
-
 }
 
 pub mod questionary {
 
     use super::*;
     use crate::input_manager::{get_user_input};
-    use crate::output_manager::{clear_screen, type_print_wrppd, print_txt, print_cntrd_txt};
+    use crate::output_manager::{type_print_wrppd, print_txt, print_cntrd_txt};
     use models::{ValidScore, ValidMultiplier, Macro};
     
     
@@ -412,26 +478,12 @@ pub mod questionary {
                     break;
                 }
                 println!();
-            } 
-            clear_screen()?; 
-        }   
-        //twprint exit message
-        type_print_wrppd("Thank you for completing the evaluation. Your scores have been recorded.\n", TYPING_SPEED)?;
-        print_cntrd_txt("\nDigit Enter to quit || theMoor9.");
-        
-        //get_user_input
-        //match get_user_input for easteregg
-        match get_user_input()?.as_str() {
-            "theMoor9" => {
-                clear_screen()?;
-                type_print_wrppd(print_txt(AsciiFile::Easteregg)?.as_str(), TYPING_SPEED-22600)?;//twprint easteregg
-                thread::sleep(Duration::from_secs(9)); // Time delay before exiting 9 seconds
-            }   
-            _ => (),
-        }
-
+            }  
+        } 
         Ok(())
-    }
+    }  
+
+    
 
     fn score_validation(score: Result<String, Error>) -> Option<ValidScore> {
         match score {
@@ -465,3 +517,4 @@ pub mod questionary {
         }
     }
 }
+

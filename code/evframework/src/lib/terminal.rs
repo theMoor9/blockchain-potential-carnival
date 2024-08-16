@@ -402,11 +402,11 @@ pub mod output_manager {
     }
 
     pub fn ask_document() -> Option<String> {
-        
-        //Asks if user wants to create a doc
-        type_print_wrppd("\n\n\nWould you like to generate the report document?",TYPING_SPEED).ok()?;
+        loop{ 
+            //Asks if user wants to create a doc
+            type_print_wrppd("\n\n\nWould you like to generate the report document?",TYPING_SPEED).ok()?;
 
-        loop{    
+           
             match get_user_input().ok()?.to_uppercase().as_str() {
                 "YES" => {
                     // Name of the ICO

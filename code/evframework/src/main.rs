@@ -13,7 +13,9 @@ use terminal::models::{
 use std::{
     fs::File,
     io::{self, Write},
-    process::Command
+    process::Command,
+    thread,
+    time::Duration
 };
 
 /* 
@@ -207,6 +209,11 @@ mod create_document {
             .arg(pdf_file_path)
             .status()
             .expect("Failed to convert markdown to PDF with Pandoc");
+
+        output_manager::clear_screen()?;
+        output_manager::type_print_wrppd("The report has been successfully created.", 2)?;
+        thread::sleep(Duration::from_secs(6));
+
         Ok(())
     }
 }
@@ -303,8 +310,7 @@ fn main() {
             match output_manager::ask_document() {
                 None => (),
                 Some(ico) => {
-                    create_document::start(ico, assesment)
-                    
+                    create_document::start(ico, assesment)                    
                 },
             }
             match output_manager::quit_message() {

@@ -7,7 +7,6 @@ use std::{
         Error,
         stdout,
     },
-
     fs::File,
     thread,
     time::Duration,
@@ -443,7 +442,8 @@ pub mod output_manager {
     }
 
     pub fn clear_screen() -> io::Result<()> {
-        execute!(stdout(), Clear(ClearType::All))?;
+        execute!(stdout(), Clear(ClearType::All))?; // Clear the screen
+        execute!(stdout, MoveTo(0, 0))?; // Cursor to top left corner
         Ok(())
     }
 }

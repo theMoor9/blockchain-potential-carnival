@@ -25,7 +25,10 @@ use crossterm::{
             Event,
             KeyCode
         },
-        cursor::MoveToColumn,
+        cursor::{
+            MoveTo,
+            MoveToColumn
+        },
 };
 
 const TYPING_SPEED: u64 = 23000; //1000 = 1ms per character
@@ -443,7 +446,7 @@ pub mod output_manager {
 
     pub fn clear_screen() -> io::Result<()> {
         execute!(stdout(), Clear(ClearType::All))?; // Clear the screen
-        execute!(stdout, MoveTo(0, 0))?; // Cursor to top left corner
+        execute!(stdout(), MoveTo(0, 0))?; // Cursor to top left corner
         Ok(())
     }
 }

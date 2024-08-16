@@ -11,12 +11,14 @@ use terminal::models::{
     ValidScore
 };
 use std::{
+    //env, let current_dir = env::current_dir()?; // Get the current directory
     fs::File,
-    io::{self, Write},
-    process::Command,
+    io::{self, Write, BufWriter},
     thread,
     time::Duration
 };
+use printpdf::*;
+
 
 /* 
 ICO Evaluation Framework: Macro Areas and Questions Overview
@@ -102,10 +104,6 @@ mod score_math {
 
 mod create_document {
     use super::*;
-    // PDF or Txt to export on personal editor
-        // Add Personal Observations sections at the end of question with brief spaces for comments
-        // Be sure to add a line at the end of the pdf for signatures
-        // Add a footer with the date of the report
 
     pub fn start(ico_name: String, updated_assessment: Vec<Macro>){
 
@@ -118,17 +116,18 @@ mod create_document {
             updated_assessment
         );
 
-        let md_file_path = "assets/pdf/md/buffer.md";
-        let pdf_file_path = "assets/pdf/EvFrameworkReport.pdf";
+        let md_file_path = "../../assets/md/buffer.md";
+        let pdf_file_path = "../../assets/pdf/EvFrameworkReport.pdf";
 
-        match create_buffer(new_ico_assessment, md_file_path){
+        match create_md(&new_ico_assessment, md_file_path){
             Ok(_) => (),
             Err(e) => {
                 eprintln!("Error: {}", e);
                 return;
             }
         };
-        match create_pdf(md_file_path, pdf_file_path) {
+
+        match create_pdf(new_ico_assessment, pdf_file_path){
             Ok(_) => (),
             Err(e) => {
                 eprintln!("Error: {}", e);
@@ -138,7 +137,7 @@ mod create_document {
 
     }
 
-    fn create_buffer(ico: IcoEvaluation, file_path: &str) -> io::Result<()> {
+    fn create_md(ico: &IcoEvaluation, file_path: &str) -> io::Result<()> {
         // Create a buffer to write the data
         let mut buffer = File::create(file_path)?;
 
@@ -201,24 +200,96 @@ mod create_document {
         Ok(())
 
     }
-    fn create_pdf(md_file_path: &str, pdf_file_path: &str) -> io::Result<()>{
-        // Create a pdf file from the buffer
-        Command::new("pandoc")
-            .arg(md_file_path)
-            .arg("-o")
-            .arg(pdf_file_path)
-            .status()
-            .expect("Failed to convert markdown to PDF with Pandoc");
+    fn create_pdf(ico: IcoEvaluation, file_path: &str) -> io::Result<()> {
+            // Create a new PDF document
+            let (doc, page1, layer1) = PdfDocument::new(&ico.name, Mm(210.0), Mm(297.0), "Layer 1");
+            let current_layer = doc.get_page(page1).get_layer(layer1);
+        
+            // Load a font
+            let font = doc.add_external_font(File::open("../../assets/fonts/Helvetica.ttf").map_err(|e| io::Error::new(io::ErrorKind::Other, e.to_string()))?)
+                .map_err(|e| io::Error::new(io::ErrorKind::Other, e.to_string()))?;
+            let title_font = doc.add_external_font(File::open("../../assets/fonts/helvetica-compressed-5871d14b6903a.otf").map_err(|e| io::Error::new(io::ErrorKind::Other, e.to_string()))?)
+                .map_err(|e| io::Error::new(io::ErrorKind::Other, e.to_string()))?;
+            let oblique_font = doc.add_external_font(File::open("../../assets/fonts/Helvetica-Oblique.ttf").map_err(|e| io::Error::new(io::ErrorKind::Other, e.to_string()))?)
+                .map_err(|e| io::Error::new(io::ErrorKind::Other, e.to_string()))?;
+            let bold_font = doc.add_external_font(File::open("../../assets/fonts/Helvetica-Bold.ttf").map_err(|e| io::Error::new(io::ErrorKind::Other, e.to_string()))?)
+                .map_err(|e| io::Error::new(io::ErrorKind::Other, e.to_string()))?;
 
-        output_manager::clear_screen()?;
-        output_manager::type_print_wrppd("The report has been successfully created.", 2)?;
-        thread::sleep(Duration::from_secs(6));
+        
+            // Start position for the content
+            let mut y_position = 287.0;
 
-        Ok(())
-    }
+            // Centered Title: EvFramework Report
+            current_layer.use_text("EvFramework Report", 36.0, Mm(55.0), Mm(y_position), &title_font);
+            y_position -= 20.0;
+
+            // Title: ICO Name
+            current_layer.use_text(&ico.name, 24.0, Mm(10.0), Mm(y_position), &bold_font);
+            y_position -= 8.0;
+        
+            // Investment Suitability Value and Total Score
+            current_layer.use_text(format!("Investment Suitability Value: {}%", ico.investment_suitability_value), 12.0, Mm(10.0), Mm(y_position), &bold_font);
+            y_position -= 8.0;
+            current_layer.use_text(format!("Total Score: {}", ico.total_score), 12.0, Mm(10.0), Mm(y_position), &oblique_font);
+            y_position -= 30.0;
+        
+            // Add each Macro Area
+            for macro_item in &ico.macros {
+                if let Some(ref name) = macro_item.name {
+                    current_layer.use_text(name, 18.0, Mm(10.0), Mm(y_position), &bold_font);
+                    y_position -= 8.0;
+                }
+        
+                if let Some(ref description) = macro_item.description {
+                    current_layer.use_text(format!("Description: {}", description), 12.0, Mm(10.0), Mm(y_position), &oblique_font);
+                    y_position -= 8.0;
+                }
+        
+                if let Some(weight) = macro_item.weight {
+                    let weight_str = match weight {
+                        ValidMultiplier::One => "Relevance: Standard",
+                        ValidMultiplier::Two => "Relevance: High",
+                        ValidMultiplier::Three => "Relevance: Critical",
+                    };
+                    current_layer.use_text(weight_str, 12.0, Mm(10.0), Mm(y_position), &oblique_font);
+                    y_position -= 20.0;
+                }
+        
+                // Add each question
+                for question in &macro_item.questions {
+                    if let Some(ref question_text) = question.question {
+                        current_layer.use_text(format!("Question: {}", question_text), 12.0, Mm(10.0), Mm(y_position), &font);
+                        y_position -= 10.0;
+                    }
+                    
+                    current_layer.use_text(format!("Score: {}", question.score.unwrap_or(ValidScore::Zero) as i16), 12.0, Mm(10.0), Mm(y_position), &font);
+                    y_position -= 10.0;
+
+                    // Placeholder for Personal Observations
+                    current_layer.use_text("Personal Observations:", 12.0, Mm(10.0), Mm(y_position), &font);
+                    y_position -= 20.0; // leave space for observations
+                }
+        
+                y_position -= 20.0;
+            }
+        
+            // Footer with date
+            let current_date = chrono::Local::now().format("%Y-%m-%d").to_string();
+            current_layer.use_text(format!("Date: {}", current_date), 12.0, Mm(10.0), Mm(y_position), &font);
+        
+            // Save the PDF document
+            let mut file = BufWriter::new(File::create(file_path)?);
+            doc.save(&mut file).map_err(|e| io::Error::new(io::ErrorKind::Other, e.to_string()))?;
+            
+
+            output_manager::clear_screen()?;
+            println!("\n\n");
+            output_manager::print_cntrd_txt("The report has been successfully created.");
+            thread::sleep(Duration::from_secs(6));
+            Ok(())
+        }
+        
 }
-
-
 
 fn main() {
 
@@ -320,16 +391,6 @@ fn main() {
                     return;
                 }
             }
-            // would you like to create a a pdf report?
-            // if yes, ask for ICO name, Name of creator and create a pdf(formati aggiuntivi word/md/txt) report
-                // All the data will be saved in a pdf file with questions ecaluation and total score %
-                // ICOs Name
-                // Report
-                // total score
-                // date
-            // if no, exit the program
-
-            
         },
         Err(e) => {
             eprintln!("Error: {}", e);

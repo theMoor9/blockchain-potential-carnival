@@ -18,7 +18,7 @@ use crossterm::{
         terminal::{
             size,
             Clear,
-            ClearType
+            ClearType,
         },
         event::{
             self,
@@ -405,8 +405,8 @@ pub mod output_manager {
         loop{ 
             //Asks if user wants to create a doc
             type_print_wrppd("\n\n\nWould you like to generate the report document?",TYPING_SPEED).ok()?;
-
-           
+            type_print_wrppd("[Yes]\n[No]", TYPING_SPEED).ok()?; //twprint document question
+            println!();
             match get_user_input().ok()?.to_uppercase().as_str() {
                 "YES" => {
                     // Name of the ICO
@@ -428,7 +428,9 @@ pub mod output_manager {
     }
     pub fn quit_message() -> io::Result<()> {
         //twprint exit message
-        type_print_wrppd("Thank you for completing the evaluation. Your scores have been recorded.\n", TYPING_SPEED)?;
+        println!();
+        print_cntrd_txt("Evaluation Complete.\n");
+        thread::sleep(Duration::from_secs(2));
         print_cntrd_txt("\nDigit Enter to quit || theMoor9.");
         
         //get_user_input

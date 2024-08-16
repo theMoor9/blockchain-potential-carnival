@@ -1,6 +1,13 @@
 pub mod models;
 use std::{
-    io::{self, Write, Read, Error},
+    io::{
+        self, 
+        Write, 
+        Read, 
+        Error,
+        stdout,
+    },
+
     fs::File,
     thread,
     time::Duration,
@@ -269,8 +276,9 @@ pub mod output_manager {
         loop {    
             print_cntrd_txt(print_txt(AsciiFile::MainMenu)?.as_str());//Main Menu
             type_print_wrppd("\n\n\n\n\n\nWelcome to EvFramework!\n\n",TYPING_SPEED)?;
-            type_print_wrppd("This tool provides a focused and structured approach to evaluate ICOs across various dimensions,\n\
-                            aiming to assist investors, analysts, and enthusiasts in making informed decisions.\n\n",
+            type_print_wrppd("This tool provides a focused and structured approach to evaluate Initial Coin Offerings \
+                            across various dimensions,\n aiming to assist investors, analysts, and enthusiasts in \
+                            making informed decisions.\n\n",
                             TYPING_SPEED-22600)?;
             type_print_wrppd("[1] Start Evaluation", TYPING_SPEED)?;
             type_print_wrppd("[2] Scoring System Information", TYPING_SPEED)?;
@@ -391,12 +399,6 @@ pub mod output_manager {
         Ok(())
     }
 
-    pub fn clear_screen() -> io::Result<()> {
-        print!("\x1B[2J\x1B[1;1H"); // Clear the terminal screen
-        io::stdout().flush()?; // Ensure the screen is cleared before moving on
-        Ok(())
-    }
-
     pub fn ask_document() -> Option<String> {
         
         //Asks if user wants to create a doc
@@ -438,6 +440,11 @@ pub mod output_manager {
             }   
             _ => return Ok(()),
         }
+    }
+
+    pub fn clear_screen() -> io::Result<()> {
+        execute!(stdout(), Clear(ClearType::All))?;
+        Ok(())
     }
 }
 

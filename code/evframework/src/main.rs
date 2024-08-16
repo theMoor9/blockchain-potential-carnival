@@ -13,6 +13,7 @@ use terminal::models::{
 use std::{
     fs::File,
     io::{self, Write},
+    process::Command
 };
 
 /* 
@@ -111,21 +112,27 @@ mod create_document {
             score_math::weighted_summation(&updated_assessment),
             score_math::to_normalize(
                 score_math::weighted_summation(&updated_assessment)
-            ), //investment_suitability_score
+            ), //investment_suitability_value
             updated_assessment
         );
 
-        let txt_file_path = "assets/txt/buffer.txt";
-        let pdf_file_path = "assets/pdf/report.pdf";
+        let md_file_path = "assets/pdf/md/buffer.md";
+        let pdf_file_path = "assets/pdf/EvFrameworkReport.pdf";
 
-        match create_buffer(new_ico_assessment, txt_file_path){
+        match create_buffer(new_ico_assessment, md_file_path){
             Ok(_) => (),
             Err(e) => {
                 eprintln!("Error: {}", e);
                 return;
             }
         };
-        create_pdf(txt_file_path, pdf_file_path);
+        match create_pdf(md_file_path, pdf_file_path) {
+            Ok(_) => (),
+            Err(e) => {
+                eprintln!("Error: {}", e);
+                return;
+            }
+        };
 
     }
 
@@ -134,37 +141,51 @@ mod create_document {
         let mut buffer = File::create(file_path)?;
 
         // ICO's info
-        writeln!(buffer, "ICO Name: {}", ico.name)?;
-        writeln!(buffer, "Total Score: {}", ico.total_score)?;
+        writeln!(buffer, "#EvFramework Report")?;
+        writeln!(buffer)?;
+        writeln!(buffer, "##**{}**", ico.name)?;
         writeln!(
             buffer,
-            "Investment Suitability Score: {}",
-            ico.investment_suitability_score
+            "##**Investment Suitability Value**:   {}", 
+            ico.investment_suitability_value
         )?;
+        writeln!(buffer, "**Total Score**: {}", ico.total_score)?;
+        writeln!(buffer, "---")?;
 
-        writeln!(buffer)?;
-
-        // Macro Areas and Questions
+        // Macro Areas and Question
         for macro_item in &ico.macros {
             if let Some(ref name) = macro_item.name {
-                writeln!(buffer, "Macro Name: {}", name)?;
+                writeln!(buffer, "**{}**", name)?;// Macro name
             }
             if let Some(ref description) = macro_item.description {
-                writeln!(buffer, "Description: {}", description)?;
+                writeln!(buffer, "***Description***: {}", description)?;
             }
+            match macro_item.weight {
+                Some(ValidMultiplier::One) => {
+                    writeln!(buffer, "***Relevance***: Standard")?;
+                },
+                Some(ValidMultiplier::Two) => {
+                    writeln!(buffer, "***Relevance***: High")?;
+                },
+                Some(ValidMultiplier::Three) => {
+                    writeln!(buffer, "***Relevance***: Critical")?;
+                },
+                None => {
+                    writeln!(buffer, "***Relevance***: Standard")?;
+                }
+            }
+
+            writeln!(buffer)?;
             
-            writeln!(buffer, "Weight: {}", macro_item.weight.unwrap_or(ValidMultiplier::One) as i16)?;
-            
-            writeln!(buffer, "Questions:")?;
             for question in &macro_item.questions {
                 if let Some(ref question_text) = question.question {
-                    writeln!(buffer, "  Question: {}", question_text)?;
-                    writeln!(buffer, "  Personal Observations: ")?;
+                    writeln!(buffer,"- {}", question_text)?; // Question
+                    writeln!(buffer, "    `Score: {}`", question.score.unwrap_or(ValidScore::Zero) as i16)?;
+                    writeln!(buffer)?;
+                    writeln!(buffer, "    Personal Observations: ")?;
+                    writeln!(buffer)?;
+                    writeln!(buffer)?;
                 }
-                
-                writeln!(buffer, "  Score: {:?}",  question.score.unwrap_or(ValidScore::Zero) as i16)?;
-                
-                writeln!(buffer)?;
             }
             writeln!(buffer)?;
         }
@@ -178,13 +199,17 @@ mod create_document {
         Ok(())
 
     }
-    fn create_pdf(_txt_file_path: &str, _pdf_file_path: &str){
+    fn create_pdf(md_file_path: &str, pdf_file_path: &str) -> io::Result<()>{
         // Create a pdf file from the buffer
+        Command::new("pandoc")
+            .arg(md_file_path)
+            .arg("-o")
+            .arg(pdf_file_path)
+            .status()
+            .expect("Failed to convert markdown to PDF with Pandoc");
+        Ok(())
     }
-
-
 }
-
 
 
 

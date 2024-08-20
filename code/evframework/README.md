@@ -16,8 +16,8 @@ $$$$$$$$\    \$  /   $$ |      $$ |      \$$$$$$$ |$$ | $$ | $$ |\$$$$$$$\ \$$$$
 
 ## Documents
 
-- [PDF](./assets/pdf/)
-- [MD](./assets/md/)
+- [PDF](./output/pdf/)
+- [MD](./output/md/)
 
 
 ## Info 

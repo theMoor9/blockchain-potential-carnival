@@ -1,4 +1,3 @@
-pub mod models;
 use std::{
     io::{
         self, 
@@ -83,7 +82,7 @@ pub mod input_manager {
 pub mod output_manager {
 
     use super::*;
-    use crate::input_manager::{skip_input, get_user_input};
+    use crate::terminal::input_manager::{skip_input, get_user_input};
 
     pub fn type_print_wrppd(message: &str, delay: u64) -> io::Result<()> {
         let width = termwidth(); // Get the current terminal width
@@ -456,9 +455,9 @@ pub mod output_manager {
 pub mod questionary {
 
     use super::*;
-    use crate::input_manager::{get_user_input};
-    use crate::output_manager::{type_print_wrppd, print_txt, print_cntrd_txt};
-    use models::{ValidScore, ValidMultiplier, Macro};
+    use crate::terminal::input_manager::{get_user_input};
+    use crate::terminal::output_manager::{type_print_wrppd, print_txt, print_cntrd_txt};
+    use crate::models::{ValidScore, ValidMultiplier, Macro};
     
     
 

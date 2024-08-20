@@ -9,10 +9,11 @@ crossterm = "0.28.1"
 unicode-width = "0.1.13"
 chrono = "0.4.38"
 printpdf = "0.7.0"
+webbrowser = "1.0.1"
 
 [lib]
-name = "terminal"
-path = "src/lib/terminal.rs"
+name = "lib"
+path = "src/lib/lib.rs"
 
 [build-dependencies]
 winres = "0.1"

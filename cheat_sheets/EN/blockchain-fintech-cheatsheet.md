@@ -10,6 +10,8 @@
 - [Others US Regulators](#Others-US-Regulators)
 - [Challenges](#Challenges)
 ##### [§ Transmission of Money](#-Transmission-of-Money-1)
+##### [§ Peer to Peer Finance](#-Peer-to-Peer-Finance-1)
+##### § 
 ##### § 
 ##### § 
 	
@@ -126,4 +128,36 @@ Businesses that transmit value, such as banks or fintech businesses like PayPal 
 	
 	1. **Exchanges**: Fiat to Crypto to various other assets is an exchange of value as a business.
 	2. **Administrators**: The ones who convert one particular value to redeem another as a business like *Tether* or certain *ICOs* which grants a buy back.
+	
+	
+---
+## **§ Peer to Peer Finance**
+	
 
+	
+	
+---
+## **§ **
+	
+
+	
+	
+---
+## **§ **
+	
+
+	
+	
+---
+## **§ **
+	
+
+	
+	
+---
+###### Suggested Follow-up
+[Blockchain Cheat Sheet - Overview](./blockchain-overview-cheatsheet.md)
+	  
+---
+  
+**Author**: Kenneth Boldrini

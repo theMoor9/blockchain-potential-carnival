@@ -5,7 +5,7 @@ It is designed to help users approach blockchain technology.
 
 My methodical approach to learning has proven to be practically successful. I hope it will be for you too!
 
-PDF versions of the .md docs are available in multiple languages - The documents have been translated using artificial intelligence without any human revisions.
+PDF versions of the .md docs are available in multiple languages - The documents have been translated using artificial intelligence without any human revisions for IT DE FR languages.
 
 ## Learning Philosophy
 
@@ -43,6 +43,9 @@ You can find a ICOs evaluation app folder [here](./code/evframework):
 ## Contributing
 
 Contributions are welcome! If you have any Rust exercises, cheat sheets, or documentation that you'd like to share, please feel free to open a pull request.
+
+## Author
+Kenneth Boldrini
 
 ## License
 

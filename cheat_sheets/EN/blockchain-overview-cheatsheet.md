@@ -17,7 +17,7 @@
 - [Digital Signature Algorithms (DSA)](#Digital-Signature-Algorithms-DSA) | [In-Depth Information](blockchain-signatures-cheatsheet.md)
 - [Transaction Mechanics](#Transaction-Mechanics)
 - [Cryptography](#Cryptography) | [In-Depth Information](blockchain-signatures-cheatsheet.md)
-- [Consensus Mechanism PoW vs PoS](#Consensus-Mechanism-PoW-vs-PoS) | [In-Depth Information](blockchain-consensus-cheatsheet.md)
+- [Consensus Mechanism PoW vs PoS](#Consensus-Mechanism-PoW-vs-PoS) | [In-Depth Information](Blockchain/blockchain-consensus-cheatsheet.md)
 - [Incentives](#Incentives)
 ###### [§ Key Questions and Resolutions 08/2024](#-Key-Questions-and-Resolutions-082024-1)
 	
@@ -113,7 +113,7 @@
     - **Proof-of-Stake (PoS):** Major token holders create consensus, as they have the most interest in validating correct transactions.
 	
 ###### In-Depth Follow-Up
-[**Blockchain Cheat Sheet - Consensus**](blockchain-consensus-cheatsheet.md)
+[**Blockchain Cheat Sheet - Consensus**](Blockchain/blockchain-consensus-cheatsheet.md)
 	
 ### Incentives
 	

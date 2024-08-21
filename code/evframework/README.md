@@ -26,6 +26,9 @@ Look in app menu choices
 
 ---
 
+## Author
+Kenneth Boldrini
+
 ## License
 
 This repository is licensed. See the [LICENSE](./LICENSE) file for more details.

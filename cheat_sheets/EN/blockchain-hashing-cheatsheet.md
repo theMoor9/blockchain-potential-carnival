@@ -29,11 +29,9 @@ We should consider hashing like a fingerprint; it provides a secure genetic refe
 >\* **Collision Issue**: The primary concern is not just the probability of any two hashes colliding, but rather the likelihood that, within a dataset, there will be at least two identical data points with the same hash. This probability increases significantly with the size of the dataset, similar to the birthday paradox.
 	
 ### Salting
-	
 **Salting** is the practice of adding a random value to the hashed password stored. This is the only way to securely hash passwords.
 	
 ### Miners
-	
 The task of miners is to take transactions or data from the blockchain buffer and group them into blocks. Each block header is 80 bytes in size.   
 	
 Before adding these blocks to the blockchain, miners must include a 32-byte hash and a nonce that meets the current difficulty requirement.  
@@ -70,17 +68,14 @@ They do this by cycling through different nonce values until they find one that 
 ### Procedure
 	
 #### 1. Prepare the Message
-	
 **Our Case**: Imagine you have a phrase, for example: "Hello World". This is our input. Calculate the length of the input in bits (88 bits in this case).
 	
 #### 2. Add an End Signal (Padding)
-	
 To let the algorithm know that the phrase is finished, we add a special symbol at the end.
 	
 **Our Case**: We add a '1' bit. This signal is the padding bit. So now we have "Hello World1".
 	
 #### 3. Block Structures
-	
 The algorithm prefers to work with blocks of a certain size, as a computing power optimization. For SHA-256, the block size is 512 bits (64 bytes) at a time.
 ###### Small Data - Add Missing Pieces (Padding with Zeros)
 **Our Case**: If the phrase is not long enough like "Hello World1", we add zeros to fill it up. So, if "Hello World1" is 88 bits long, we add another 424 zeros to make it 512 bits.
@@ -88,13 +83,11 @@ The algorithm prefers to work with blocks of a certain size, as a computing powe
 If data that has to be hashed is longer than 512 bits, the algorithm runs multiple times on chunks.
 	
 #### 4. Add the Length (Append Length)
-	
 At the end, we append the length of the original message in bits, as required by the SHA-256 padding rules.
 	
 **Our Case**: "Hello World" was 88 bits, so we add a 64-bit representation of "88". Now we have a total of 512 bits: 448 bits of data and padding + 64 bits of length.
 	
 #### 5. Mix the Characters (Compression Function)
-	
 Now the algorithm starts mixing the characters. It takes each 512-bit block and performs a lot of complex operations on them, changing the bits in a very complicated way that only the algorithm knows. This step includes operations like XOR, bitwise shifts, and modular additions.
 ###### Big Data - Merkle Root
 The algorithm takes all the 512 bits chunks and concatenates them in pairs executing the hashing again and again until having as a result a 256 bits Hash
@@ -102,7 +95,6 @@ The algorithm takes all the 512 bits chunks and concatenates them in pairs execu
 Technically executing a Collapsing on long groups of hashed data into a single Hash called The **Merkle Root**
 	
 #### 6. Obtain the Secret Code (Hash Value)
-	
 After the algorithm has finished mixing, we get a unique secret code called a hash or digest, like "a7b9c3d2". This code is special because even if you change just one letter of the original message, the hash will be completely different.
 	
 	

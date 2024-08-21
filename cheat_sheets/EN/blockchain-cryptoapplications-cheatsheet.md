@@ -1,4 +1,4 @@
-# Blockchain CheatSheet - Cryptoapplications
+# **Blockchain CheatSheet - Cryptoapplications**
 ---
 ##### **Table of Contents**
 ###### [§ Money and Crypto](#-Money-and-Crypto-1)
@@ -46,7 +46,6 @@
 - [**Initial Coin Offerings (ICOs)**](#-Initial-Coin-Offerings-ICOs-1): Invest in a new cryptocurrency project by participating in its initial offering.
 	
 ### Crypto Exchanges
-	
 Unlike traditional stock exchanges, crypto exchanges often adhere to strict Know Your Customer (KYC) policies due to the regulatory requirements associated with blockchain and cryptocurrencies.
 	
 It's important to note that these exchanges are not devoid of risks. Challenges include [frauds](#-Fraudulent-Crypto-1), hacks, and subpar business practices. Careful consideration is required when choosing an exchange to ensure security and reliability.
@@ -56,7 +55,6 @@ It's important to note that these exchanges are not devoid of risks. Challenges 
 ## **§ Stablecoins**
 	
 ### Cryptocurrency Volatility
-	
 Cryptocurrency is renowned for being one of the most volatile types of assets out there. In fact, during the financial crisis of 2008, markets saw drops in value of up to 9% in a single week; which was an incredible event. But, believe it or not, that’s nothing compared to the normal liquidity flow in cryptocurrency markets. If you’re here reading this, you might already know about its unbelievable oscillations.
 	
 In order of complexity this are the four types of Stablecoins:
@@ -73,7 +71,6 @@ FIAT Collateralized Stablecoins are designed to provide everyone with access to 
 Additionally, if the issuer of the stablecoins that you exchanged for the FIAT-pegged coins encounters financial difficulties, you should be able to recover your FIAT value.
 	
 ### Real Asset Collateralized
-	
 A prime example of this is Digix Gold (DGX) which 1DGX equals 1 gram of gold 
 - Uses the Ethereum Blockchain ERC-20 protocol.
 - Maintains its own caveau in Singapore.
@@ -85,7 +82,6 @@ A prime example of this is Digix Gold (DGX) which 1DGX equals 1 gram of gold
 - D1 Coin  ERC-20: Collateralized by diamonds.
 	
 ### Crypto Collateralized
-	
 This kind of Stablecoin works similarly to those pegged to a FIAT value but adds an intriguing twist based on the chosen cryptocurrency.
 	
 **How it works**
@@ -113,7 +109,6 @@ This kind of Stablecoin works similarly to those pegged to a FIAT value but adds
 >If the system faces a significant threat or instability, a Global Settlement might trigger, returning the collateralized crypto to its original holders.
 	
 ### Non-Collateralized
-	
 This type of Stablecoin operates through internal mechanisms to ensure that its price remains stable.
 	
 **How it works**
@@ -139,7 +134,6 @@ Some stable tokens leverage the programming frameworks of existing blockchains t
 ## **§ Initial Coin Offerings (ICOs)**
 	
 ### Investors
-
 Initial Coin Offerings movements can be cause by a couple of factors
 	
 **Wales Manipulation**:
@@ -167,7 +161,6 @@ The ones ho sees price increase and buy high contributing to a certaint extent t
 7. **Stablecoins**: Easiest to give value by nature. 
 	
 ### ICO Trends
-	
 We certainly can understand that ICOs will not stop as long as there will be new innovative technologies to invest on.
 	
 	

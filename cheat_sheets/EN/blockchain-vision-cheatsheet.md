@@ -37,7 +37,6 @@ Security and Efficiency backed by strong cryptography and the most powerful netw
 Miners providing security by rewarding system  
 	
 ### Hashing
-	
 Bitcoin Blockchain Blocks, by design, are composed of 10 minutes of data each, a practice established since 2009.
 	
 **Chain Feature**:
@@ -81,7 +80,6 @@ Today, Ethereum it stands as one of the most, if not the most, important technol
 - **Base layer for the Internet of Value**
 	
 ### Decentralized Applications (dApps)
-	
 As previously mentioned, Ethereum and other new generation blockchains provide the opportunity to develop Decentralized Applications (dApps). These applications use a series of technologies such as smart contracts for app logic, IPFS or Swarm for data storage, Ethereum Name Services (**ENS**) for decentralized domain naming, and Whisper for decentralized messaging between apps.
 	
  **Explanation**
@@ -165,15 +163,12 @@ These, for the most enterprising minds, are likely to be the ultimate substitute
 ## **§ Gas**
 	
 ### The Problem
-	
 Having applications developed on-chain could result in faulty algorithms, which could end up consuming and wasting the computing power of the blockchain node system.
 	
 ### The Solution
-	
 Introducing a "gas" fee allows applications and smart contracts to be used. This is equivalent to the transaction fee in Bitcoin blockchains, rewarding miners for managing the computational power of the applications to a certain extent, determined by the amount of gas.
 	
 ### Analogy
-	
 Having a car with a faulty throttle pedal could be dangerous with infinite gas. This is the idea implemented in the blockchain: it limits application use by the amount of gas fee you are willing to spend.
 	
 	

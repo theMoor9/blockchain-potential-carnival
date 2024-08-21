@@ -1,4 +1,4 @@
-# Evaluation Sheet
+# **Evaluation Sheet**
 ---
 ### Introduction to the ICO Evaluation Framework
 
@@ -8,7 +8,7 @@ This framework introduces a systematic approach to assessing the viability and p
 	
 #### **Application-Driven Evaluation**
 	
-The evaluation will be facilitated by a smart application, developed in Rust, with a user-friendly interface accessible via .exe displayed in CMD. This application will automate the scoring and weighting process, ensuring a streamlined and consistent evaluation experience.
+The evaluation will be facilitated by a smart application, developed in Rust, with a user-friendly interface. This application will automate a scoring and weighting process, ensuring a streamlined and consistent evaluation experience returning a vast array of information into a single document that, will provide a clear and defined picture of the situation.
 	
 #### **Scoring System**
 	
@@ -41,12 +41,21 @@ These multipliers are used to adjust the impact of each macro area's score on th
 	
 #### **Purpose of the Framework**
 	
-This evaluation framework is intended to provide investors, analysts, and enthusiasts with a comprehensive tool to assess ICOs systematically. It facilitates informed decision-making by providing a clear, quantifiable method to compare and contrast various ICO projects based on multiple dimensions of performance and potential.+
+This evaluation framework is intended to provide investors, analysts, and enthusiasts with a comprehensive tool to assess ICOs systematically. 
 	
-#### **Legend**
+**This type of scoring is crucial for the following reasons:**
+	
+**Quantifies the Decision:** It transforms subjective impressions and qualitative assessments into an objective number that can be easily compared and analyzed.
+	
+**Guides Investors:** It provides a clear foundation upon which investors can base their decisions, especially in a complex field like cryptocurrencies and ICOs, where the amount of information can be overwhelming.
+	
+**Standardizes Evaluations:** It creates a standardized method for assessing different ICOs, making it easier for investors to compare various investment opportunities based on consistent metrics.
+	
+Therefore, this type of scoring system not only helps simplify the decision-making process but also contributes to reducing uncertainty and providing greater clarity, making the ICO investment evaluation process more transparent.
+	
+<h6 style="font-size: 70%;page-break-before: always; "><b>Guideline</b></h6>
 
-
-<h1 style="page-break-before: always; text-align:center;">IDEA</h1>
+<h1 style="text-align:center;">IDEA</h1>
 
 ---
 <div style="display: grid; grid-template-columns: auto auto auto; font-size: 100%;"> 
@@ -164,7 +173,8 @@ This evaluation framework is intended to provide investors, analysts, and enthus
 	</div>   
 </div>
 
-<h1 style="page-break-before: always; text-align:center;">TECHNOLOGY</h1>
+<h6 style="font-size: 70%;page-break-before: always; "><b>Guideline</b></h6>
+<h1 style="text-align:center;">TECHNOLOGY</h1>
 
 ---
 
@@ -272,7 +282,8 @@ This evaluation framework is intended to provide investors, analysts, and enthus
 	<div style="margin: 5px;">
 	</div>   
 </div>
-<h1 style="page-break-before: always; text-align:center;">BLOCKCHAIN SPECIFICS</h1>
+<h6 style="font-size: 70%;page-break-before: always; "><b>Guideline</b></h6>
+<h1 style=" text-align:center;">BLOCKCHAIN SPECIFICS</h1>
 
 ---
 <div style="display: grid; grid-template-columns: auto auto auto; font-size: 100%;"> 
@@ -421,7 +432,8 @@ This evaluation framework is intended to provide investors, analysts, and enthus
 		</p>
 	</div>   
 </div>
-<h1 style="page-break-before: always; text-align:center;">TEAM</h1>
+<h6 style="font-size: 70%;page-break-before: always; "><b>Guideline</b></h6>
+<h1 style="text-align:center;">TEAM</h1>
 
 ---
 
@@ -609,7 +621,8 @@ This evaluation framework is intended to provide investors, analysts, and enthus
 	<div style="margin: 5px;">
 	</div>   
 </div>
-<h1 style="page-break-before: always; text-align:center;">EXECUTION</h1>
+<h6 style="font-size: 70%;page-break-before: always; "><b>Guideline</b></h6>
+<h1 style="text-align:center;">EXECUTION</h1>
 
 ---
 <div style="display: grid; grid-template-columns: auto auto auto; font-size: 100%;"> 
@@ -741,7 +754,8 @@ This evaluation framework is intended to provide investors, analysts, and enthus
 	<div style="margin: 5px;">
 	</div>   
 </div>
-<h1 style="page-break-before: always; text-align:center;">MARKET POTENTIAL</h1>
+<h6 style="font-size: 70%;page-break-before: always; "><b>Guideline</b></h6>
+<h1 style="text-align:center;">MARKET POTENTIAL</h1>
 
 ---
 <div style="display: grid; grid-template-columns: auto auto auto; font-size: 100%;"> 

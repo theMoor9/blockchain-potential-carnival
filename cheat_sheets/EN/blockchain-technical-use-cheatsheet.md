@@ -46,7 +46,6 @@
 ## **§ Cryptotransactions**
 	  
 ### Analogy
-	  
 Suppose that the parties **A**, **B**, and **C** each have a _lockbox_ which contains content that travels through the Blockchain Protocol System, which enforces the rules of how everything works. These _lockboxes_ have a slot that only accepts inward content, and the only way to retrieve the content is with the private key of the owner.
 	  
 ### Mechanics of Transactions
@@ -141,7 +140,6 @@ then need to be accessed manipulating the container to handle it.
 ```
 	
 #### Blockchain Block Structure
-	
 In the context of blockchain, miners create blocks with a specific structure. A typical Bitcoin block header is 80 bytes and includes the following:
 	
 - 4 bytes: version number
@@ -168,7 +166,6 @@ In the context of blockchain, miners create blocks with a specific structure. A 
 - **Layer 2** : Wallet for small transactions faster.
 	
 #### Layer 2 Lightning Network
-	
 **Description**: The Lightning Network is an off-chain solution that functions as a payment channel, built on a network structure that connects users. It enables transactions to be processed without recording every transaction on the Bitcoin blockchain.
 	
 **What it Solves**: It significantly increases transaction speed by using a double signature system as an agreement of exchange.

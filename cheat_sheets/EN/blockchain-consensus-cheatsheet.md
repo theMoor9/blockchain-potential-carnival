@@ -1,11 +1,11 @@
-# Blockchain CheatSheet - Consensus
+# **Blockchain CheatSheet - Consensus**
 ---
 ##### **Table of Contents**
 ###### [§ Fundamentals](#-Fundamentals-1)
 - [Consensus](#Consensus)
 - [Nodes](#Nodes)
 - [Needs](#Needs)
-###### [§ Proof of Work (PoW)](#- Proof-of-Work-PoW)
+###### [§ Proof of Work (PoW)](#-Proof-of-Work-PoW)
 - [Overview](#Overview)
 - [Strengths](#Strengths)
 - [Weaknesses](#Weaknesses)
@@ -46,7 +46,6 @@
 **Light Node**: Acts as a relay between the creation of blocks and their distribution. They maintain a complete copy of the blockchain's ledger and validate all transactions and blocks to ensure consistency and security.
 	
 ### Needs
-	
 In a blockchain system, which is distributed and decentralized, a robust mechanism is essential since parties involved often cannot inherently trust each other. We need to ensure the integrity of the ledger so that the transaction history is reliable. This leads to the necessity of validating transactions without needing trust.
 	
 The consensus mechanism and its forms are designed to address these issues.
@@ -88,7 +87,6 @@ The consensus mechanism and its forms are designed to address these issues.
 For most individuals, it is nearly impossible to successfully mine a block on their own due to the prohibitive costs of specialized mining hardware and electricity, especially when compared to the potential rewards.
 	
 ### Pools
-	
 The most feasible approach is to join a mining pool, which consolidates the processing power of multiple miners. These pools typically have access to cheaper energy sources and more efficient mining rigs. As a member, you would receive a portion of the rewards proportional to your contribution to the pool’s overall resources.
 	
 	
@@ -96,7 +94,6 @@ The most feasible approach is to join a mining pool, which consolidates the proc
 ## **§ Proof of Stake (PoS)**
 	
 ### Overview
-	
 Proof of Stake (PoS) is an alternative consensus mechanism to Proof of Work (PoW), offering a different approach to achieving consensus in a blockchain network.
 	
 **Definition**: In PoS, the "stake" refers to the amount of cryptocurrency an individual holds and commits as a means to gain the right to participate in the process of creating new blocks. The probability of being chosen to create a block is typically proportional to the amount of stake held.
@@ -117,7 +114,6 @@ Proof of Stake (PoS) is an alternative consensus mechanism to Proof of Work (PoW
 - **Nothing at Stake Problem**: Validators may support multiple blockchain forks since doing so incurs no significant costs, potentially leading to double-spending issues.
 	
 ### Delegated Proof of Stake (DPoS)
-	
 DPoS aims to democratize the staking process by allowing stakeholders to delegate their staking power to "delegates," who validate transactions and create blocks on their behalf. This system can potentially address the centralization of rewards by spreading the opportunity to earn transaction fees and block rewards more broadly among participants.
 	
 ### Current PoW Systems
@@ -138,8 +134,7 @@ The Byzantine Generals Problem illustrates a challenge in achieving consensus in
 ![[generals-1024x512.png]]
 	
 ### Blockchain Application
-	
-- In blockchain technology, this problem is analogous to ensuring that all nodes in the network agree on the validity and order of transactions, despite potential attempts by some participants to cheat or disrupt the process. Solutions such as Proof of Work (PoW) and Proof of Stake (PoS) are designed to mitigate these risks by requiring participants to contribute work or stake, creating economic and computational barriers to dishonest behavior.
+In blockchain technology, this problem is analogous to ensuring that all nodes in the network agree on the validity and order of transactions, despite potential attempts by some participants to cheat or disrupt the process. Solutions such as Proof of Work (PoW) and Proof of Stake (PoS) are designed to mitigate these risks by requiring participants to contribute work or stake, creating economic and computational barriers to dishonest behavior.
 	
 	
 ---

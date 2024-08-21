@@ -80,7 +80,6 @@
 [**Blockchain Cheat Sheet - Cryptography & Signatures**](blockchain-signatures-cheatsheet.md)
 	  
 ### Transaction Mechanics
-	
 **UTXO Concept:** The system operates with the Concept of UTXO (unspent transaction outputs), which represents the value that the block possesses and establishes the units that are unspent and spendable.
 	
 1. **Start:** Begin the transaction process.

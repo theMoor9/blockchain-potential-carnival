@@ -1,4 +1,4 @@
-# Welcome to Kenneth's Blockchain CheatRepo!
+# Welcome to the Blockchain CheatRepo!
 
 This repository contains a comprehensive collection of knowledge for learning blockchain through easy-to-reference cheat sheets. 
 It is designed to help users approach blockchain technology. 

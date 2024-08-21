@@ -1,5 +1,8 @@
 
 # **Blockchain CheatSheet - Technical Use**
+
+<div style="font-size: 70%"><b>&#x1F553; Read Time: 5 m</b></div>
+
 ---
 ##### **Table of Contents**
 ###### [§ Addresses](#-Addresses-1)
@@ -14,7 +17,8 @@
 - [Layers](#Layers)
 - [Layer 2 Lightning Network](#Layer-2-Lightning-Network)
 	  
----
+<hr style="page-break-before: always; ">
+
 ## **§ Addresses**
 	  
 ### Use Cases

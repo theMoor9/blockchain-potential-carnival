@@ -1,4 +1,7 @@
 # **Blockchain CheatSheet - The Vision**
+
+<div style="font-size: 70%"><b>&#x1F553; Read Time: 9 m</b></div>
+
 ---
 ##### **Table of Contents**
 ###### [§ Bitcoin](#-Bitcoin-1)
@@ -27,7 +30,8 @@
 ###### [§ The Blockchain Vision Proprieties](#-The-Blockchain-Vision-Proprieties-1)
 - [Cryptocurrency Risks](#Cryptocurrency-Risks)
 	
----
+<hr style="page-break-before: always; ">
+
 ## **§ Bitcoin**
 	
 ### Overview

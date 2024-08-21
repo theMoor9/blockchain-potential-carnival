@@ -1,13 +1,11 @@
 # Welcome to Kenneth's Blockchain CheatRepo!
 
 This repository contains a comprehensive collection of knowledge for learning blockchain through easy-to-reference cheat sheets. 
-It is designed to help Rust users approach blockchain technology through an implementation of knowledge in Rust code. 
-
-However, don't worry! Everyone can understand the cheat sheets; just skip the code blocks if you're not a developer, as they might be confusing.
+It is designed to help users approach blockchain technology. 
 
 My methodical approach to learning has proven to be practically successful. I hope it will be for you too!
 
-At the end you will find .pdf versions of the .md docs.
+PDF versions of the .md docs are available in multiple languages - The documents have been translated using artificial intelligence without any human revisions.
 
 ## Learning Philosophy
 

@@ -1,4 +1,7 @@
 # **Blockchain CheatSheet - Hashing**
+
+<div style="font-size: 70%"><b>&#x1F553; Read Time: 5 m</b></div>
+
 ---
 ##### **Table of Contents**
 ###### [§ Fundamentals](#-Fundamentals-1)
@@ -10,7 +13,8 @@
 - [Procedure](#Procedure)
 ###### [§ Applications](#-Applications-1)
 	  
----
+<hr style="page-break-before: always; ">
+
 ## **§ Fundamentals**
 	
 Hashing is not encryption because you cannot rebuild the original data from the hash as you can with encrypted files. 

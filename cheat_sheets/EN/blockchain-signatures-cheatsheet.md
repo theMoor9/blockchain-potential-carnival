@@ -1,4 +1,7 @@
 ## **Blockchain CheatSheet - Cryptography & Signatures**
+
+<div style="font-size: 70%"><b>&#x1F553; Read Time: 6 m</b></div>
+
 ---
 ##### **Table of Contents**
 ###### [§ Fundamentals](#-Fundamentals-1)
@@ -15,7 +18,8 @@
 - [ECC Operations (Elliptic Curve Cryptography)](#ecc-Operations-Elliptic-Curve-Cryptography)
 - [ECDSA (Elliptic Curve Digital Signature Algorithm)](#ecdsa-elliptic-curvedigital-signature-algorithm)
 	
----
+<hr style="page-break-before: always; ">
+
 ## **§ Fundamentals**
 	
 ### Cryptoanalysis

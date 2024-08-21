@@ -1,4 +1,7 @@
 # **Blockchain CheatSheet - Overview**
+
+<div style="font-size: 70%"><b>&#x1F553; Read Time: 5 m</b></div>
+
 ---
 ##### **Table of Contents**
 ###### [§ Fundamentals](#-Fundamentals-1)
@@ -18,7 +21,8 @@
 - [Incentives](#Incentives)
 ###### [§ Key Questions and Resolutions 08/2024](#-Key-Questions-and-Resolutions-082024-1)
 	
----
+<hr style="page-break-before: always; ">
+
 ## **§ Fundamentals**
 	
 ### Blockchain: A Peer-to-Peer Distributed Database

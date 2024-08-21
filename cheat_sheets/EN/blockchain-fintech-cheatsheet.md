@@ -1,4 +1,7 @@
 # **Blockchain CheatSheet - Future of Fintech**
+
+<div style="font-size: 70%"><b>&#x1F553; Read Time: 7 m</b></div>
+
 ---
 ##### **Table of Contents**
 
@@ -13,12 +16,18 @@
 - [Money Transmitter License](#Money-Transmitter-License)
 - [The Need of a License](#The-Need-of-a-License)
 - [Qualification](#Qualification)
-##### [§ Peer to Peer Finance](#-Peer-to-Peer-Finance-1)
-##### § 
-##### § 
-##### § 
+##### [§ Fintech](#-Fintech-1)
+- [Peer to Peer Finance](#Peer-to-Peer-Finance)
+- [Blockchain Based Finance](#Blockchain-Based-Finance)
+- [Growth of Algorithmic Tools](#Growth-of-Algorithmic-Tools)
+- [Growth of AI and Machine Learning System](#Growth-of-AI-and-Machine-Learning-System)
+- [Dramatic Growth](#Dramatic-Growth)
+- [Implications for Business](#Implications-for-Business)
+- [Implications for Society](#Implications-for-Society)
+- [Underserved](#Underserved)
 	
----
+<hr style="page-break-before: always; ">
+
 ## **§ Law**
 	
 ***Premise***: Analogous entities are found worldwide, varying based on jurisdiction.
@@ -134,27 +143,55 @@ Businesses that transmit value, such as banks or fintech businesses like PayPal 
 	
 	
 ---
-## **§ Peer to Peer Finance**
+## **§ Fintech**
 	
-
+### Peer to Peer Finance
 	
+The ability to bypass the bank as a middleman, keeping things efficient by saving time and money typically spent in the middle phase, redistributing it between the two parties.
 	
----
-## **§ **
+### Blockchain Based Finance
 	
-
+Properties of blockchain technology touch different aspects of finance, ranging from peer-to-peer finance to the secure and efficient exchange of assets.
 	
+### Growth of Algorithmic Tools
 	
----
-## **§ **
+Advising with algorithmic tools grants a systematic approach to investing, which fosters a more robust experience.
 	
-
+### Growth of AI and Machine Learning System
 	
+These elements can provide the engine for systematic investment, allowing for the processing of immense amounts of data to oversee capital growth.
 	
----
-## **§ **
+### Dramatic Growth
 	
-
+Quantitative tools are crucial for *Fintech* , a concept that, while not new, has evolved significantly due to advancements in technology - the "tech" part of *Fintech*.
+	
+**For perspective**: Years ago, a computer capable of performing 1.9 billion operations per second would have cost $32 million in today's dollars. Now, consider your smartphone, which can handle over 5 billion operations per second.
+	
+It's clear that as technology advances, so too will Fintech, offering an ever-expanding array of tools that grow in direct proportion to technological enhancements.
+	
+### Implications for Business
+	
+The disruption is significant:
+- **Financial Analysts**: Machine learning tools are clearly more efficient.
+- **Peer to Peer Finance**: Direct deals between lender and borrower yield more efficient results.
+- **Investment in Certificates of Deposits**: Blockchain contracting is revolutionary.
+- **Times**: Significantly reduced operation times.
+- **Wide Range of Applications**: Businesses now have numerous tools that aid in strategizing and creating various routes to raise capital.
+- **Supply Chain**: Blockchain adds a solid component of trust to products and services.
+	
+### Implications for Society
+	
+Banks and current systems need to change; they have been operating on the same model for too long. This model has proven inefficient, as evidenced by events like the global financial crisis and the current state of decisional structures.
+	
+A massive amount of money is wasted in processes and security measures, or due to the lack of them in these kinds of systems.
+	
+Fintech and related technologies such as blockchain present alternatives that highlight these realities in place of historical inadequacies.
+	
+### Underserved
+	
+Fintech is the way to spread banking services to the ones that doesn't have access to traditional system. It lowers costs and the digitalization is the key of the wide spread of the systems. Giving the possibility of microlending efficiently for example, that would empower people to build things easily reducing financial constraints and increasing possibilities.
+	
+Having a bank or a shop in our own smartphone is easy for everybody thanks to Fintech. This will increase investments in the economy, this will generate employment and so growth and equality for a better society.
 	
 	
 ---

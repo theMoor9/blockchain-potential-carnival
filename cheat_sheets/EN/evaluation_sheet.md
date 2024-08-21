@@ -1,4 +1,7 @@
 # **Evaluation Sheet**
+
+<div style="font-size: 70%"><b>&#x1F553; Read Time: 15 m</b></div>
+
 ---
 ### Introduction to the ICO Evaluation Framework
 
@@ -818,5 +821,4 @@ Therefore, this type of scoring system not only helps simplify the decision-maki
 </div> 
 
 ---
-	
 **Author**: Kenneth Boldrini

@@ -1,4 +1,7 @@
 # **Blockchain CheatSheet - Consensus**
+
+<div style="font-size: 70%"><b>&#x1F553; Read Time: 7 m</b></div>
+
 ---
 ##### **Table of Contents**
 ###### [§ Fundamentals](#-Fundamentals-1)
@@ -22,7 +25,8 @@
 - [Blockchain Application](#Blockchain-Application)
 ###### [§ Other Consensus Algorithm](#-Other-Consensus-Algorithm-1)
 	
----
+<hr style="page-break-before: always; ">
+
 ## **§ Fundamentals**
 	
 ### Consensus 

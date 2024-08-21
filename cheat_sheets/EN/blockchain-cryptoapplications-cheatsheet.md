@@ -1,4 +1,7 @@
 # **Blockchain CheatSheet - Cryptoapplications**
+
+<div style="font-size: 70%"><b>&#x1F553; Read Time: 8 m</b></div>
+
 ---
 ##### **Table of Contents**
 ###### [§ Money and Crypto](#-Money-and-Crypto-1)
@@ -25,7 +28,8 @@
 - [App](#App)
 - [Sheet](#Sheet)
 	
----
+<hr style="page-break-before: always; ">
+
 ## **§ Money and Crypto**
 	
 ### Money
@@ -213,7 +217,7 @@ click on title
 	
 ---
 ###### Suggested Follow-up
-[Blockchain Cheat Sheet - Overview](./blockchain-overview-cheatsheet.md)
+[Blockchain Cheat Sheet - Future of Fintech](./blockchain-fintech-cheatsheet.md)
 	  
 ---
   

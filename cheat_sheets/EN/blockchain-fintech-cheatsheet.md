@@ -10,6 +10,9 @@
 - [Others US Regulators](#Others-US-Regulators)
 - [Challenges](#Challenges)
 ##### [§ Transmission of Money](#-Transmission-of-Money-1)
+- [Money Transmitter License](#Money-Transmitter-License)
+- [The Need of a License](#The-Need-of-a-License)
+- [Qualification](#Qualification)
 ##### [§ Peer to Peer Finance](#-Peer-to-Peer-Finance-1)
 ##### § 
 ##### § 

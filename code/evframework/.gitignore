@@ -1,1 +1,43 @@
-target/
+# Ignore everything in the target directory...
+/target/*
+
+# ...except the release directory
+!/target/release/
+
+# But still ignore everything in release except the executable
+/target/release/*
+
+# Whitelist the executable
+!/target/release/my_executable_name
+
+# If you also want to keep debug builds
+!/target/debug/
+/target/debug/* 
+!/target/debug/my_executable_name
+
+# Ignore incremental compilation artifacts
+/target/incremental/
+
+# Ignore unnecessary files in the release directory
+/target/release/build/
+/target/release/deps/
+/target/release/.fingerprint/
+/target/release/.cargo-lock/
+
+# Other common ignore rules (as discussed before)
+*.o
+*.rlib
+*.so
+*.dylib
+*.dll
+*.log
+*.bak
+*.swp
+*.swo
+*.tmp
+/.vscode/
+/.idea/
+/node_modules/
+
+
+

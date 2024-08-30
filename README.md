@@ -5,7 +5,6 @@
     <p>
         <h1>Welcome to the Blockchain CheatRepo</h1>
     </p>
-    <br>
 </div>
 
 This repository contains a comprehensive collection of knowledge for learning blockchain through easy-to-reference cheat sheets. 

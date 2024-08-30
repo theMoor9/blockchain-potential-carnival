@@ -3,12 +3,10 @@
 </div>
 <div align="center">
     <p>
-        <b>Create a solid knowledge about blockchain</b>
+        <h1>Welcome to the Blockchain CheatRepo</h1>
     </p>
     <br>
 </div>
-
-# Welcome to the Blockchain CheatRepo!
 
 This repository contains a comprehensive collection of knowledge for learning blockchain through easy-to-reference cheat sheets. 
 It is designed to help users approach blockchain technology. 

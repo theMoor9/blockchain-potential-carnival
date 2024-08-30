@@ -1,3 +1,13 @@
+<div align="center" >
+    <img src="https://img.freepik.com/free-vector/abstract-violet-particle-wave-points-array-shallow-depth-field-futuristic-illustration-technology-digital-splash-explosion-data-points_1217-4280.jpg?t=st=1725029274~exp=1725032874~hmac=f1e79d4a746020cfe48efcda2ad3585198c88531e0efe8dc92ad7deff0907d3a&w=1480"/>
+</div>
+<div align="center">
+    <p>
+        <b>Create a solid knowledge about blockchain</b>
+    </p>
+    <br>
+</div>
+
 # Welcome to the Blockchain CheatRepo!
 
 This repository contains a comprehensive collection of knowledge for learning blockchain through easy-to-reference cheat sheets. 
